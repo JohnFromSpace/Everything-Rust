@@ -39,3 +39,4 @@ Rust has a foreign function interface (FFI) that can be used both to call code w
 ## Links <br>
 https://play.rust-lang.org/ <br>
 https://doc.rust-lang.org/book/ <br>
+https://doc.rust-lang.org/std/ <br>
