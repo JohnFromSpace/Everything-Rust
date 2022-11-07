@@ -37,5 +37,5 @@ Procedural macros comes in three flavors:
 Rust has a foreign function interface (FFI) that can be used both to call code written in languages such as C from Rust and to call Rust code from those languages. Rust also has a library, CXX, for calling to or from C++. Rust and C differ in how they lay out structs in memory, so Rust structs may be given a #[repr(C)] attribute, forcing the same layout as the equivalent C struct.
 
 ##Links
-https://play.rust-lang.org/
-https://doc.rust-lang.org/book/
+https://play.rust-lang.org/ <br>
+https://doc.rust-lang.org/book/ <br>
