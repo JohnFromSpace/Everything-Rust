@@ -49,13 +49,13 @@ fn main() {
     // the usage of different logical operators makes up the same results
     
     
-  //Using if in an let statement
+  // Using if in an let statement
     let condition = true;
     let number = if condition {1} else {0};
     
     println!("The value of the condition as type int is {number}.");
     
-      //Repetition with Loops
+      // Repetition with Loops
     loop {
         println!("again");
     } // this loop won't stop until conditions are met 
