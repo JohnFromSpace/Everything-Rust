@@ -61,5 +61,47 @@ fn main() {
     } // this loop won't stop until conditions are met 
       // and since there are no conditions, i.e. the code block contains no if/else statements to break the cycle
       // the program continues forever
- 
+
+  // Using if in an let statement
+    let condition = true;
+    let number = if condition {1} else {0};
+    
+    println!("The value of the condition as type int is {number}.\n");
+    
+    let mut counter = 0;
+    let result = loop {
+        counter += 1; // same as "counter = counter + 1"
+        
+        if counter == 10 {
+            break counter * 2; 
+        }
+    }; // 20
+    
+    println!("The result after the loop is {result}.\n");
+    
+  // Loop labels to disambiguate between multiple loops
+    let mut count = 0;
+    'counting_up: loop {
+        println!("count = {count}");
+        
+        let mut remaining = 10;
+        
+        loop {
+            println!("remaining = {remaining}");
+            if remaining == 9 {
+                break;
+            }
+            
+            if count == 2 {
+                break 'counting_up;
+            }
+            remaining -= 1;
+        }
+        count  += 1;
+    }
+    println!("End count = {count}");
+    
+    
+    
+     
 }
