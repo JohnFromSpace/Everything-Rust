@@ -127,7 +127,7 @@ fn main() {
         println!("The value is {element}.");       
     }    
     
-  // Looping through numbers from 1 to N
+  // Looping through numbers from 1 to n
   // add "use std::io" to use a specified by the user number 'n'
     let mut text = String::new();
     io::stdin().read_line(&mut text).expect("Failed to read!");
