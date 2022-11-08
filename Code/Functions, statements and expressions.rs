@@ -1,7 +1,7 @@
 fn main() {
-  print_labeled_measurement(5, 'h');
+    print_labeled_measurement(5, 'h');
   
-      let _x = 1; // this is an expression which returns value '1' while 'let' is a statement
+    let _x = 1; // this is an expression which returns value '1' while 'let' is a statement
     // used to declare a new variable '_x'
     //
     // you cannot have statements like "x = y = 1" in Rust
