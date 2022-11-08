@@ -12,8 +12,16 @@ fn main() {
         let x = 3;
         x + 1
     };
+    //this can be represented as a scope for 'y' variable
+    //
+    // { 
+    //   let x = 3;
+    //   let y = x + 1;
+    // }
+    //
+    // in that way the value of 'x' is "active" only inside the scope for 'y' and cannot be used outside of it 
     
-    println!("The value of y is {y}."); // 4, where "x + 1 " is an expression of variable 'y'
+    println!("The value of y is {y}."); // 4, where "x + 1" is an expression of variable 'y'
     
     let x = one(); // 1
     println!("The value of x is {x}."); 
