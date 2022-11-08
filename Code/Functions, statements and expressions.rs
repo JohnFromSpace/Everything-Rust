@@ -15,7 +15,7 @@ fn main() {
     
     println!("The value of y is {y}."); // 4, where "x + 1 " is an expression of variable 'y'
     
-    let x = one(); // 5
+    let x = one(); // 1
     println!("The value of x is {x}."); 
     
     let x = plus_one(5); // 6
