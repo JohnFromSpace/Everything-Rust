@@ -54,5 +54,12 @@ fn main() {
     let number = if condition {1} else {0};
     
     println!("The value of the condition as type int is {number}.");
+    
+      //Repetition with Loops
+    loop {
+        println!("again");
+    } // this loop won't stop until conditions are met 
+      // and since there are no conditions, i.e. the code block contains no if/else statements to break the cycle
+      // the program continues forever
  
 }
