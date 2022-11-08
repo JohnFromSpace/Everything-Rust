@@ -5,7 +5,7 @@ fn main() {
     let _prod = 4 * 3;
     let _div = 55.5 / 11.1;
     let _floor = 2 / 3; // 0
-    let _rem = 43 % 5;// modulo is 3
+    let _rem = 43 % 5; // modulo is 3
   
   //Boolean type
     let _rust_is_easy = true;
