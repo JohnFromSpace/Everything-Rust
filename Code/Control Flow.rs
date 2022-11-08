@@ -100,7 +100,30 @@ fn main() {
         count  += 1;
     }
     println!("End count = {count}");
+
+  // Conditional loops using While
     
+    let mut number = 3;
+    while number != 0 {
+        println!("{number}\n");
+        number -= 1;
+    }
+    
+  // Looping through a collectiong with "while"
+    let a1 = [1, 2, 3, 4, 5];
+    let mut index = 0;
+    
+    while index < 5 {
+        println!("The value is {}.", a1[index]);
+        
+        index += 1;
+    }
+    
+  // Looping through a collection with "for"
+    let a2 = [1, 2, 3, 4, 5];
+    for element in a2 {
+        println!("The value is {element}.");       
+    }    
     
     
      
