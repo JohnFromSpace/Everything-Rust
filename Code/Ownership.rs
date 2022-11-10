@@ -12,7 +12,20 @@ fn main() {
   // The double colon "::" allows us to namespace this particular "from" function
   // under the "String" type rather than using a different name
   
+  let mut s = String::from("hello");
+  s.push_str(", world"); // push_str() appends a literal to a string 
+  println!("{}", s); // "hello, world"
+  
+  {
+    let s = String::from("hello");
+  } // once the program leaves this scope, 's' is no longer valid
+  
+  let x = 5; 
+  let y = x; // makes a copy of the value in 'x' and assigns it 
+  // it means that there are two variables with integer values of 5
+  // and those values are pushed on the stack  
   
   
-    
+  
+  
 }
