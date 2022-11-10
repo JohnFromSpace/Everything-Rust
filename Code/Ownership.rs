@@ -54,7 +54,7 @@ fn main() {
   // it means that there is no need to use method "clone" on 's1' because
   // we will achieve nothing different in terms of efficiency
   
-  // Multiple values can be returned by a function
+  // Multiple values can be returned by a function by using a tuple
   let s1 = String::from("hello");
   let (s2, len) = calculate_length(s1);
   
