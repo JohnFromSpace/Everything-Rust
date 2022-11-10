@@ -38,6 +38,30 @@ fn main() {
   let s1 = String::from("hello");
   let s2 = s1; // the pointer, the length and the capacity of 's1' on the stack are ONLY copied
   // none of the data on the heap that the pointer refers to is copied
+  // Such process of assigning 's1' value to 's2' can be considered a "shallow copy"
+  // but since Rust invalidates the first variable that makes the "shallow copy" more like "move"
+  // 
+  // To implement a "deep copy", i.e. to copy the data of 's1' on the heap to 's2' 
+  // we can use the method "clone", instead
   
+  let s1 = String::from("hello"); // data is allocated on heap
+  let s2 = s1.copy(); // heap data of 's1' is copied to 's2'
+  println!("s1 = {}, s2 = {}", s1, s2);
   
+  // Making copies of integer-type values is pointless 
+  // since they already have a definitive size at compile time
+  // and are entirely stored on the stack, so that makes the copy fast
+  // it means that there is no need to use method "clone" on 's1' because
+  // we will achieve nothing different in terms of efficiency
+  
+  // Multiple values can be returned by a function
+  let s1 = String::from("hello");
+  let (s2, len) = calculate_length(s1);
+  
+  println!("The length of '{}' is {}.", s2, len);
+}
+
+fn calculate_length(s: String) -> (String, usize) {
+  let length = s.len();
+  (s, length)
 }
