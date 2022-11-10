@@ -29,8 +29,15 @@ fn main() {
   // a pointer to the memory that holds all the contents of the string;
   // a length;
   // a capacity.
+  // 
+  // All of these are stored on the stack
+  // 
+  // Length is the current amount of memory, in bytes, that the "String" is using
+  // 
+  // Capacity is the total amount of memory, in bytes, that the "String" has received from the allocator
   let s1 = String::from("hello");
-  let s2 = s1; // 
+  let s2 = s1; // the pointer, the length and the capacity of 's1' on the stack are ONLY copied
+  // none of the data on the heap that the pointer refers to is copied
   
   
 }
