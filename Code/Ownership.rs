@@ -25,7 +25,12 @@ fn main() {
   // it means that there are two variables with integer values of 5
   // and those values are pushed on the stack  
   
-  
+  // A string is made of 3 parts:
+  // a pointer to the memory that holds all the contents of the string;
+  // a length;
+  // a capacity.
+  let s1 = String::from("hello");
+  let s2 = s1; // 
   
   
 }
