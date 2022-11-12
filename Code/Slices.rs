@@ -3,6 +3,10 @@ fn main() {
   let word = first_word(&s); // 5
   
   s.clear(); // empties the "String", making it equal to "" 
+  
+  let mut my_word = String::from("Hello, World!");
+  let another_word =  first_word(&my_word); // 6 
+  
 }
 
 fn first_word(word: &String) -> usize {
