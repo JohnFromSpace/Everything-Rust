@@ -14,6 +14,18 @@ fn main() {
   //
   // println!("{}, {}", r1, r2);
   change(&mut s); // we call the function by using a mutable reference 
+  
+  
+  // To avoid the problem with multiple mutable references to 's'
+  // we can use curly brackets (create a scope) for each one of the references to 's'
+  // so when we are outside the current scope, it will be safe to make a new reference
+  
+  {
+    let r1 = &mut s;
+  } 
+  
+  let r2 = &mut s;
+  
 }
 
 fn calculate_length(s: &String) -> usize { // 's' is a reference to a "String"
