@@ -24,7 +24,8 @@ fn main() {
   let slice = &a_word[2..len]; // this is the same as 
   let slice = &a_word[2..];
   
-  
+  let slice  = &a_word[0..len]; //this is the same as
+  let slice = &a_word[..];
   
 }
 
