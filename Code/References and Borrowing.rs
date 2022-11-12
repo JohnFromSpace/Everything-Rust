@@ -1,6 +1,6 @@
 fn main() {
   let s = String::from("hi");
-  let len = calculate_length(s);
+  let len = calculate_length(&s);
   
   println!("The length of '{}' is {}.", s, len);
 }
