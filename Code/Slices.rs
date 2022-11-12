@@ -1,5 +1,8 @@
 fn main() {
-
+  let mut s = String::from("hello");
+  let word = first_word(&s); // 5
+  
+  s.clear(); // empties the "String", making it equal to "" 
 }
 
 fn first_word(word: &String) -> usize {
