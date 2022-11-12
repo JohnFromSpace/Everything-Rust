@@ -1,3 +1,10 @@
+/* THE RULES OF REFERENCES
+  
+  At any given time, we can have "either" one mutable reference "or" any number of immutable references.
+
+  References must always be valid.
+  
+*/
 fn main() {
   let s = String::from("hi"); 
   let len = calculate_length(&s); // "&s" creates a reference of the variable 's', i.e.
