@@ -30,9 +30,21 @@ fn main() {
   let slice  = &a_word[0..len]; //this is the same as
   let slice = &a_word[..];
   
+  let my_string = String::from("hello world");
+  
+  // `first_word` works on slices of `String`s, whether partial or whole
+  let word = first_word(&my_string[0..6]);
+  let word = first_word(&my_string[..]);
+  
+  // `first_word` also works on references to `String`s, which are equivalent
+  // to whole slices of `String`s
+  let word = first_word(&my_string);
+  
+  let my_string_literal = "hello world";
+  
 }
 
-fn first_word(word: &String) -> usize {
+fn first_word(word: &String) -> usize { 
   let bytes = word.as_bytes(); // conversion of string to bytes to check for spaces 
   
   for (i, &item) in bytes.iter().enumerate() { // we create an iterator for our bytes using the "iter()" method and 
