@@ -26,6 +26,16 @@ fn main() {
   
   let r2 = &mut s;
   
+  
+  // There is no problem in using multiple immutable references at the same time 
+  let iR1 = &s;
+  let iR2 = &s;
+  
+  println!("{} and {}", iR1, iR2); // the variables "iR1" and "iR2" will not be used anymore
+  // This allows us to create a mutable reference to 's'
+  let mutable_reference = &mut s;
+  println!("{}", mutable_reference);
+  
 }
 
 fn calculate_length(s: &String) -> usize { // 's' is a reference to a "String"
