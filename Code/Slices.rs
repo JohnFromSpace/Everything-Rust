@@ -11,8 +11,8 @@ fn main() {
   // Slicing
   // A "string slice" allows us to access a portion of the "String" 
   // without having to have a full access to the whole "String" 
-  let hello_part = s[0..5];
-  let world_part = s[7..12];
+  let hello_part = &s[0..5];
+  let world_part = &s[7..12];
 }
 
 fn first_word(word: &String) -> usize {
