@@ -15,6 +15,6 @@ fn calculate_length(s: &String) -> usize { // 's' is a reference to a "String"
 } // 's' goes out of scope and since it does not have ownership of the it refers to,
 // it is not dropped
 
-fn change(s: &mut String) {
+fn change(s: &mut String) { // the function mutates the value that borrows
   s.push_str(", world");
 } 
