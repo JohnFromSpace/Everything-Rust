@@ -13,6 +13,19 @@ fn main() {
   // without having to have a full access to the whole "String" 
   let hello_part = &s[0..5];
   let world_part = &s[7..12];
+  
+  
+  let a_word = String::from("word");
+  let slice = &a_word[0..2]; // this is the same as
+  let slice = &a_word[..2];
+  
+  let len_word = a_word.len(); 
+  
+  let slice = &a_word[2..len]; // this is the same as 
+  let slice = &a_word[2..];
+  
+  
+  
 }
 
 fn first_word(word: &String) -> usize {
