@@ -46,3 +46,13 @@ fn calculate_length(s: &String) -> usize { // 's' is a reference to a "String"
 fn change(s: &mut String) { // the function mutates the value that borrows
   s.push_str(", world");
 } 
+
+fn no_dangle() -> String {
+  let s = String::from("hello");
+  
+  s
+} // this function creates a variable 's' and returns the "String" directly without having to 
+// deallocate anything as it would happen if we called the function by reference
+// since such actions would cause the variable 's' to be created and existed only inside the scope of the function
+// once the function would end
+// 's' would be deallocated and nothing would be returned
