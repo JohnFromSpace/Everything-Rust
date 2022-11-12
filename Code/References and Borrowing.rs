@@ -7,6 +7,12 @@ fn main() {
   
   
   let mut s = String::from("hi");
+  //
+  // You are not allowed to have multiple mutable references to the same variable 
+  // let r1 = &mut s;
+  // let r2 = &mut s;
+  //
+  // println!("{}, {}", r1, r2);
   change(&mut s); // we call the function by using a mutable reference 
 }
 
