@@ -1,5 +1,6 @@
 // String literals are Slices.
 // If we have a String, we can pass a slice of that String or a reference to the String.
+// The concepts of ownership, borrowing and slices ensure memory safety in Rust programs at compile time.
 
 fn main() {
   let mut s = String::from("hello");
