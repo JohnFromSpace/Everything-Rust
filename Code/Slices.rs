@@ -42,7 +42,7 @@ fn first_word(word: &String) -> usize {
   s.len() //  if there are no spaces in the string, we return its length
 }
 
-fn another_first_word(s: &String) -> usize {
+fn another_first_word(s: &String) -> &str {
   let bytes = s.as_bytes();
   
   for (i, &item) in bytes.iter().enumerate() {
@@ -50,5 +50,5 @@ fn another_first_word(s: &String) -> usize {
       return s[0..i]; // current position of "space"
     } 
   }
-  s[..] // length of 's'
+  &s[..] // length of 's'
 }
