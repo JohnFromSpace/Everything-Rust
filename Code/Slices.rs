@@ -1,3 +1,6 @@
+// String literals are Slices.
+// If we have a String, we can pass a slice of that String or a reference to the String.
+
 fn main() {
   let mut s = String::from("hello");
   let word = first_word(&s); // 5
