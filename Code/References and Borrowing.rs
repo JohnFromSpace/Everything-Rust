@@ -1,5 +1,10 @@
 fn main() {
-  let mut s = String::from("hi");
+  let s = String::from("hi");
+  let len = calculate_length(s);
   
-  
+  println!("The length of '{}' is {}.", s, len);
+}
+
+fn calculate_length(s: &String) -> usize {
+  s.len()
 }
