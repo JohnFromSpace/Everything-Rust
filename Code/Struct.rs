@@ -10,7 +10,12 @@ struct Colour(i32, i32, i32);
 // Each defined struct is its own type, even though the fields within the struct
 // might have the same types
 
+struct AlwaysEqual; // Unit-like struct, no need to know the data it stores
+// can be used as a marker of a specific characteristic
+
 fn main() {
+  let subject = AlwaysEqual; // 
+  
   let black = Colour(0, 0, 0);
   let point = Point(0, 0, 0);
   // "black" and "point" are of different types  
