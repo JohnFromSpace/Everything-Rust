@@ -22,6 +22,11 @@ fn main() {
     sign_in_count: user.sign_in_count,
   }
   
+  let user3 = User {
+    email: String::from("another@example.com"),
+    ..user1 // following fields not explicitly set will have the values of the instance "user1" 
+  }
+  
 }
 
 fn build_user(email: String, username: String) -> User {
