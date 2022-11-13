@@ -5,7 +5,16 @@ struct User {
   sign_in_count: u64,  
 }
 
+struct Point(i32, i32, i32);
+struct Colour(i32, i32, i32);
+// Each defined struct is its own type, even though the fields within the struct
+// might have the same types
+
 fn main() {
+  let black = Colour(0, 0, 0);
+  let point = Point(0, 0, 0);
+  // "black" and "point" are of different types  
+  
   let user1 = User {
     email: String::from("someone@example.com"),
     username: String::from("someusername123"),
