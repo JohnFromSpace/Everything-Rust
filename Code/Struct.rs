@@ -25,3 +25,12 @@ fn build_user(email: String, username: String) -> User {
     sign_in_count: 1,
   }
 }
+
+fn using_field_init_shorthand(email: String, username: String) -> User {
+  User {
+    email,
+    username,
+    active: true,
+    sign_in_count: 1,
+  }
+}
