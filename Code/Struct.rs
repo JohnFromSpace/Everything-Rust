@@ -47,7 +47,7 @@ fn build_user(email: String, username: String) -> User {
   }
 }
 
-fn using_field_init_shorthand(email: String, username: String) -> User {
+fn field_init_shorthand(email: String, username: String) -> User {
   User {
     email,
     username,
