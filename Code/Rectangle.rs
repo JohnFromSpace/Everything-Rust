@@ -16,7 +16,7 @@ fn main() {
     height: 30, 
   }
   
-  println!("The area is {}.", area_struct(&rectangle));
+  println!("The area is {}.", area_struct(&rectangle)); // 900
   
 }
 
