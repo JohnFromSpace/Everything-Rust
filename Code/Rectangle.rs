@@ -15,7 +15,6 @@ fn main() {
     width: 30, 
     height: 30, 
   }
-  
   println!("The area is {}.", area_struct(&rectangle)); // 900
   
 }
