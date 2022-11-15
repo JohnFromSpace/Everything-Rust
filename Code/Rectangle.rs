@@ -16,15 +16,25 @@ fn main() {
     width: 30, 
     height: 30, 
   };
-  
   println!("The area is {}.", area_struct(&rectangle)); // 900
   
   let rectangle_debug = Rectangle {
     width: 30,
     height: 20,
   };
+  println!("The rectangle is {:?}"., rectangle_debug);
   
-  println!("The rectangle is {:?}", rectangle_debug);
+  // "dbg!" macro can be used to print out a value using the "Debug" format
+  // which takes ownership of an expression, as opposed to "println!" that takes a reference
+  // "dbg!" also prints the file and the line where that macro call occurs in the code
+  // along with the resulting value of that expression
+  // and returns ownership of the value
+  let scale = 2;
+  let rectangle_dbg = Rectangle {
+    width: dbg!(30 * scale),
+    height: 40,
+  };
+  dbg!(&rectangle_dbg);  
   
 }
 
