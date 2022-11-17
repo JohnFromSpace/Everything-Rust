@@ -23,6 +23,18 @@ impl Rectangle {
   }
 }
 
+// we can create a "square" from "Rectangle"
+impl Rectangle {
+  fn square(size: u32) -> Self { // an associated function
+    // an associated function acts like a constructor 
+    // that will create a new instance
+    Self {
+      width: size,
+      height: size,
+    }
+  }
+}
+
 
 fn main() {
   let rect1 = Rectangle {
