@@ -4,9 +4,7 @@ enum IpAddress {
 }
 
 // we can call this function with either variant of "IpAddress"
-fn route(ip_address: IpAddress) {
-    
-}
+fn route(ip_address: IpAddress) {}
 
 fn main() {
   // we can create instances of the "enum" class
