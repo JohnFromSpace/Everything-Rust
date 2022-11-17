@@ -12,5 +12,11 @@ impl Rectangle {
 }
 
 fn main() {
+  let rect1 = Rectangle {
+    width: 30,
+    height: 20,
+  };
+  
+  println!("The area of the rectangle is {}.", rect1.area());
   
 }
