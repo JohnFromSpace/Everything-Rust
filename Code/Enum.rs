@@ -3,6 +3,11 @@ enum IpAddress {
   V6,
 }
 
+// we can call this function with either variant of "IpAddress"
+fn route(ip_address: IpAddress) {
+    
+}
+
 fn main() {
   // we can create instances of the "enum" class
   let v_four = IpAddress::V4;
