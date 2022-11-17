@@ -12,7 +12,17 @@ impl Rectangle {
   fn area(&self) -> u32 { 
     self.width * self.height
   }  
+  
+  // we can have more functions inside the current block
 }
+
+// we can have multiple "impl" blocks with that typename
+impl Rectangle {
+  fn can_hold(&self, other: &Rectangle) -> bool {
+    self.width > other.width && self.height > other.height
+  }
+}
+
 
 fn main() {
   let rect1 = Rectangle {
