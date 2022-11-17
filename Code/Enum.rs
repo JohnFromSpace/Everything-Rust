@@ -9,11 +9,14 @@ struct IpAddress {
 }
 
 let home = IpAddress { 
-  kind: IpAddress::V4,
+  kind: IpAddressVersion::V4,
   address: String::from("127.0.0.1"),
-}
+};
 
-
+let loopback = IpAddress {
+  kind: IpAddressVersion::V6,
+  address: String::from("::1");
+};
 
 // we can call this function with either variant of "IpAddress"
 fn route(ip_address_version: IpAddressVersion) {}
