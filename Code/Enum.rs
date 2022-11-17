@@ -5,7 +5,15 @@ enum IpAddressVersion {
 
 struct IpAddress {
   version: IpAddressVersion,
+  address: String,
 }
+
+let home = IpAddress { 
+  kind: IpAddress::V4,
+  address: String::from("127.0.0.1"),
+}
+
+
 
 // we can call this function with either variant of "IpAddress"
 fn route(ip_address_version: IpAddressVersion) {}
