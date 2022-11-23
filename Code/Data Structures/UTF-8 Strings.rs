@@ -37,4 +37,10 @@ fn main() {
   let sss1 = String::from("tic");
   let ssss = format!("{}-{}-{}", sss1, ss2, ss3); // "tic-tac-toe"
   
+  // Access "String" element
+  let hello = "hello";
+  let answer = &hello[0]; // 'h'
+  
+  
+  
 }
