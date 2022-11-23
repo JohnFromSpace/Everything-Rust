@@ -8,4 +8,8 @@ fn main() {
   vector3.push(23);
   vector3.push(1021);
   
+  let vector4 = vec![1, 2, 3, 4, 5];
+  let third: &i32 = &v[2];
+  println!("The third element is {}", third);
+  
 }
