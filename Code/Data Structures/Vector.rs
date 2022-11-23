@@ -17,4 +17,27 @@ fn main() {
     Some(third) => println!("The third element is {}", third);
     None => println!("There is no third element");
   }
+  
+  let vector5 = vec![1, 2, 3, 4, 5, 6];
+  for i in &vector5 {
+    println!("{}", i);  
+  }
+  
+  let mut vector6 = vec![1, 2, 3, 4, 5, 6];
+  for i in &mut vector6 {
+    *i += 50; // we get to the value 'i' before calculating "+= 50"
+  }
+  
+  enum SpreadSheetCell {
+    Int(i32),
+    Float(f64),
+    Text(String),
+  }
+  
+  let row = vec! [
+    SpreadSheetCell::Int(3),
+    SpreadSheetCell::Float(3.4),
+    SpreadSheetCell::String::from("rust"),
+  ];
+  
 }
