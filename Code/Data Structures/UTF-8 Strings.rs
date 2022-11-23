@@ -23,6 +23,11 @@ fn main() {
   s.push('L');
   println!("{}", s);
   
+  let more_strings1 = String::from("Hello, ");
+  let more_strings2 = Strinng::from("World!");
+  let more_strings3 = more_strings1 + &more_strings2; // "more_strings1" has been moved here 
+  // and can no longer be used 
   
+  // Concatenation with '+' operator
   
 }
