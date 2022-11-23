@@ -29,5 +29,11 @@ fn main() {
   // and can no longer be used 
   
   // Concatenation with '+' operator
+  let ss1 = String::from("tic");
+  let ss2 = String::from("tac");
+  let ss3 = String::from("toe");
+  let sss = ss1 + "-" + &ss2 + "-" + &ss3; // "tic-tac-toe"
+  
+  
   
 }
