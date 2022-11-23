@@ -40,4 +40,10 @@ fn main() {
     SpreadSheetCell::String::from("rust"),
   ];
   
+  {
+    let v = vec![1,2, 3]; // create a vector inside scope
+  } // -> leaves scope and frees allocated memory of the vector
+  
+  
+  
 }
