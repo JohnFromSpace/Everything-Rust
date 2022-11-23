@@ -34,6 +34,7 @@ fn main() {
   let ss3 = String::from("toe");
   let sss = ss1 + "-" + &ss2 + "-" + &ss3; // "tic-tac-toe"
   
-  
+  let sss1 = String::from("tic");
+  let ssss = format!("{}-{}-{}", sss1, ss2, ss3); // "tic-tac-toe"
   
 }
