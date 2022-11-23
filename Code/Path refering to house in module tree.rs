@@ -14,6 +14,8 @@ pub fn eat_at_restaurant() {
   front_of_house::hosting::add_to_waitlist();
 }
 
+// Another example
+
 mod back_of_house {
   pub enum Appetizer {
     Soup,
@@ -22,8 +24,8 @@ mod back_of_house {
 }
 
 pub fn eat_at_restaurant_again() {
-  let order1 = back_of_house::Appetizer::Soup;
-  let order2 = back_of_house::Appetizer::Salad;
+  let order1 = back_of_house::Appetizer::Soup; // we can use the fields, because 
+  let order2 = back_of_house::Appetizer::Salad; // we made "Appetizer" enum public
 }
 
 fn main() {}
