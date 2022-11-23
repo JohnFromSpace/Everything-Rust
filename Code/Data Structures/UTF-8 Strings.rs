@@ -41,6 +41,10 @@ fn main() {
   let hello = "hello";
   let answer = &hello[0]; // 'h'
   
+  // Slicing Strings
+  let hellos = "hellos";
+  let shellos = &hellos[0..2];
+  
   
   
 }
