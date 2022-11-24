@@ -15,4 +15,11 @@ fn main() {
     // "B: 2"
   }
   
+  // Ownership
+  let field_name = String::from("Favourite");
+  let filed_value = String::from("Banana");
+  
+  let mut map = HashMap::new(0;
+  map.insert(field_name, field_value);  
+  
 }
