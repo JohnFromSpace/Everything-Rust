@@ -5,7 +5,7 @@ fn main() {
     hm.insert(String::from("A"), 10); // "A" is associated/paired with 10
     hm.insert(String::from("B"), 2); // "B" is paired with 2
 
-    // access a HashMap's value it stores 
+    // Access a HashMap's value it stores 
     let name = String::from("B");
     let hash_map = hm.get(&name).copy().unwrap_or(0); // 2
 
@@ -28,5 +28,12 @@ fn main() {
     scores.insert(String::from("Blue"), 20);
     println!("{:?}", scores); // "Blue: 20"
            
-    
+    // Updating a Value based on the old Value
+    let text = "blah blah blah";
+    let mut map = HashMap::new();
+    for word in text.split_whitespace() {
+        let count = map.entry(word).or_insert(0);
+        *count += 1;
+    }
+    println!("{?}", map); // "blah: 3"
 }
