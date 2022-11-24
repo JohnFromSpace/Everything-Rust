@@ -9,5 +9,10 @@ fn main() {
   let name = String::from("B");
   let hash_map = hm.get(&name).copy().unwrap_or(0); // 2
   
+  for(key, value) in &hm {
+    println!("{}: {}", key, value); 
+    // "A: 10"
+    // "B: 2"
+  }
   
 }
