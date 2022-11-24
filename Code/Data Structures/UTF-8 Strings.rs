@@ -45,6 +45,23 @@ fn main() {
   let hellos = "hellos";
   let shellos = &hellos[0..2];
   
+  // Iteration
+  for c in "hello".chars() {
+    println!("{}", c);
+    // h
+    // e
+    // l
+    // l
+    // o
+  }
   
+  for b in "hello".bytes() {
+    println!("{}", b);
+    // 104
+    // 101
+    // 108
+    // 108 
+    // 111
+  }
   
 }
