@@ -78,9 +78,29 @@ impl Game {
     }
   }
   
-  
-  
-  
+  fn guess(&mut self) -> String {
+    println!("{}", format!("Enter your word guess ({} letters)", WORD_LENGTH).cyan());
+    self.display_invalid_letters();
+    let mut guess = String::new();
+    let mut is_valid_guess = false;
+    while !is_valid_guess {
+      guess = String::new();
+      std::io::stdin().read_line(&mut guess).unwrap();
+      guess = fix_word(&guess);
+      println!("{guess}");
+      if guess.len() != WORD_LENGTH {
+        println!("{}", format!("Your guess has a different number of letters than {}.", WORD_LENGTH).red());
+      }
+      else if !self.dictionary.iter().any(|word| word == &guess) {
+        println!("{}", "{guess} is not a word.".red());
+      }
+      else {
+        self.guesses.push(guess.clone());
+        is_valid_guess = true;
+      }
+    }
+    guess     
+  }
 }
 
 fn main() {}
