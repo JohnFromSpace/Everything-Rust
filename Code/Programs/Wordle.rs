@@ -26,8 +26,14 @@ impl Game {
     let mut rng = RandomNumberGenerator::new();
     let dictionary = list();
     let word = rng.random_slice_entry(&dictionary).unwrap().clone();
-    Self {}
+    Self {
+      dictionary, 
+      word,
+      guessed_word_letters: HashSet::new(),
+      guesses: Vec::new(),
+    }
   }
+  
   
   
 }
