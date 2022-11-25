@@ -47,13 +47,25 @@ impl Game {
                 } 
                 
                 else {
-                    self.guessed_letters.insert(c);
+                    self.guessed_word_letters.insert(c);
                     format!("{c}").red()
                 };
                 print!("{display}");
             });
             println!();
         })
+ 
+  fn display_invalid_letters(&self) {
+    if !self.guessed_word_letters.is_empty() {
+      print!("Letters not in word: ");
+      self.guessed_word_letters.iter().for_each(|letter| print!("{letter} "));
+      println!();
+    }
+  }
+  
+  
+  
+  
   
 }
 
