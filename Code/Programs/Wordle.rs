@@ -63,6 +63,20 @@ impl Game {
     }
   }
   
+  fn is_game_over(&self, guess: &str) -> bool {
+    let n_tries = self.guesses.len();
+    if guess == self.word {
+      println!("{}", "Correct! You guessed the word in {n_tries} tries.", bright_green());
+      true
+    }
+    else if n_tries >= MAX_TRIES {
+      println!("{}", format!("You ran out of tries! The word was {}.", self.word, bright_red()));
+      true
+    }
+    else {
+      false
+    }
+  }
   
   
   
