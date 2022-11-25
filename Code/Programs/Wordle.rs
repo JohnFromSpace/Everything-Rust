@@ -10,4 +10,8 @@ fn fix_word(word: &str) -> String {
   word.trim().to_uppercase().chars().filter(|c| c.is_ascii_alphabetic()).collect
 }
 
+fn words_list() -> Vec<String> {
+  ALL_WORDS.split('\n').skip(2).map(fix_word).filter(|line| line.len() == WORD_LENGTH).collect()
+}
+
 fn main() {}
