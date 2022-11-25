@@ -14,4 +14,13 @@ fn words_list() -> Vec<String> {
   ALL_WORDS.split('\n').skip(2).map(fix_word).filter(|line| line.len() == WORD_LENGTH).collect()
 }
 
+struct Game {
+  dictionary: Vec<String>,
+  word: String,
+  guessed_word_letters: HashSet<char>,
+  guesses: Vec<String>,
+}
+
+
+
 fn main() {}
