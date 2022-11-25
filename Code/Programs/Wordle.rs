@@ -21,6 +21,6 @@ struct Game {
   guesses: Vec<String>,
 }
 
-
+impl Game {}
 
 fn main() {}
