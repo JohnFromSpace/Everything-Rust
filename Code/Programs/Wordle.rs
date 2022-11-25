@@ -103,4 +103,14 @@ impl Game {
   }
 }
 
-fn main() {}
+fn main() {
+  let mut game = Game::new();
+  println!("{}", game.word);
+  loop {
+    game.display_guesses();
+    let guess = game.guess();
+    if game.is_game_over(&guess) {
+      break;
+    }
+  }
+}
