@@ -34,7 +34,26 @@ impl Game {
     }
   }
   
-  
+  fn display_guesses(&mut self) {
+    self.guesses.iter().enumerate().for_each(|guess_number, guess|) {
+            print!("{}: ", guess_number+1);
+            guess.chars().enumerate().for_each(|(pos, c)| {
+                let display = if self.word.chars().nth(pos).unwrap() == c {
+                    format!("{c}").bright_green()
+                } 
+              
+                else if self.word.chars().any(|wc| wc == c) {
+                    format!("{c}").bright_yellow()
+                } 
+                
+                else {
+                    self.guessed_letters.insert(c);
+                    format!("{c}").red()
+                };
+                print!("{display}");
+            });
+            println!();
+        })
   
 }
 
