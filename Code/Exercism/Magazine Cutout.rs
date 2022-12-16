@@ -15,5 +15,5 @@ pub fn can_construct_note(magazine: &[&str], note: &[&str]) -> bool {
         words
     });
     
-    
+    note_words.iter().all(&|(w, count)| magazine_words.get(w).unwrap_or(&0) >= count)
 }
