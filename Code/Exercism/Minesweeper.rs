@@ -28,7 +28,14 @@ pub fn annotate(minefield: &[&str]) -> Vec<String> {
                 })
                 .filter(|&chr| chr == '*')
                 .count();
+     
+            if neighbour_mines > 0 {
+                result.push(format!("{}", neighbour_mines).chars().nth(0).unwrap());
+            } 
             
+            else {
+                result.push(' ');
+            }
     }
     
 }
