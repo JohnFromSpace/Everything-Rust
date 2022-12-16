@@ -17,6 +17,17 @@ pub fn annotate(minefield: &[&str]) -> Vec<String> {
                 continue;
             }
             
+            let mut neighbour_mines = minefield
+                .iter()
+                .take(y + 2)
+                .skip((y as isize - 1).max(0) as usize)
+                .flat_map(|&line| {
+                    line.chars()
+                        .take(x + 2)
+                        .skip((x as isize - 1). max(0) as usize)
+                })
+                .filter(|&chr| chr == '*')
+                .count();
             
     }
     
