@@ -8,3 +8,5 @@ impl From<u64> for Duration {
         }    
     }
 }
+
+const EARTH_PERIOD: f64 = 31557600.0;
