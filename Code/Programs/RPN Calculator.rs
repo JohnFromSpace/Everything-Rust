@@ -2,9 +2,11 @@ use std::io::prelude::*;
 
 fn main() {
     let inputs = std::io::stdin();
+    
     for s in inputs.lock().lines() {
         let mut stack: Vec<f64> = vec![];
         let mut error = false;
+    
         for token in s.unwrap().split_whitespace() {
             if let Ok(x) = token.parse() {
                 stack.push(x);
