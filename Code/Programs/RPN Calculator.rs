@@ -29,7 +29,14 @@ fn main() {
                 }
             }
         }
+       
+        if !error && stack.len() == 1 {
+            println!("{}", stack[0]);
+        }
         
+        else if err || stack.len() > 1 {
+            println!("error");
+        }
        
     }
 }
