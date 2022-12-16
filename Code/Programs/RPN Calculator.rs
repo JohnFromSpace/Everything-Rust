@@ -13,8 +13,21 @@ fn main() {
             else {
                 error = stack.len() < 2;
                 if error {break;}
-                let (y, x) = (stack.pop().unwrap(), stack.pop().unwrap());  
+                let (y, x) = (stack.pop().unwrap(), stack.pop().unwrap());
+                
+                match token {
+                    "+" => stack.push(x + y),
+                    "-" => stack.push(x - y),
+                    "*" => stack.push(x * y),
+                    "/" => stack.push(x / y),
+                    _   => {
+                        error = true;
+                        break;
+                    }    
+                }
             }
         }
+        
+       
     }
 }
