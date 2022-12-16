@@ -7,4 +7,7 @@ pub fn annotate(minefield: &[&str]) -> Vec<String> {
         return vec![String::new()];
     }
     
+    let width = minefield[0].len();
+    let mut result = Vec::new();
+    
 }
