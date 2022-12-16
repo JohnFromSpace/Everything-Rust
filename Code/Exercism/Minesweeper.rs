@@ -36,6 +36,7 @@ pub fn annotate(minefield: &[&str]) -> Vec<String> {
             else {
                 result.push(' ');
             }
-    }
-    
+        }
+    }   
+    result.chunks(width).map(String::from_iter).collect()
 }
