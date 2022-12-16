@@ -10,5 +10,10 @@ pub fn can_construct_note(magazine: &[&str], note: &[&str]) -> bool {
         words
     });
     
+    let note_words = note.iter().fold(HashMap::new(), |mut words, str| {
+        *words.entry(str).or_insert(0) += 1;
+        words
+    });
+    
     
 }
