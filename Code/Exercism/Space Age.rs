@@ -19,3 +19,12 @@ pub trait Planet {
     }
     fn period() -> f64; 
 }
+
+pub struct Mercury;
+pub struct Venus;
+pub struct Earth;
+pub struct Mars;
+pub struct Jupiter;
+pub struct Saturn;
+pub struct Uranus;
+pub struct Neptune;
