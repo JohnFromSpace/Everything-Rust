@@ -10,4 +10,8 @@ pub fn annotate(minefield: &[&str]) -> Vec<String> {
     let width = minefield[0].len();
     let mut result = Vec::new();
     
+    for (y, &line) in minefield.iter().enumerate() {
+        
+    }
+    
 }
