@@ -19,5 +19,9 @@ pub fn is_valid(code: &str) -> bool {
         }
     };
     
+    let is_invalid_code = code.chars().any(|c| c.is_alphabetic() || c.is_ascii_punctuation());
+    if is_invalid_code {
+        return false;
+    }
     
 }
