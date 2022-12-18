@@ -24,4 +24,5 @@ pub fn is_valid(code: &str) -> bool {
         return false;
     }
     
+    code.chars().filter_map(|c| c.to_digit(10)).rev().enumerate().map(adjust).sum::<u32>() % 10 == 0
 }
