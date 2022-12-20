@@ -1,4 +1,6 @@
 use std::collections::HashMap;
+use std::cmp::min;
+use std::thread;
 
 pub fn frequency(input: &[&str], worker_count: usize) -> HashMap<char, usize> {
     let mut answers = HashMap::<char, usize>::new();
