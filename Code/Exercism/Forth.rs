@@ -1,6 +1,10 @@
 pub type Value = i32;
 pub type Result = std::result::Result<(), Error>;
   
+pub struct Forth;
+use std::{convert::TryInto, str::FromStr};
+pub type ForthResult = std::result::Result<T, Error>;
+
 #[derive(Debug, PartialEq, Eq)]
 pub enum Error {
     DivisionByZero,
