@@ -15,14 +15,18 @@ pub enum Error {
 
 impl Forth {
     pub fn new() -> Forth {
-        unimplemented!()
+        std::default::Default::default()
     }
 
     pub fn stack(&self) -> &[Value] {
-        unimplemented!()
+        self.stack.clone()
     }
 
     pub fn eval(&mut self, input: &str) -> Result {
-        unimplemented!("result of evaluating '{}'", input)
+        let mut iter = input.split_ascii_whitespace();
+        while let Some(word) = iter.next() {
+            self.parse_word(word, &mut iter);
+        }
+        Ok(())
     }
 }
