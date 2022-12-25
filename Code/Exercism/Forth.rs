@@ -3,7 +3,7 @@ type Result<T> = std::result::Result<T, Error>;
   
 pub struct Forth;
 use std::{convert::TryInto, str::FromStr};
-pub type ForthResult = std::result::Result<T, Error>;
+pub type ForthResult = Result<()>;
 
 #[derive(Debug, PartialEq, Eq)]
 pub enum Error {
