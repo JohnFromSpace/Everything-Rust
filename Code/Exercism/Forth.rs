@@ -171,4 +171,20 @@ impl Forth {
         self.push(bottom);
         Ok(())
     }
+    
+    fn call(&mut self, idx: Value) -> ForthResult {
+        let idx = idx.try_into().unwrap();
+        if self.dict.len() <= idx {
+            eprintln!("call {} but dict is only of length {}", idx, self.dict.len());
+            Err(Error::UnknownWord)
+        } 
+        
+        else {
+            let def = self.dict[idx].body.clone();
+            for instr in def {
+                self.eval_instruction(instr)?;
+            }
+            Ok(())
+        }
+    }
 }
