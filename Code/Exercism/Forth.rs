@@ -69,4 +69,18 @@ impl Forth {
             self.eval_instruction(instr)
         }
     }
+    
+    fn parse_normal_word(&mut self, word: &str) -> Result<Instruction> {
+        if word == ":" || word == ";" {
+            Err(Error::InvalidWord)
+        } else {
+            let canonical = word.to_ascii_uppercase();
+            if let Some(call) = self.find_defn(&canonical) {
+                Ok(call)
+            } else {
+                parse_builtin(&canonical)
+            }
+        }
+    }
+    
 }
