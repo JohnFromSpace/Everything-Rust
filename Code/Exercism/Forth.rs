@@ -127,4 +127,13 @@ impl Forth {
         self.stack.push(val);
     }
     
+    fn pop(&mut self) -> Result<Value> {
+        if let Some(v) = self.stack.pop() {
+            Ok(v)
+        } else {
+            eprintln!("Stack underflow!");
+            Err(Error::StackUnderflow)
+        }
+    }
+    
 }
