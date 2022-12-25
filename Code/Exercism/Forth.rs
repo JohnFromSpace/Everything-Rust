@@ -136,4 +136,10 @@ impl Forth {
         }
     }
     
+    fn arith<F: FnOnce(Value, Value) -> Result<Value>>(&mut self, op: F) -> ForthResult {
+        let rhs = self.pop()?;
+        let lhs = self.pop()?;
+        self.push(op(lhs, rhs)?);
+        Ok(())
+    }
 }
