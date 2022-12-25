@@ -142,4 +142,11 @@ impl Forth {
         self.push(op(lhs, rhs)?);
         Ok(())
     }
+    
+    fn dup(&mut self) -> ForthResult {
+        let v = self.pop()?;
+        self.push(v);
+        self.push(v);
+        Ok(())
+    }
 }
