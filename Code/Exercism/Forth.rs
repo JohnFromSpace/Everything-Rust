@@ -187,4 +187,13 @@ impl Forth {
             Ok(())
         }
     }
+    
+    fn find_defn(&self, word: &str) -> Option<Instruction> {
+        for (idx, defn) in self.dict.iter().enumerate().rev() {
+            if defn.name == word {
+                return Some(Instruction::Call(idx.try_into().unwrap()));
+            }
+        }
+        None
+    }
 }
