@@ -83,4 +83,24 @@ impl Forth {
         }
     }
     
+    fn parse_definition<'a>(&mut self, iter: &mut impl Iterator<Item = &'a str>) -> ForthResult {
+        if let Some(new_word) = iter.next() {
+            if let Ok(_) = Value::from_str(new_word) {
+                return Err(Error::InvalidWord);
+            }
+            let name = new_word.to_ascii_uppercase();
+            let mut body = Vec::new();
+            for word in iter {
+                if word == ";" {
+                    self.dict.push(Definition { name, body });
+                    return Ok(())
+                } else {
+                    body.push(self.parse_normal_word(word)?)
+                }
+            }
+        }
+        eprintln!("parse_definition failed");
+        Err(Error::InvalidWord)
+    }
+    
 }
