@@ -149,4 +149,12 @@ impl Forth {
         self.push(v);
         Ok(())
     }
+    
+    fn swap(&mut self) -> ForthResult {
+        let top = self.pop()?;
+        let bottom = self.pop()?;
+        self.push(top);
+        self.push(bottom);
+        Ok(())
+    }
 }
