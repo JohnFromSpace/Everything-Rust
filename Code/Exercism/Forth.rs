@@ -103,4 +103,24 @@ impl Forth {
         Err(Error::InvalidWord)
     }
     
+    fn eval_instruction(&mut self, instr: Instruction) -> ForthResult {
+        match instr {
+            Instruction::Add => self.arith(|a, b| Ok(a + b)),
+            Instruction::Sub => self.arith(|a, b| Ok(a - b)),
+            Instruction::Mul => self.arith(|a, b| Ok(a * b)),
+            Instruction::Div => self.arith(|a, b| if b == 0 {
+                eprintln!("Division by zero");
+                Err(Error::DivisionByZero)
+            } else {
+                Ok(a / b)
+            }),
+            Instruction::Dup => self.dup(),
+            Instruction::Swap => self.swap(),
+            Instruction::Drop => self.drop(),
+            Instruction::Over => self.over(),
+            Instruction::Number(n) => { self.push(n); Ok(()) },
+            Instruction::Call(idx) => self.call(idx),
+        }
+    }
+    
 }
