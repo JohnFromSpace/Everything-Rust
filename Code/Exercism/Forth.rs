@@ -60,4 +60,13 @@ impl Forth {
         }
         Ok(())
     }
+    
+    fn parse_word<'a>(&mut self, word: &'a str, remaining_input: &mut impl Iterator<Item = &'a str>) -> ForthResult {
+        if word == ":" {
+            self.parse_definition(remaining_input)
+        } else {
+            let instr = self.parse_normal_word(word)?;
+            self.eval_instruction(instr)
+        }
+    }
 }
