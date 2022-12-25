@@ -1,5 +1,5 @@
 pub type Value = i32;
-pub type Result = std::result::Result<(), Error>;
+type Result<T> = std::result::Result<T, Error>;
   
 pub struct Forth;
 use std::{convert::TryInto, str::FromStr};
