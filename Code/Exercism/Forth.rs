@@ -123,4 +123,8 @@ impl Forth {
         }
     }
     
+    fn push(&mut self, val: Value) {
+        self.stack.push(val);
+    }
+    
 }
