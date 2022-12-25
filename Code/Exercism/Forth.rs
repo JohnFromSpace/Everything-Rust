@@ -23,6 +23,27 @@ pub struct Forth {
     stack: Vec<Value>,
 }
 
+fn parse_builtin(word: &str) -> Result<Instruction> {
+    match word {
+        "+" => Ok(Instruction::Add),
+        "-" => Ok(Instruction::Sub),
+        "*" => Ok(Instruction::Mul),
+        "/" => Ok(Instruction::Div),
+        "DUP" => Ok(Instruction::Dup),
+        "SWAP" => Ok(Instruction::Swap),
+        "DROP" => Ok(Instruction::Drop),
+        "OVER" => Ok(Instruction::Over),
+        _ => if let Ok(num) = Value::from_str(word) {
+            Ok(Instruction::Number(num))
+        } 
+        
+        else {
+            eprintln!("parse_builtin failed");
+            Err(Error::UnknownWord)
+        }
+    }
+}
+
 impl Forth {
     pub fn new() -> Forth {
         std::default::Default::default()
