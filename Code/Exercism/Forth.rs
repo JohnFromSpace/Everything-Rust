@@ -157,4 +157,9 @@ impl Forth {
         self.push(bottom);
         Ok(())
     }
+    
+    fn drop(&mut self) -> ForthResult {
+        self.pop()?;
+        Ok(())
+    }
 }
