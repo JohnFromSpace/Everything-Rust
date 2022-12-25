@@ -1,7 +1,6 @@
 pub type Value = i32;
 type Result<T> = std::result::Result<T, Error>;
-  
-pub struct Forth;
+
 use std::{convert::TryInto, str::FromStr};
 pub type ForthResult = Result<()>;
 
@@ -11,6 +10,17 @@ pub enum Error {
     StackUnderflow,
     UnknownWord,
     InvalidWord,
+}
+
+struct Definition {
+    name: String,
+    body: Vec<Instruction>,
+}
+
+#[derive(Default)]
+pub struct Forth {
+    dict: Vec<Definition>,
+    stack: Vec<Value>,
 }
 
 impl Forth {
