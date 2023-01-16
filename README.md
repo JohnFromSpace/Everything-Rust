@@ -29,12 +29,12 @@ Declarative macros (also called "macros by example") are macros that uses patter
 Procedural macros use Rust functions that are compiled before other components to run and modify the compiler's input token stream. They are generally more flexible than declarative macros, but are more difficult to maintain due to their complexity.
 
 Procedural macros comes in three flavors:
-* Function-like macros custom!(...)
-* Derive macros #[derive(CustomDerive)]
-* Attribute macros #[custom_attribute]
+* Function-like macros `custom!(...)`
+* Derive macros `#[derive(CustomDerive)]`
+* Attribute macros `#[custom_attribute]`
 
 #### Interface with C and C++
-Rust has a foreign function interface (FFI) that can be used both to call code written in languages such as C from Rust and to call Rust code from those languages. Rust also has a library, CXX, for calling to or from C++. Rust and C differ in how they lay out structs in memory, so Rust structs may be given a #[repr(C)] attribute, forcing the same layout as the equivalent C struct.
+Rust has a foreign function interface (FFI) that can be used both to call code written in languages such as C from Rust and to call Rust code from those languages. Rust also has a library, CXX, for calling to or from C++. Rust and C differ in how they lay out structs in memory, so Rust structs may be given a `#[repr(C)]` attribute, forcing the same layout as the equivalent C struct.
 
 ## Links <br>
 https://play.rust-lang.org/ <br>
