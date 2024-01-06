@@ -20,4 +20,34 @@ impl XFastTrie {
             max_bits: 0,
         }
     }
+    
+    fn insert(&mut self, x: usize) {
+        self.max_bits = usize::max(self.max_bits, x.count_ones() as usize);
+
+        let mut current = &mut self.root;
+        for i in (0..self.max_bits).rev() {
+            let bit = (x >> i) & 1;
+            current = match current {
+                Node::Leaf(set) => {
+                    let mut new_set = BTreeSet::new();
+                    new_set.insert(x);
+                    let mut internal_node = [None, None];
+                    internal_node[bit] = Some(Box::new(Node::Leaf(new_set)));
+                    Some(Box::new(Node::Internal(Box::new(internal_node))))
+                }
+                Node::Internal(ref mut internal_node) => {
+                    if let Some(child) = &mut internal_node[bit] {
+                        child.clone()
+                    } else {
+                        let mut new_set = BTreeSet::new();
+                        new_set.insert(x);
+                        internal_node[bit] = Some(Box::new(Node::Leaf(new_set)));
+                        return;
+                    }
+                }
+            };
+        }
+    }
+
+    
 }
