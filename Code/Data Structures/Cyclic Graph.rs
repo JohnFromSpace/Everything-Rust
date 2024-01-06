@@ -28,4 +28,24 @@ impl Graph {
 
         false
     }
+
+    fn detect_cycle(&self, node: usize, visited: &mut HashSet<usize>, recursion_stack: &mut HashSet<usize>) -> bool {
+        visited.insert(node);
+        recursion_stack.insert(node);
+
+        if let Some(neighbors) = self.edges.get(&node) {
+            for &neighbor in neighbors {
+                if !visited.contains(&neighbor) {
+                    if self.detect_cycle(neighbor, visited, recursion_stack) {
+                        return true;
+                    }
+                } else if recursion_stack.contains(&neighbor) {
+                    return true; // Cycle detected
+                }
+            }
+        }
+
+        recursion_stack.remove(&node);
+        false
+    }
 }
