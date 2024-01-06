@@ -67,3 +67,14 @@ impl XFastTrie {
         true
     }
 }
+
+fn main() {
+    let mut xfast_trie = XFastTrie::new();
+
+    xfast_trie.insert(3);
+    xfast_trie.insert(7);
+    xfast_trie.insert(5);
+
+    println!("Contains 7: {}", xfast_trie.contains(7)); // true
+    println!("Contains 4: {}", xfast_trie.contains(4)); // false
+}
