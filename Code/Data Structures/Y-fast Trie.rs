@@ -66,3 +66,14 @@ impl YFastTrie {
         true
     }
 }
+
+fn main() {
+    let mut yfast_trie = YFastTrie::new();
+
+    yfast-trie.insert(3);
+    yfast_trie.insert(7);
+    yfast_trie.insert(5);
+
+    println!("Contains 7: {}", yfast_trie.contains(7)); // true
+    println!("Contains 4: {}", yfast_trie.contains(4)); // false   
+}
