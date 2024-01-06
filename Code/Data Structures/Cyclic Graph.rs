@@ -9,4 +9,8 @@ impl Graph {
     fn new() -> Self {
         Graph { edges: HashMap::new() }
     }
+
+    fn add_edge(&mut self, from: usize, to: usize) {
+        self.edges.entry(from).or_insert(Vec::new()).push(to);
+    }
 }
