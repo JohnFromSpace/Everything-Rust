@@ -11,3 +11,12 @@ enum Node {
     Leaf(BTreeSet<usize>),
     Internal(Box<[Option<Box<Node>>; 2]>),
 }
+
+impl YFastTrie {
+    fn new() -> Self {
+        YFastTrie {
+            root: Node::Leaf(BTreeSet::new()),
+            max_bits: 0,
+        }
+    }
+}
