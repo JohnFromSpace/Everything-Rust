@@ -48,5 +48,21 @@ impl YFastTrie {
         }
     }
 
-    
+    fn contains(&self, x: usize) -> bool {
+        let mut current = &self.root;
+        for i in (0..self.max_bits).rev() {
+            let bit = (x >> i) & 1;
+            current = match current {
+                Node::Leaf(set) => set.contains(&x),
+                Node::Internal(internal_node) => {
+                    if let Some(child) = &internal_node[bit] {
+                        child.clone()
+                    } else {
+                        return false;
+                    }
+                }
+            };
+        }
+        true
+    }
 }
