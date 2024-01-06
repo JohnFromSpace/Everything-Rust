@@ -49,3 +49,19 @@ impl Graph {
         false
     }
 }
+
+fn main() {
+    let mut graph = Graph::new();
+
+    // Add directed edges to create a cyclic graph
+    graph.add_edge(1, 2);
+    graph.add_edge(2, 3);
+    graph.add_edge(3, 1);
+
+    // Check if the graph has a cycle
+    if graph.has_cycle() {
+        println!("The graph has a cycle.");
+    } else {
+        println!("The graph is acyclic.");
+    }
+}
