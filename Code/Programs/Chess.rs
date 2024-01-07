@@ -30,5 +30,10 @@ struct Board {
 }
 
 impl Board {
-        
+    fn new() -> Board {
+        Board {
+            squares: [[None; 8]; 8],
+            turn: Color::White,
+        }
+    }        
 }
