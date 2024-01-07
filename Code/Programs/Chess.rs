@@ -140,4 +140,17 @@ impl Board {
 
         false
     }
+
+    fn is_valid_rook_move(&self, from: (usize, usize), to: (usize, usize)) -> bool {
+        // Implement rook move validation logic
+        let (from_row, from_col) = from;
+        let (to_row, to_col) = to;
+
+        if from_row == to_row || from_col == to_col {
+            // Rook moves horizontally or vertically
+            return true;
+        }
+
+        false
+    }
 }
