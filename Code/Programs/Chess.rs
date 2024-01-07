@@ -205,4 +205,29 @@ impl Board {
             Color::Black => Color::White,
         };
     }
+
+    fn is_checkmate(&self) -> bool {
+        // Implement checkmate detection logic
+        // This is a simplified example and does not cover all checkmate conditions
+        for i in 0..8 {
+            for j in 0..8 {
+                if let Some(piece) = self.squares[i][j] {
+                    if piece.color == self.turn {
+                        for x in 0..8 {
+                            for y in 0..8 {
+                                let from = (i, j);
+                                let to = (x, y);
+
+                                if self.is_valid_move(from, to) && !self.leads_to_check(from, to) {
+                                    return false;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        true
+    }
 }
