@@ -165,4 +165,16 @@ impl Board {
         (row_diff == 2 && col_diff == 1) || (row_diff == 1 && col_diff == 2)
     }
 
+    fn is_valid_bishop_move(&self, from: (usize, usize), to: (usize, usize)) -> bool {
+        // Implement bishop move validation logic
+        let (from_row, from_col) = from;
+        let (to_row, to_col) = to;
+
+        if (to_row as isize - from_row as isize).abs() == (to_col as isize - from_col as isize).abs() {
+            // Bishop moves diagonally
+            return true;
+        }
+
+        false
+    }
 }
