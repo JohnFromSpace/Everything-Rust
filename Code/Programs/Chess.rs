@@ -236,4 +236,27 @@ impl Board {
         board_copy.perform_move(from, to);
         board_copy.is_check()
     }
+
+    fn is_check(&self) -> bool {
+        // Implement check detection logic
+        // This is a simplified example and does not cover all check conditions
+        let king_position = self.find_king(self.turn);
+
+        for i in 0..8 {
+            for j in 0..8 {
+                if let Some(piece) = self.squares[i][j] {
+                    if piece.color != self.turn {
+                        let from = (i, j);
+                        let to = king_position;
+
+                        if self.is_valid_move(from, to) {
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+
+        false
+    }
 }
