@@ -294,5 +294,10 @@ fn main() {
             iter.next().unwrap().parse::<usize>().unwrap(),
             iter.next().unwrap().parse::<usize>().unwrap(),
         );
+
+        if !board.is_valid_move(from, to) {
+            println!("Invalid move. Try again.");
+            continue;
+        }
     }
 }
