@@ -309,5 +309,10 @@ fn main() {
             println!("Checkmate! Game over.");
             break;
         }
+
+        // Check for check
+        if board.is_check() {
+            println!("Check!");
+        }
     }
 }
