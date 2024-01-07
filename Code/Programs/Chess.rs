@@ -299,5 +299,9 @@ fn main() {
             println!("Invalid move. Try again.");
             continue;
         }
+
+        // Perform the move
+        board.perform_move(from, to);
+        board.print();
     }
 }
