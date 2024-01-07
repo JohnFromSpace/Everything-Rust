@@ -283,6 +283,11 @@ fn main() {
         println!("Enter the move (from_row from_col to_row to_col):");
         let mut input = String::new();
         io::stdin().read_line(&mut input).expect("Failed to read line");
-        
+
+        let mut iter = input.split_whitespace();
+        let from = (
+            iter.next().unwrap().parse::<usize>().unwrap(),
+            iter.next().unwrap().parse::<usize>().unwrap(),
+        );
     }
 }
