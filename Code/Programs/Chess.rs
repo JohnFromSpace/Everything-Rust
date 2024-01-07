@@ -275,5 +275,7 @@ impl Board {
 }
 
 fn main() {
-        
+    let mut board = Board::new();
+    board.init();
+    board.print();     
 }
