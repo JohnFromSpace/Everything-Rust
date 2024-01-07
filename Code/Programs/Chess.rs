@@ -94,4 +94,32 @@ impl Board {
             println!();
         }
     }
+
+     fn is_valid_move(&self, from: (usize, usize), to: (usize, usize)) -> bool {
+        let (from_row, from_col) = from;
+        let (to_row, to_col) = to;
+
+        if from_row >= 8 || from_col >= 8 || to_row >= 8 || to_col >= 8 {
+            return false; // Out of bounds
+        }
+
+        if let Some(piece) = self.squares[from_row][from_col] {
+            if piece.color != self.turn {
+                return false; // Wrong player's turn
+            }
+
+            match piece.piece_type {
+                PieceType::Pawn => self.is_valid_pawn_move(from, to),
+                PieceType::Rook => self.is_valid_rook_move(from, to),
+                PieceType::Knight => self.is_valid_knight_move(from, to),
+                PieceType::Bishop => self.is_valid_bishop_move(from, to),
+                PieceType::Queen => self.is_valid_queen_move(from, to),
+                PieceType::King => self.is_valid_king_move(from, to),
+            }
+        } else {
+            false // No piece at the starting square
+        }
+    }
+
+    
 }
