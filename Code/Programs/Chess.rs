@@ -289,5 +289,10 @@ fn main() {
             iter.next().unwrap().parse::<usize>().unwrap(),
             iter.next().unwrap().parse::<usize>().unwrap(),
         );
+        
+        let to = (
+            iter.next().unwrap().parse::<usize>().unwrap(),
+            iter.next().unwrap().parse::<usize>().unwrap(),
+        );
     }
 }
