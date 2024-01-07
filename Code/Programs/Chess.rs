@@ -193,4 +193,16 @@ impl Board {
 
         row_diff <= 1 && col_diff <= 1
     }
+
+    fn perform_move(&mut self, from: (usize, usize), to: (usize, usize)) {
+        // Execute the move
+        self.squares[to.0][to.1] = self.squares[from.0][from.1];
+        self.squares[from.0][from.1] = None;
+
+        // Switch player's turn
+        self.turn = match self.turn {
+            Color::White => Color::Black,
+            Color::Black => Color::White,
+        };
+    }
 }
