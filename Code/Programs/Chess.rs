@@ -273,3 +273,7 @@ impl Board {
         unreachable!()
     }
 }
+
+fn main() {
+        
+}
