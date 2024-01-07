@@ -303,5 +303,11 @@ fn main() {
         // Perform the move
         board.perform_move(from, to);
         board.print();
+
+        // Check for checkmate
+        if board.is_checkmate() {
+            println!("Checkmate! Game over.");
+            break;
+        }
     }
 }
