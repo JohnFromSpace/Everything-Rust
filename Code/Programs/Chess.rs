@@ -177,4 +177,9 @@ impl Board {
 
         false
     }
+
+    fn is_valid_queen_move(&self, from: (usize, usize), to: (usize, usize)) -> bool {
+        // Implement queen move validation logic
+        self.is_valid_rook_move(from, to) || self.is_valid_bishop_move(from, to)
+    }
 }
