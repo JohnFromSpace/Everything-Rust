@@ -259,4 +259,17 @@ impl Board {
 
         false
     }
+
+    fn find_king(&self, color: Color) -> (usize, usize) {
+        for i in 0..8 {
+            for j in 0..8 {
+                if let Some(piece) = self.squares[i][j] {
+                    if piece.piece_type == PieceType::King && piece.color == color {
+                        return (i, j);
+                    }
+                }
+            }
+        }
+        unreachable!()
+    }
 }
