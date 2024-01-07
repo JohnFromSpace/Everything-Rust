@@ -120,6 +120,24 @@ impl Board {
             false // No piece at the starting square
         }
     }
-
     
+    fn is_valid_pawn_move(&self, from: (usize, usize), to: (usize, usize)) -> bool {
+        // Implement pawn move validation logic
+        // This is a simplified example and does not cover all pawn rules
+        let (from_row, from_col) = from;
+        let (to_row, to_col) = to;
+
+        let direction = if self.turn == Color::White { 1 } else { -1 };
+
+        if to_col == from_col && self.squares[to_row][to_col].is_none() {
+            if to_row == from_row + direction {
+                return true;
+            }
+            if from_row == 1 && to_row == from_row + 2 * direction && self.squares[from_row + direction][from_col].is_none() {
+                return true;
+            }
+        }
+
+        false
+    }
 }
