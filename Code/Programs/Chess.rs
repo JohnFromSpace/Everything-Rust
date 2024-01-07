@@ -69,4 +69,29 @@ impl Board {
             piece_type,
         });
     }
+
+    fn print(&self) {
+        for i in 0..8 {
+            for j in 0..8 {
+                if let Some(piece) = self.squares[i][j] {
+                    let piece_str = match piece.piece_type {
+                        PieceType::Pawn => 'P',
+                        PieceType::Rook => 'R',
+                        PieceType::Knight => 'N',
+                        PieceType::Bishop => 'B',
+                        PieceType::Queen => 'Q',
+                        PieceType::King => 'K',
+                    };
+                    let color_str = match piece.color {
+                        Color::White => 'W',
+                        Color::Black => 'B',
+                    };
+                    print!("{}{} ", color_str, piece_str);
+                } else {
+                    print!("-- ");
+                }
+            }
+            println!();
+        }
+    }
 }
