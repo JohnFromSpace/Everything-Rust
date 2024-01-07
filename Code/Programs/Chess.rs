@@ -62,6 +62,11 @@ impl Board {
         self.add_piece(7, 6, PieceType::Knight, Color::Black);
         self.add_piece(7, 7, PieceType::Rook, Color::Black);
     }
-
     
+    fn add_piece(&mut self, row: usize, col: usize, piece_type: PieceType, color: Color) {
+        self.squares[row][col] = Some(Piece {
+            color,
+            piece_type,
+        });
+    }
 }
