@@ -230,4 +230,10 @@ impl Board {
 
         true
     }
+
+    fn leads_to_check(&self, from: (usize, usize), to: (usize, usize)) -> bool {
+        let mut board_copy = self.clone();
+        board_copy.perform_move(from, to);
+        board_copy.is_check()
+    }
 }
