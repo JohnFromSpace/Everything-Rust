@@ -28,3 +28,7 @@ struct Board {
     squares: [[Option<Piece>; 8]; 8],
     turn: Color,
 }
+
+impl Board {
+        
+}
