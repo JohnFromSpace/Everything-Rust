@@ -16,3 +16,9 @@ enum PieceType {
     Queen,
     King,
 }
+
+#[derive(Clone, Copy)]
+struct Piece {
+    color: Color,
+    piece_type: PieceType,
+}
