@@ -280,6 +280,9 @@ fn main() {
     board.print();     
 
     loop {
-                
+        println!("Enter the move (from_row from_col to_row to_col):");
+        let mut input = String::new();
+        io::stdin().read_line(&mut input).expect("Failed to read line");
+        
     }
 }
