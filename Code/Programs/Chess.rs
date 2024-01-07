@@ -35,5 +35,23 @@ impl Board {
             squares: [[None; 8]; 8],
             turn: Color::White,
         }
-    }        
+    }
+
+    fn init(&mut self) {
+        // Initialize the board with pieces in their starting positions
+        self.add_piece(0, 0, PieceType::Rook, Color::White);
+        self.add_piece(0, 1, PieceType::Knight, Color::White);
+        self.add_piece(0, 2, PieceType::Bishop, Color::White);
+        self.add_piece(0, 3, PieceType::Queen, Color::White);
+        self.add_piece(0, 4, PieceType::King, Color::White);
+        self.add_piece(0, 5, PieceType::Bishop, Color::White);
+        self.add_piece(0, 6, PieceType::Knight, Color::White);
+        self.add_piece(0, 7, PieceType::Rook, Color::White);
+
+        for i in 0..8 {
+            self.add_piece(1, i, PieceType::Pawn, Color::White);
+            self.add_piece(6, i, PieceType::Pawn, Color::Black);
+        }
+
+        
 }
