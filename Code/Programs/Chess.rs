@@ -182,4 +182,15 @@ impl Board {
         // Implement queen move validation logic
         self.is_valid_rook_move(from, to) || self.is_valid_bishop_move(from, to)
     }
+
+    fn is_valid_king_move(&self, from: (usize, usize), to: (usize, usize)) -> bool {
+        // Implement king move validation logic
+        let (from_row, from_col) = from;
+        let (to_row, to_col) = to;
+
+        let row_diff = (to_row as isize - from_row as isize).abs();
+        let col_diff = (to_col as isize - from_col as isize).abs();
+
+        row_diff <= 1 && col_diff <= 1
+    }
 }
