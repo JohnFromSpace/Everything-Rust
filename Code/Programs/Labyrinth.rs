@@ -71,6 +71,11 @@ impl Labyrinth {
         }
 
          if new_row < self.grid.len() && new_col < self.grid[0].len() && self.grid[new_row][new_col] != Cell::Wall {
+            // Move the player
+            self.grid[self.player_position.0][self.player_position.1] = Cell::Open;
+            self.player_position = (new_row, new_col);
+            self.grid[self.player_position.0][self.player_position.1] = Cell::Player;
+             
             true
         } else {
             false
