@@ -15,3 +15,7 @@ struct Labyrinth {
     player_position: (usize, usize),
     end_position: (usize, usize),
 }
+
+impl Labyrinth {
+    
+}
