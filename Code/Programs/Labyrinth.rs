@@ -43,4 +43,9 @@ impl Labyrinth {
             end_position,
         }
     }
+
+    fn print(&self) {
+        
+    }
+    
 }
