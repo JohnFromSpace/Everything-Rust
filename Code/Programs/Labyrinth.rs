@@ -26,6 +26,10 @@ impl Labyrinth {
         // Place the player at the start
         let start_position = (rng.gen_range(0..size), rng.gen_range(0..size));
         grid[start_position.0][start_position.1] = Cell::Start;
+
+        // Place the end point
+        let end_position = (rng.gen_range(0..size), rng.gen_range(0..size));
+        grid[end_position.0][end_position.1] = Cell::End;
         
     }
 }
