@@ -45,7 +45,18 @@ impl Labyrinth {
     }
 
     fn print(&self) {
-        
+         for row in &self.grid {
+            for cell in row {
+                match cell {
+                    Cell::Wall => print!("# "),
+                    Cell::Open => print!(". "),
+                    Cell::Start => print!("S "),
+                    Cell::End => print!("E "),
+                    Cell::Player => print!("P "),
+                }
+            }
+            println!();
+        }   
     }
     
 }
