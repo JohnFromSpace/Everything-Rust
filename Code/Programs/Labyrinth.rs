@@ -18,6 +18,6 @@ struct Labyrinth {
 
 impl Labyrinth {
     fn new(size: usize) -> Self {
-        
+        let mut rng = rand::thread_rng();
     }
 }
