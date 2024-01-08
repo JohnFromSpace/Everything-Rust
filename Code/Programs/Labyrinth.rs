@@ -99,6 +99,11 @@ fn main() {
             println!("Congratulations! You reached the end of the labyrinth.");
             break;
         }
+
+        println!("Enter your move (up, down, left, right):");
+        let mut input = String::new();
+        io::stdin().read_line(&mut input).expect("Failed to read line");
+
         
     }
 }
