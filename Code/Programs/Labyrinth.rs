@@ -105,5 +105,11 @@ fn main() {
         io::stdin().read_line(&mut input).expect("Failed to read line");
 
         let direction = input.trim().to_lowercase();
+
+        if direction == "quit" {
+            println!("Quitting the game.");
+            break;
+        }
+        
     }
 }
