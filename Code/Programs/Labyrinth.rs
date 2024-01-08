@@ -9,3 +9,9 @@ enum Cell {
     End,
     Player,
 }
+
+struct Labyrinth {
+    grid: Vec<Vec<Cell>>,
+    player_position: (usize, usize),
+    end_position: (usize, usize),
+}
