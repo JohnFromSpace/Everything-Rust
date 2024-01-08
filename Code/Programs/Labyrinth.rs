@@ -30,6 +30,12 @@ impl Labyrinth {
         // Place the end point
         let end_position = (rng.gen_range(0..size), rng.gen_range(0..size));
         grid[end_position.0][end_position.1] = Cell::End;
+
+        // Make sure the start and end points are not the same
+        while start_position == end_position {
+            let new_end_position = (rng.gen_range(0..size), rng.gen_range(0..size));
+            grid[new_end_position.0][new_end_position.1] = Cell::End;
+        }
         
     }
 }
