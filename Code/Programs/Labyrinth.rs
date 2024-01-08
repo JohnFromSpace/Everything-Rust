@@ -19,5 +19,9 @@ struct Labyrinth {
 impl Labyrinth {
     fn new(size: usize) -> Self {
         let mut rng = rand::thread_rng();
+
+         // Generate a random labyrinth
+        let mut grid = vec![vec![Cell::Wall; size]; size];
+        
     }
 }
