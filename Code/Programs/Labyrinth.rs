@@ -110,6 +110,9 @@ fn main() {
             println!("Quitting the game.");
             break;
         }
-        
+
+        if !labyrinth.move_player(&direction) {
+            println!("Invalid move. Try again.");
+        }
     }
 }
