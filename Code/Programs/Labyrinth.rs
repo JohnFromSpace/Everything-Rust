@@ -17,5 +17,7 @@ struct Labyrinth {
 }
 
 impl Labyrinth {
-    
+    fn new(size: usize) -> Self {
+        
+    }
 }
