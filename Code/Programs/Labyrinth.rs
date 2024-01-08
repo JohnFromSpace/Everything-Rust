@@ -36,6 +36,11 @@ impl Labyrinth {
             let new_end_position = (rng.gen_range(0..size), rng.gen_range(0..size));
             grid[new_end_position.0][new_end_position.1] = Cell::End;
         }
-        
+
+        Labyrinth {
+            grid,
+            player_position: start_position,
+            end_position,
+        }
     }
 }
