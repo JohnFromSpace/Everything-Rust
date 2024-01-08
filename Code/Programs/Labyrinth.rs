@@ -83,6 +83,6 @@ impl Labyrinth {
     }
 
     fn is_player_at_end(&self) -> bool {
-        
+        self.player_position == self.end_position            
     }
 }
