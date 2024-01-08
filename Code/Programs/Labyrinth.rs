@@ -86,3 +86,7 @@ impl Labyrinth {
         self.player_position == self.end_position            
     }
 }
+
+fn main() {
+    
+}
