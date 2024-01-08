@@ -60,7 +60,16 @@ impl Labyrinth {
     }
 
     fn move_player(&mut self, direction: &str) -> bool {
-          let (mut new_row, mut new_col) = self.player_position;  
+        let (mut new_row, mut new_col) = self.player_position;  
+
+        match direction {
+            "up" => new_row -= 1,
+            "down" => new_row += 1,
+            "left" => new_col -= 1,
+            "right" => new_col += 1,
+            _ => return false,
+        }
+            
     }
     
 }
