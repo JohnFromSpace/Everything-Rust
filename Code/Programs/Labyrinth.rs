@@ -91,4 +91,11 @@ fn main() {
     const MAZE_SIZE: usize = 5;    
 
     let mut labyrinth = Labyrinth::new(MAZE_SIZE);
+
+    loop {
+        labyrinth.print();
+    
+        
+        
+    }
 }
