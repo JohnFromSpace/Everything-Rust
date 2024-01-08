@@ -58,5 +58,9 @@ impl Labyrinth {
             println!();
         }   
     }
+
+    fn move_player(&mut self, direction: &str) -> bool {
+       
+    }
     
 }
