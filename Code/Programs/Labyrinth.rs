@@ -88,5 +88,5 @@ impl Labyrinth {
 }
 
 fn main() {
-    
+    const MAZE_SIZE: usize = 5;    
 }
