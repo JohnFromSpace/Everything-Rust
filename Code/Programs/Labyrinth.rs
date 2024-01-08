@@ -22,6 +22,10 @@ impl Labyrinth {
 
          // Generate a random labyrinth
         let mut grid = vec![vec![Cell::Wall; size]; size];
+
+        // Place the player at the start
+        let start_position = (rng.gen_range(0..size), rng.gen_range(0..size));
+        grid[start_position.0][start_position.1] = Cell::Start;
         
     }
 }
