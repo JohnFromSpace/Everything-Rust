@@ -94,8 +94,11 @@ fn main() {
 
     loop {
         labyrinth.print();
-    
         
+        if labyrinth.is_player_at_end() {
+            println!("Congratulations! You reached the end of the labyrinth.");
+            break;
+        }
         
     }
 }
