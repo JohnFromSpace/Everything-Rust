@@ -79,8 +79,10 @@ impl Labyrinth {
             true
         } else {
             false
-        }
-            
+        }   
     }
-    
+
+    fn is_player_at_end(&self) -> bool {
+        
+    }
 }
