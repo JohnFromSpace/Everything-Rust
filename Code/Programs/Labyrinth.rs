@@ -69,6 +69,12 @@ impl Labyrinth {
             "right" => new_col += 1,
             _ => return false,
         }
+
+         if new_row < self.grid.len() && new_col < self.grid[0].len() && self.grid[new_row][new_col] != Cell::Wall {
+            true
+        } else {
+            false
+        }
             
     }
     
