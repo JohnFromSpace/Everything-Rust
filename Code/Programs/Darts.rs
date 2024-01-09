@@ -36,7 +36,11 @@ impl Player {
     }
 
     fn adjust_proficiency(&mut self, rounds_left: usize) {
-        
+        // Decrease proficiency based on how far into the tournament or league the player loses
+        if rounds_left > 0 {
+            let decrease_factor = 0.1 * rounds_left as f64;
+            self.proficiency = (self.proficiency - decrease_factor).max(0.0);
+        }    
     }
 }
 
