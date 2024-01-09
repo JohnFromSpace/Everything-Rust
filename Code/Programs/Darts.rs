@@ -162,5 +162,8 @@ impl League {
         for (name, avg_score) in sorted_scores.iter().rev() {
             println!("{}: Average Score - {:.2}", name, avg_score);
         }
+
+        let winner = sorted_scores.iter().next().map(|(name, _)| name.clone()).unwrap();
+        println!("League Winner: {}\n", winner);
     }
 }
