@@ -46,4 +46,8 @@ impl Game {
     fn new(players: Vec<Player>, rounds: usize) -> Self {
         Game { players, rounds }    
     }    
+
+    fn play_round(&mut self) {
+        
+    }
 }
