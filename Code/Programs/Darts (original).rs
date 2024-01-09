@@ -94,5 +94,7 @@ struct Tournament {
 }
 
 impl Tournament {
-    
+    fn new(games: Vec<Game>) -> Self {
+        
+    }    
 }
