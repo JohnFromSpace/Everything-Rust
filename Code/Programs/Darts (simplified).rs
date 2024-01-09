@@ -42,4 +42,11 @@ fn main() {
     let player_proficiency = get_input_f64("Enter your proficiency level (0.0 to 1.0): ");
     let player = Player::new(&player_name, player_proficiency);
 
+    let mut ai_proficiency = player_proficiency + rand::thread_rng().gen_range(-0.2..0.2);
+    if ai_proficiency < 0.0 {
+        ai_proficiency = 0.0;
+    } else if ai_proficiency > 1.0 {
+        ai_proficiency = 1.0;
+    }
+    let ai = Player::new("AI", ai_proficiency);
 }
