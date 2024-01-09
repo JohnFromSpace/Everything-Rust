@@ -176,4 +176,8 @@ fn main() {
     let game1 = Game::new(vec![player1.clone(), player2.clone(), player3.clone()], 3);
     let game2 = Game::new(vec![player1.clone(), player2.clone(), player3.clone()], 3);
     let game3 = Game::new(vec![player1.clone(), player2.clone(), player3.clone()], 3);
+
+    let tournament = Tournament::new(vec![game1.clone(), game2.clone(), game3.clone()]);
+    let mut tournament_manager = tournament;
+    tournament_manager.play_tournament();
 }
