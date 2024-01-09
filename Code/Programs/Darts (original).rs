@@ -56,4 +56,8 @@ impl Game {
             }
         }    
     }
+
+    fn calculate_average_scores(&mut self) {
+        
+    }
 }
