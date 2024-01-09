@@ -169,5 +169,7 @@ impl League {
 }
 
 fn main() {
-    
+    let player1 = Player::new("Player 1", 0.8);
+    let player2 = Player::new("Player 2", 0.7);
+    let player3 = Player::new("Player 3", 0.6);    
 }
