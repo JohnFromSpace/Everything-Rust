@@ -128,3 +128,9 @@ impl Tournament {
         println!("Tournament Winner: {}\n", winner);
     }
 }
+
+#[derive(Debug, Clone)]
+struct League {
+    players: Vec<Player>,
+    games: Vec<Game>,
+}
