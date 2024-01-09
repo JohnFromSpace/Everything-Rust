@@ -58,6 +58,8 @@ impl Game {
     }   
 
     fn calculate_average_scores(&mut self) {
-        
+        for player in &mut self.players {
+            player.average_score = (player.total_score as f64) / (self.rounds as f64);
+        }        
     }
 }
