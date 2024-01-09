@@ -134,3 +134,7 @@ struct League {
     players: Vec<Player>,
     games: Vec<Game>,
 }
+
+impl League {
+    
+}
