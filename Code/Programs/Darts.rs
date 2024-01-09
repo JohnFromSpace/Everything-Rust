@@ -116,5 +116,15 @@ impl Tournament {
                 *entry += player.average_score;
             }
         }
+
+        let sorted_scores: BTreeMap<_, _> = overall_scores.into_iter().collect();
+
+        println!("Overall Tournament Standings:");
+        for (name, avg_score) in sorted_scores.iter().rev() {
+            println!("{}: Average Score - {:.2}", name, avg_score);
+        }
+
+        let winner = sorted_scores.iter().next().map(|(name, _)| name.clone()).unwrap();
+        println!("Tournament Winner: {}\n", winner);
     }
 }
