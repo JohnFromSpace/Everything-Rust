@@ -84,3 +84,7 @@ fn main() {
 
     println!("Game over! Thanks for playing.");
 }
+
+fn get_input(prompt: &str) -> String {
+    
+}
