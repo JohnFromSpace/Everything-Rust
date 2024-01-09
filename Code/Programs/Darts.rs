@@ -143,8 +143,13 @@ impl League {
         }  
 
         println!("League Over!");
-
         
+        // Display final proficiency after the league
+        println!("Final Proficiency Levels:");
+        for player in &self.games[0].players {
+            println!("{}: Proficiency - {:.2}", player.name, player.proficiency);
+        }
+        println!();
     }
 }
 
