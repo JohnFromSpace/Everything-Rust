@@ -41,3 +41,7 @@ struct Game {
     players: Vec<Player>,
     rounds: usize,
 }
+
+impl Game {
+    
+}
