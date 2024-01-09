@@ -1,6 +1,7 @@
 /*
     In this modified version:
-
+    
+    - The main function sequentially plays a tournament and then a league, ensuring that they do not happen simultaneously.
     - The adjust_proficiency method is added to the Player struct, 
     which adjusts the player's proficiency based on how far into the tournament or league they lose.
     - The play_round method in the Game struct calls adjust_proficiency for players who didn't win the round.
