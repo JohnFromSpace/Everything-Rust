@@ -115,8 +115,13 @@ impl Tournament {
         }
 
         println!("Tournament Over!");
-
         
+        // Display final proficiency after the tournament
+        println!("Final Proficiency Levels:");
+        for player in &self.games[0].players {
+            println!("{}: Proficiency - {:.2}", player.name, player.proficiency);
+        }
+        println!();
     }
 }
 
