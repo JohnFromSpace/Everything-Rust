@@ -115,5 +115,6 @@ impl Tournament {
                 let entry = overall_scores.entry(player.name.clone()).or_insert(0.0);
                 *entry += player.average_score;
             }
+        }
     }
 }
