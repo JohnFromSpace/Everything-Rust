@@ -42,3 +42,6 @@ struct Game {
     rounds: usize,
 }
 
+impl Game {
+    
+}
