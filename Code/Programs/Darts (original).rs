@@ -129,5 +129,9 @@ struct League {
 impl League {
     fn new(players: Vec<Player>, games: Vec<Game>) -> Self {
         League { players, games }    
-    }    
+    }  
+
+    fn play_league(&mut self) {
+        
+    }
 }
