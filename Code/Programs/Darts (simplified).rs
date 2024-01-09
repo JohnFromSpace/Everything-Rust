@@ -80,5 +80,7 @@ fn main() {
         // Reset cumulative scores for the next week
         player.cumulative_score = 0;
         ai.cumulative_score = 0;
-    }    
+    }  
+
+    println!("Game over! Thanks for playing.");
 }
