@@ -25,5 +25,13 @@ impl Player {
         let base_score = (self.proficiency * 20.0) as usize;
         let randomization = rand::thread_rng().gen_range(-5.0..5.0);
         let final_score = base_score as isize + randomization as isize;    
+
+        if final_score < 0 {
+            0
+        } else if final_score > 60 {
+            60
+        } else {
+            final_score as usize
+        }
     }
 }
