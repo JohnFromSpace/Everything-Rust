@@ -35,3 +35,9 @@ impl Player {
         }
     }
 }
+
+#[derive(Debug, Clone)]
+struct Game {
+    players: Vec<Player>,
+    rounds: usize,
+}
