@@ -137,6 +137,14 @@ impl League {
             game.play_round();
             game.display_scores();
             game.calculate_average_scores();
-        }    
+        }
+
+        println!("League Over!");
+
+        let mut overall_scores: HashMap<String, f64> = HashMap::new();
+
+        for player in &self.players {
+            overall_scores.insert(player.name.clone(), player.average_score);
+        }
     }
 }
