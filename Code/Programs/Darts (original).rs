@@ -48,6 +48,12 @@ impl Game {
     }    
 
     fn play_round(&mut self) {
-        
+        for _ in 0..self.rounds {
+            for player in &mut self.players {
+                let score = player.throw_dart();
+                println!("{} scored {} points", player.name, score);
+                player.total_score += score;
+            }
+        }    
     }
 }
