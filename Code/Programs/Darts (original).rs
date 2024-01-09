@@ -116,8 +116,12 @@ impl Tournament {
         }
 
         let winner = sorted_scores.iter().next().map(|(name, _)| name.clone()).unwrap();
-        println!("Tournament Winner: {}\n", winner);
-       
-   }
-    
+        println!("Tournament Winner: {}\n", winner);   
+   }   
+}
+
+#[derive(Debug, Clone)]
+struct League {
+    players: Vec<Player>,
+    games: Vec<Game>,
 }
