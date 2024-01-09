@@ -9,3 +9,7 @@ struct Player {
     total_score: usize,
     average_score: f64,
 }
+
+impl Player {
+    
+}
