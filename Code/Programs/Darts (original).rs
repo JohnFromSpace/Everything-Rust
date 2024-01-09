@@ -108,14 +108,7 @@ impl Tournament {
 
        println!("Tournament Over!");
 
-        let mut overall_scores: HashMap<String, f64> = HashMap::new();
-
-        for game in &self.games {
-            for player in &game.players {
-                let entry = overall_scores.entry(player.name.clone()).or_insert(0.0);
-                *entry += player.average_score;
-            }
-        }
+       
    }
     
 }
