@@ -10,3 +10,7 @@ struct Player {
     proficiency: f64,
     cumulative_score: usize,
 }
+
+impl Player {
+    
+}
