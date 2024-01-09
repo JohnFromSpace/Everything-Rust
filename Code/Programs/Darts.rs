@@ -77,6 +77,14 @@ impl Game {
             );
         }
         println!();
+
+        // Determine winners and adjust proficiency
+        let winners = self.determine_winners();
+        for player in &mut self.players {
+            if !winners.contains(&player.name) {
+                player.adjust_proficiency(self.rounds - round_number);
+            }
+        }
     }
     
     fn determine_winner(&self) -> Vec<String> {
