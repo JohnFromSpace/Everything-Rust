@@ -62,4 +62,8 @@ impl Game {
             player.average_score = (player.total_score as f64) / (self.rounds as f64);
         }
     }
+
+    fn display_scores(&self) {
+        
+    }
 }
