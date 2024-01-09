@@ -91,3 +91,7 @@ fn get_input(prompt: &str) -> String {
     io::stdin().read_line(&mut input).expect("Failed to read line");
     input.trim().to_string()
 }
+
+fn get_input_f64(prompt: &str) -> f64 {
+    
+}
