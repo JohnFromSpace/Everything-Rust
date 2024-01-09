@@ -62,7 +62,12 @@ impl Game {
                 println!("{} scored {} points", player.name, score);
                 player.total_score += score;
             }
-        }        
+        }
+
+        // Calculate and display scores
+        for player in &mut self.players {
+            player.calculate_average_score(self.rounds as f64);
+        }
     }
     
     fn determine_winner(&self) -> Vec<String> {
