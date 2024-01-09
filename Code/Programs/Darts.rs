@@ -12,6 +12,11 @@ struct Player {
 
 impl Player {
     fn new(name: &str, proficiency: f64) -> Self {
-        
+       Player {
+            name: name.to_string(),
+            proficiency,
+            total_score: 0,
+            average_score: 0.0,
+        }     
     }    
 }
