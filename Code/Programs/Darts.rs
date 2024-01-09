@@ -34,6 +34,10 @@ impl Player {
             final_score as usize
         }
     }
+
+    fn adjust_proficiency(&mut self, rounds_left: usize) {
+        
+    }
 }
 
 #[derive(Debug, Clone)]
