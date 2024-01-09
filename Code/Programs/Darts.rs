@@ -92,3 +92,7 @@ impl Game {
 struct Tournament {
     games: Vec<Game>,
 }
+
+impl Tournament {
+    
+}
