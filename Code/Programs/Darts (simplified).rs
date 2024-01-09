@@ -12,5 +12,7 @@ struct Player {
 }
 
 impl Player {
-    
+    fn new(name: &str, proficiency: f64) -> Self {
+        
+    }
 }
