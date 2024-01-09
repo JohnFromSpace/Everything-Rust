@@ -87,3 +87,9 @@ impl Game {
         winners        
     }
 }
+
+#[derive(Debug, Clone)]
+struct Tournament {
+    games: Vec<Game>,
+}
+
