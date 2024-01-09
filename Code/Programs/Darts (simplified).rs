@@ -35,3 +35,7 @@ impl Player {
         }    
     }
 }
+
+fn main() {
+    
+}
