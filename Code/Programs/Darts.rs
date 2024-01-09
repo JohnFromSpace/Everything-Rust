@@ -68,6 +68,15 @@ impl Game {
         for player in &mut self.players {
             player.calculate_average_score(self.rounds as f64);
         }
+
+        println!("Round {} Scores:", round_number);
+        for player in &self.players {
+            println!(
+                "{}: Total Score - {}, Average Score - {:.2}",
+                player.name, player.total_score, player.average_score
+            );
+        }
+        println!();
     }
     
     fn determine_winner(&self) -> Vec<String> {
