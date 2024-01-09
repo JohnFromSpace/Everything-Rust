@@ -1,3 +1,14 @@
+/*
+    In this modified version:
+
+    - The adjust_proficiency method is added to the Player struct, 
+    which adjusts the player's proficiency based on how far into the tournament or league they lose.
+    - The play_round method in the Game struct calls adjust_proficiency for players who didn't win the round.
+    - The main function now displays the final proficiency levels after the tournament or league is over.
+    - This way, players who lose later in the tournament or league will experience a more significant decrease in proficiency, 
+    while those who lose earlier will have a milder adjustment.
+*/
+
 use rand::Rng;
 use std::collections::{HashMap, BTreeMap};
 use std::io;
