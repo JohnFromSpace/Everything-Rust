@@ -93,5 +93,11 @@ fn get_input(prompt: &str) -> String {
 }
 
 fn get_input_f64(prompt: &str) -> f64 {
-    
+    loop {
+        let input = get_input(prompt);
+        match input.parse() {
+            Ok(value) => return value,
+            Err(_) => println!("Invalid input. Please enter a number."),
+        }
+    }    
 }
