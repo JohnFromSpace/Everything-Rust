@@ -162,5 +162,9 @@ impl League {
 fn main() {
     let player1 = Player::new("Player 1", 0.8);
     let player2 = Player::new("Player 2", 0.7);
-    let player3 = Player::new("Player 3", 0.6);    
+    let player3 = Player::new("Player 3", 0.6);
+
+    let game1 = Game::new(vec![player1.clone(), player2.clone(), player3.clone()], 3);
+    let game2 = Game::new(vec![player1.clone(), player2.clone(), player3.clone()], 3);
+    let game3 = Game::new(vec![player1.clone(), player2.clone(), player3.clone()], 3);
 }
