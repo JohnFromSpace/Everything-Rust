@@ -99,6 +99,11 @@ impl Tournament {
     } 
 
     fn play_tournament(&mut self) {
-        
+        for (index, game) in self.games.iter_mut().enumerate() {
+                println!("Game {} of the tournament", index + 1);
+                game.play_round();
+                game.display_scores();
+                game.calculate_average_scores();
+        }         
     }
 }
