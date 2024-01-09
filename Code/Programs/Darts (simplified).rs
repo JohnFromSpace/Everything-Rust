@@ -19,4 +19,8 @@ impl Player {
             cumulative_score: 0,
         }
     }
+
+    fn throw_dart(&self) -> usize {
+        
+    }
 }
