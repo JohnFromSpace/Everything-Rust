@@ -55,5 +55,9 @@ impl Game {
                 player.total_score += score;
             }
         }        
-    }     
+    }   
+
+    fn calculate_average_scores(&mut self) {
+        
+    }
 }
