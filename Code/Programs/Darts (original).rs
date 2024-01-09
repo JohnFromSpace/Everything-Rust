@@ -64,6 +64,13 @@ impl Game {
     }
 
     fn display_scores(&self) {
-        
+        println!("Current Scores:");
+        for player in &self.players {
+            println!(
+                "{}: Total Score - {}, Average Score - {:.2}",
+                player.name, player.total_score, player.average_score
+            );
+        }
+        println!();    
     }
 }
