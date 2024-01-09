@@ -144,21 +144,7 @@ impl League {
 
         println!("League Over!");
 
-        let mut overall_scores: HashMap<String, f64> = HashMap::new();
-
-        for player in &self.players {
-            overall_scores.insert(player.name.clone(), player.average_score);
-        }
-
-        let sorted_scores: BTreeMap<_, _> = overall_scores.into_iter().collect();
-
-        println!("Overall League Standings:");
-        for (name, avg_score) in sorted_scores.iter().rev() {
-            println!("{}: Average Score - {:.2}", name, avg_score);
-        }
-
-        let winner = sorted_scores.iter().next().map(|(name, _)| name.clone()).unwrap();
-        println!("League Winner: {}\n", winner);
+        
     }
 }
 
