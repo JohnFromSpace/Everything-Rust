@@ -37,5 +37,9 @@ impl Player {
 }
 
 fn main() {
-    
+    // Set up player and AI
+    let player_name = get_input("Enter your name: ");
+    let player_proficiency = get_input_f64("Enter your proficiency level (0.0 to 1.0): ");
+    let player = Player::new(&player_name, player_proficiency);
+
 }
