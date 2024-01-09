@@ -49,4 +49,36 @@ fn main() {
         ai_proficiency = 1.0;
     }
     let ai = Player::new("AI", ai_proficiency);
+
+    // Play the game for a year
+    for week in 1..=WEEKS_IN_A_YEAR {
+        println!("Week {}", week);
+
+        // Play the game for a week
+        for day in 1..=DAYS_IN_A_WEEK {
+            let player_score = player.throw_dart();
+            let ai_score = ai.throw_dart();
+
+            println!(
+                "Day {}: {} scored {} points, {} scored {} points",
+                day, player.name, player_score, ai.name, ai_score
+            );
+
+            player.cumulative_score += player_score;
+            ai.cumulative_score += ai_score;
+        }
+
+        // Determine the winner for the week
+        if player.cumulative_score > ai.cumulative_score {
+            println!("{} wins the week!\n", player.name);
+        } else if player.cumulative_score < ai.cumulative_score {
+            println!("{} wins the week!\n", ai.name);
+        } else {
+            println!("It's a tie!\n");
+        }
+
+        // Reset cumulative scores for the next week
+        player.cumulative_score = 0;
+        ai.cumulative_score = 0;
+    }    
 }
