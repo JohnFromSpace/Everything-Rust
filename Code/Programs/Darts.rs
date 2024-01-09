@@ -89,8 +89,12 @@ impl Game {
     
     fn determine_winner(&self) -> Vec<String> {
         let max_score = self.players.iter().map(|p| p.total_score).max().unwrap_or(0);
-
-           
+        
+        self.players
+            .iter()
+            .filter(|player| player.total_score == max_score)
+            .map(|player| player.name.clone())
+            .collect()   
      }
 }
 
