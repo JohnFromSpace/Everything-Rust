@@ -104,6 +104,16 @@ impl Tournament {
                 game.play_round();
                 game.display_scores();
                 game.calculate_average_scores();
-        }         
+        }
+
+        println!("Tournament Over!");
+
+        let mut overall_scores: HashMap<String, f64> = HashMap::new();
+
+        for game in &self.games {
+            for player in &game.players {
+                let entry = overall_scores.entry(player.name.clone()).or_insert(0.0);
+                *entry += player.average_score;
+            }
     }
 }
