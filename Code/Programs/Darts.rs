@@ -75,6 +75,15 @@ impl Game {
     }
 
      fn determine_winner(&self) -> Vec<String> {
-         
+         let mut winners = Vec::new();
+        let max_score = self.players.iter().map(|p| p.total_score).max().unwrap_or(0);
+
+        for player in &self.players {
+            if player.total_score == max_score {
+                winners.push(player.name.clone());
+            }
+        }
+
+        winners    
      }
 }
