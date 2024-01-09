@@ -139,9 +139,7 @@ impl League {
     fn play_league(&mut self) {
         for (index, game) in self.games.iter_mut().enumerate() {
             println!("Game {} of the league", index + 1);
-            game.play_round();
-            game.display_scores();
-            game.calculate_average_scores();
+            game.play_round(index + 1);
         }  
 
         println!("League Over!");
