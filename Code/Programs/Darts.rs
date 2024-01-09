@@ -63,26 +63,9 @@ impl Game {
                 player.total_score += score;
             }
         }        
-    }   
-
-    fn calculate_average_scores(&mut self) {
-        for player in &mut self.players {
-            player.average_score = (player.total_score as f64) / (self.rounds as f64);
-        }        
     }
-
-    fn display_scores(&self) {
-        println!("Current Scores:");
-        for player in &self.players {
-            println!(
-                "{}: Total Score - {}, Average Score - {:.2}",
-                player.name, player.total_score, player.average_score
-            );
-        }
-        println!();    
-    }
-
-     fn determine_winner(&self) -> Vec<String> {
+    
+    fn determine_winner(&self) -> Vec<String> {
         let mut winners = Vec::new();
         let max_score = self.players.iter().map(|p| p.total_score).max().unwrap_or(0);
 
