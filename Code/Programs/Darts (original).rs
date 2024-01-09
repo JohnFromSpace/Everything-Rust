@@ -43,5 +43,7 @@ struct Game {
 }
 
 impl Game {
-    
+    fn new(players: Vec<Player>, rounds: usize) -> Self {
+        
+    }    
 }
