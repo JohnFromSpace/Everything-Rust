@@ -42,6 +42,20 @@ impl VonNeumann {
 
     // Return the power set of a Von Neumann ordinal
     fn power_set(a: &VonNeumann) -> VonNeumann {
-        
+        match a {
+            VonNeumann::Set(set_a) => {
+                let mut result = Vec::new();
+                for subset in 0..(1 << set_a.len()) {
+                    let subset_elements: Vec<VonNeumann> = set_a
+                        .iter()
+                        .enumerate()
+                        .filter(|(i, _)| (subset >> i) & 1 == 1)
+                        .map(|(_, element)| element.clone())
+                        .collect();
+                    result.push(VonNeumann::Set(subset_elements));
+                }
+                VonNeumann::Set(result)
+            }
+        }    
     }
 }
