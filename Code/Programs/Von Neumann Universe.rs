@@ -25,4 +25,9 @@ impl VonNeumann {
             }
         }    
     }
+
+     // Take the intersection of two Von Neumann ordinals
+    fn intersection(a: &VonNeumann, b: &VonNeumann) -> VonNeumann {
+        
+    }
 }
