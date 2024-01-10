@@ -17,6 +17,12 @@ impl VonNeumann {
 
     // Take the union of two Von Neumann ordinals
     fn union(a: &VonNeumann, b: &VonNeumann) -> VonNeumann {
-        
+        match (a, b) {
+            (VonNeumann::Set(set_a), VonNeumann::Set(set_b)) => {
+                let mut result = set_a.clone();
+                result.extend_from_slice(set_b);
+                VonNeumann::Set(result)
+            }
+        }    
     }
 }
