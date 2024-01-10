@@ -28,6 +28,15 @@ impl VonNeumann {
 
      // Take the intersection of two Von Neumann ordinals
     fn intersection(a: &VonNeumann, b: &VonNeumann) -> VonNeumann {
-        
+        match (a, b) {
+            (VonNeumann::Set(set_a), VonNeumann::Set(set_b)) => {
+                let result: Vec<VonNeumann> = set_a
+                    .iter()
+                    .filter(|element| set_b.contains(element))
+                    .cloned()
+                    .collect();
+                VonNeumann::Set(result)
+            }
+        }    
     }
 }
