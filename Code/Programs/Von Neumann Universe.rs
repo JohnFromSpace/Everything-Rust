@@ -82,4 +82,7 @@ fn main() {
 
     let intersection_result = VonNeumann::intersection(&ordinal_3, &ordinal_5);
     println!("Intersection of Ordinal 3 and Ordinal 5: {:?}", intersection_result);
+
+    let power_set_result = VonNeumann::power_set(&ordinal_3);
+    println!("Power set of Ordinal 3: {:?}", power_set_result);
 }
