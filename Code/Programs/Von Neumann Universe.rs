@@ -70,5 +70,7 @@ impl VonNeumann {
 }
 
 fn main() {
-    
+    // Example usage:
+    let ordinal_3 = VonNeumann::ordinal(3);
+    println!("Ordinal 3: {:?}", ordinal_3);    
 }
