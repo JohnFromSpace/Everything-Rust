@@ -14,4 +14,9 @@ impl VonNeumann {
         }
         VonNeumann::Set(result)
     }    
+
+    // Take the union of two Von Neumann ordinals
+    fn union(a: &VonNeumann, b: &VonNeumann) -> VonNeumann {
+        
+    }
 }
