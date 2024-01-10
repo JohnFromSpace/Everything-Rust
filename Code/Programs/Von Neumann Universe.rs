@@ -58,4 +58,9 @@ impl VonNeumann {
             }
         }    
     }
+
+    // Check if one Von Neumann ordinal is a subset of another
+    fn is_subset(a: &VonNeumann, b: &VonNeumann) -> bool {
+        
+    }
 }
