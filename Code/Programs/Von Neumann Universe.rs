@@ -39,4 +39,9 @@ impl VonNeumann {
             }
         }    
     }
+
+    // Return the power set of a Von Neumann ordinal
+    fn power_set(a: &VonNeumann) -> VonNeumann {
+        
+    }
 }
