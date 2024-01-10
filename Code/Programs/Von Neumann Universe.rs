@@ -79,4 +79,7 @@ fn main() {
 
     let union_result = VonNeumann::union(&ordinal_3, &ordinal_5);
     println!("Union of Ordinal 3 and Ordinal 5: {:?}", union_result);
+
+    let intersection_result = VonNeumann::intersection(&ordinal_3, &ordinal_5);
+    println!("Intersection of Ordinal 3 and Ordinal 5: {:?}", intersection_result);
 }
