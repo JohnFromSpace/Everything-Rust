@@ -4,3 +4,7 @@ use std::collections::HashMap;
 enum VonNeumann {
     Set(Vec<VonNeumann>),
 }
+
+impl VonNeumann {
+    
+}
