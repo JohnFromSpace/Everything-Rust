@@ -85,4 +85,7 @@ fn main() {
 
     let power_set_result = VonNeumann::power_set(&ordinal_3);
     println!("Power set of Ordinal 3: {:?}", power_set_result);
+
+    let is_subset_result = VonNeumann::is_subset(&ordinal_3, &ordinal_5);
+    println!("Is Ordinal 3 a subset of Ordinal 5? {}", is_subset_result);
 }
