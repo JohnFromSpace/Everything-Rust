@@ -68,3 +68,7 @@ impl VonNeumann {
         }    
     }
 }
+
+fn main() {
+    
+}
