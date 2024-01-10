@@ -76,4 +76,7 @@ fn main() {
 
     let ordinal_5 = VonNeumann::ordinal(5);
     println!("Ordinal 5: {:?}", ordinal_5);
+
+    let union_result = VonNeumann::union(&ordinal_3, &ordinal_5);
+    println!("Union of Ordinal 3 and Ordinal 5: {:?}", union_result);
 }
