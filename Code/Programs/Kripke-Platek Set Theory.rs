@@ -156,4 +156,8 @@ fn main() {
         VonNeumann::Set(set) => set.len() == 1,
         _ => false,
     };
+    let axiom_predicative_separation = model.axiom_of_predicative_separation(&set1, predicative_separation_property);
+    println!("Axiom of Predicative Separation: {:?}", axiom_predicative_separation);
+
+    
 }
