@@ -137,4 +137,6 @@ fn main() {
     let axiom_empty_set = model.axiom_of_empty_set();
     println!("Axiom of Empty Set: {:?}", axiom_empty_set);
 
+    let axiom_pairing = model.axiom_of_pairing(&set1, &set2);
+    println!("Axiom of Pairing: {:?}", axiom_pairing);
 }
