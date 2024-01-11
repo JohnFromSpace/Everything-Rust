@@ -12,3 +12,7 @@ struct KripkePlatekModel {
     universe: HashSet<VonNeumann>,
     admissible_sets: HashSet<HashSet<VonNeumann>>,
 }
+
+impl KripkePlaket {
+    
+}
