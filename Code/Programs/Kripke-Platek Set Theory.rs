@@ -57,4 +57,12 @@ impl KripkePlaket {
         result.insert(VonNeumann::Set(vec![VonNeumann::Set(vec![])]).into_iter().collect());
         result    
     }
+
+    // Axiom of induction: If a property holds for the empty set and holds for each set x whenever it holds for all elements of x, then it holds for all sets.
+    fn axiom_of_induction<F>(&self, property: F) -> bool
+    where
+        F: Fn(&HashSet<VonNeumann>) -> bool,
+    {
+        
+    }
 }
