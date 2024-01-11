@@ -95,4 +95,9 @@ impl KripkePlaket {
     {
         set.iter().map(|elem| property(elem)).collect()    
     }
+
+    // A function to check if a set is admissible
+    fn is_admissible(&self, set: &HashSet<VonNeumann>) -> bool { 
+        
+    }
 }
