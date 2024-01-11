@@ -163,4 +163,8 @@ fn main() {
     let replacement_property = |set: &HashSet<VonNeumann>| VonNeumann::Successor(Box::new(VonNeumann::Set(set.clone())));
     let axiom_replacement = model.axiom_of_replacement(&set1, replacement_property);
     println!("Axiom of Replacement: {:?}", axiom_replacement);
+
+    // Check if a set is admissible
+    let admissible_set: HashSet<VonNeumann> = HashSet::new();
+    println!("Is the set admissible? {}", model.is_admissible(&admissible_set));
 }
