@@ -125,5 +125,9 @@ impl KripkePlaket {
 
 fn main() {
     // Example usage
-    let mut model = KripkePlatekModel::new();    
+    let mut model = KripkePlatekModel::new(); 
+
+    // Apply axioms
+    let set1 = HashSet::new();
+    let set2 = HashSet::new();
 }
