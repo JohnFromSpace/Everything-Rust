@@ -79,4 +79,12 @@ impl KripkePlaket {
         }
         true
     }
+
+    // Axiom schema of predicative separation: For any property P and any set x, there exists a set y such that for any z, z is in y if and only if z is in x and P(z).
+    fn axiom_of_predicative_separation<F>(&self, set: &HashSet<VonNeumann>, property: F) -> HashSet<VonNeumann>
+    where
+        F: Fn(&VonNeumann) -> bool,
+    { 
+        
+    }
 }
