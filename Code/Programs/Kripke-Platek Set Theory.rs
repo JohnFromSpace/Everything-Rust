@@ -103,6 +103,9 @@ impl KripkePlaket {
 
     // A function to check if an ordinal is admissible
     fn is_admissible_ordinal(&self, ordinal: &VonNeumann) -> bool { 
-    
+        match ordinal {
+            VonNeumann::Set(set) => self.is_admissible(set),
+            VonNeumann::Successor(inner) => self.is_admissible_ordinal(inner),
+        }
     }
 }
