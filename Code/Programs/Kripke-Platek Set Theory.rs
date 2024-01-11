@@ -41,6 +41,12 @@ impl KripkePlaket {
 
     // Axiom of union: For any set x, there exists a set y such that for any z, z is in y if and only if there exists a set w in x such that z is in w.
     fn axiom_of_union(&self, set: &HashSet<VonNeumann>) -> HashSet<VonNeumann> {
-        
+        let mut result = HashSet::new();
+        for element_set in set {
+            if let VonNeumann::Set(elements) = element_set {
+                result.extend(elements.clone());
+            }
+        }
+        result    
     }
 }
