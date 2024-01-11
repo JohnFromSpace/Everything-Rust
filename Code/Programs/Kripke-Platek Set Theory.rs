@@ -77,5 +77,6 @@ impl KripkePlaket {
                 }
             }    
         }
+        true
     }
 }
