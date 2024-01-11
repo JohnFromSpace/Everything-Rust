@@ -108,4 +108,9 @@ impl KripkePlaket {
             VonNeumann::Successor(inner) => self.is_admissible_ordinal(inner),
         }
     }
+
+     // A function to check if a set is amenable
+    fn is_amenable_set(&self, set: &HashSet<VonNeumann>) -> bool { 
+    
+    }
 }
