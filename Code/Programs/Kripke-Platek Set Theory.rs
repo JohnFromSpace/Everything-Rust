@@ -142,4 +142,7 @@ fn main() {
 
     let axiom_union = model.axiom_of_union(&HashSet::new());
     println!("Axiom of Union: {:?}", axiom_union);
+
+    let axiom_infinity = model.axiom_of_infinity();
+    println!("Axiom of Infinity: {:?}", axiom_infinity);
 }
