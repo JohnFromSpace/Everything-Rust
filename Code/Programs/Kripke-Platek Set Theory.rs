@@ -113,4 +113,9 @@ impl KripkePlaket {
     fn is_amenable_set(&self, set: &HashSet<VonNeumann>) -> bool { 
         set.len() < 5
     }
+
+    // A function to check if a set is a Cartesian product of two sets
+    fn is_cartesian_product(&self, set: &HashSet<VonNeumann>) -> bool {
+    
+    }
 }
