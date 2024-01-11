@@ -87,4 +87,12 @@ impl KripkePlaket {
     { 
         set.iter().filter(|elem| property(elem)).cloned().collect()    
     }
+
+    // Axiom schema of replacement: For any functional property F and any set x, there exists a set y such that for any z, z is in y if and only if there exists a set w in x such that F(w) = z.
+    fn axiom_of_replacement<F>(&self, set: &HashSet<VonNeumann>, property: F) -> HashSet<VonNeumann>
+    where
+        F: Fn(&HashSet<VonNeumann>) -> VonNeumann,
+    {
+        
+    }
 }
