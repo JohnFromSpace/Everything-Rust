@@ -100,4 +100,9 @@ impl KripkePlaket {
     fn is_admissible(&self, set: &HashSet<VonNeumann>) -> bool { 
         set.iter().all(|elem| self.admissible_sets.contains(elem))    
     }
+
+    // A function to check if an ordinal is admissible
+    fn is_admissible_ordinal(&self, ordinal: &VonNeumann) -> bool { 
+    
+    }
 }
