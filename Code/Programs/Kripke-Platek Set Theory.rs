@@ -68,7 +68,14 @@ impl KripkePlaket {
         let mut queue: Vec<HashSet<VonNeumann>> = vec![self.axiom_of_empty_set()];  
 
         while let Some(set) = queue.pop() {
-            
+            if !property(&set) {
+                return false;
+            }
+            for element_set in set {
+                if let VonNeumann::Set(elements) = element_set {
+                    queue.push(elements.clone());
+                }
+            }    
         }
     }
 }
