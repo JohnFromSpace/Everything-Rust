@@ -150,4 +150,10 @@ fn main() {
     let induction_property = |set: &HashSet<VonNeumann>| set.len() < 3;
     let axiom_induction = model.axiom_of_induction(induction_property);
     println!("Axiom of Induction: {}", axiom_induction);
+
+    // Example usage of axiom schema of predicative separation
+    let predicative_separation_property = |elem: &VonNeumann| match elem {
+        VonNeumann::Set(set) => set.len() == 1,
+        _ => false,
+    };
 }
