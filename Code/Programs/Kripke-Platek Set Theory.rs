@@ -30,4 +30,9 @@ impl KripkePlaket {
     fn axiom_of_empty_set(&self) -> HashSet<VonNeumann> {
         HashSet::new()
     }
+
+    // Axiom of pairing: For any sets x and y, there exists a set {x, y}.
+    fn axiom_of_pairing(&self, set1: &HashSet<VonNeumann>, set2: &HashSet<VonNeumann>) -> HashSet<VonNeumann> {
+        
+    }
 }
