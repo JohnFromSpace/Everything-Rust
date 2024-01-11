@@ -116,6 +116,9 @@ impl KripkePlaket {
 
     // A function to check if a set is a Cartesian product of two sets
     fn is_cartesian_product(&self, set: &HashSet<VonNeumann>) -> bool {
-    
+        set.iter().all(|elem| match elem {
+            VonNeumann::Set(pair) => pair.len() == 2,
+            _ => false,
+        })
     }
 }
