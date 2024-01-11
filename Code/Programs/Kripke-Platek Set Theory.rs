@@ -139,4 +139,7 @@ fn main() {
 
     let axiom_pairing = model.axiom_of_pairing(&set1, &set2);
     println!("Axiom of Pairing: {:?}", axiom_pairing);
+
+    let axiom_union = model.axiom_of_union(&HashSet::new());
+    println!("Axiom of Union: {:?}", axiom_union);
 }
