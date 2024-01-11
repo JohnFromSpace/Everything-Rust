@@ -33,6 +33,9 @@ impl KripkePlaket {
 
     // Axiom of pairing: For any sets x and y, there exists a set {x, y}.
     fn axiom_of_pairing(&self, set1: &HashSet<VonNeumann>, set2: &HashSet<VonNeumann>) -> HashSet<VonNeumann> {
-        
+        let mut result = HashSet::new();
+        result.insert(VonNeumann::Set(set1.clone()));
+        result.insert(VonNeumann::Set(set2.clone()));
+        result    
     }
 }
