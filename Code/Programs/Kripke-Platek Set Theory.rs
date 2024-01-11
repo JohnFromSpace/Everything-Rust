@@ -174,4 +174,8 @@ fn main() {
         "Is the ordinal admissible? {}",
         model.is_admissible_ordinal(&admissible_ordinal)
     );
+
+    // Check if a set is amenable
+    let amenable_set: HashSet<VonNeumann> = HashSet::new();
+    println!("Is the set amenable? {}", model.is_amenable_set(&amenable_set));
 }
