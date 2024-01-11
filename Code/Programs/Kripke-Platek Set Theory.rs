@@ -15,6 +15,6 @@ struct KripkePlatekModel {
 
 impl KripkePlaket {
     fn new() -> Self {
-        
+         
     }   
 }
