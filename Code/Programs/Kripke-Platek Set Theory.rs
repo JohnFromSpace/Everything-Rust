@@ -63,6 +63,8 @@ impl KripkePlaket {
     where
         F: Fn(&HashSet<VonNeumann>) -> bool,
     {
-        
+        // Implementation of the axiom of induction
+        // (You might need to adjust this based on your specific axioms and theorems)
+        let mut queue: Vec<HashSet<VonNeumann>> = vec![self.axiom_of_empty_set()];    
     }
 }
