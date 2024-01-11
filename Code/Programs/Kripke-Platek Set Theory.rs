@@ -13,7 +13,7 @@ struct KripkePlatekModel {
     admissible_sets: HashSet<HashSet<VonNeumann>>,
 }
 
-impl KripkePlaket {
+impl KripkePlatek {
     fn new() -> Self {
         KripkePlatekModel {
             universe: HashSet::new(),
