@@ -25,4 +25,9 @@ impl KripkePlaket {
     fn axiom_of_extensionality(&self, set1: &HashSet<VonNeumann>, set2: &HashSet<VonNeumann>) -> bool {
         set1 == set2
     }
+
+    // Axiom of empty set: There exists a set with no elements.
+    fn axiom_of_empty_set(&self) -> HashSet<VonNeumann> {
+        HashSet::new()
+    }
 }
