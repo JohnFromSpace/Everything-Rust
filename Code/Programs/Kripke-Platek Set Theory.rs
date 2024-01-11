@@ -145,4 +145,9 @@ fn main() {
 
     let axiom_infinity = model.axiom_of_infinity();
     println!("Axiom of Infinity: {:?}", axiom_infinity);
+
+    // Example usage of axiom of induction
+    let induction_property = |set: &HashSet<VonNeumann>| set.len() < 3;
+    let axiom_induction = model.axiom_of_induction(induction_property);
+    println!("Axiom of Induction: {}", axiom_induction);
 }
