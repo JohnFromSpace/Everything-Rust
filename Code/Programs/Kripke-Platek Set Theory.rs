@@ -85,6 +85,6 @@ impl KripkePlaket {
     where
         F: Fn(&VonNeumann) -> bool,
     { 
-        
+        set.iter().filter(|elem| property(elem)).cloned().collect()    
     }
 }
