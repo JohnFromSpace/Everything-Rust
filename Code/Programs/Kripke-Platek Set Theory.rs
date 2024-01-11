@@ -134,4 +134,7 @@ fn main() {
     let axiom_ext = model.axiom_of_extensionality(&set1, &set2);
     println!("Axiom of Extensionality: {}", axiom_ext);
 
+    let axiom_empty_set = model.axiom_of_empty_set();
+    println!("Axiom of Empty Set: {:?}", axiom_empty_set);
+
 }
