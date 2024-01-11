@@ -93,6 +93,6 @@ impl KripkePlaket {
     where
         F: Fn(&HashSet<VonNeumann>) -> VonNeumann,
     {
-        
+        set.iter().map(|elem| property(elem)).collect()    
     }
 }
