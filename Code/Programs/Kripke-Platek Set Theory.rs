@@ -181,5 +181,10 @@ fn main() {
 
     // Check if a set is a Cartesian product
     let cartesian_product_set: HashSet<VonNeumann> = HashSet::new();
-    
+    // Check if a set is a Cartesian product
+    let cartesian_product_set: HashSet<VonNeumann> = HashSet::new();
+    println!(
+        "Is the set a Cartesian product? {}",
+        model.is_cartesian_product(&cartesian_product_set)
+    );
 }
