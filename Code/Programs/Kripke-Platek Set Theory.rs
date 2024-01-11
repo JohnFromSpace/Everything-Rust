@@ -158,6 +158,9 @@ fn main() {
     };
     let axiom_predicative_separation = model.axiom_of_predicative_separation(&set1, predicative_separation_property);
     println!("Axiom of Predicative Separation: {:?}", axiom_predicative_separation);
-
     
+    // Example usage of axiom schema of replacement
+    let replacement_property = |set: &HashSet<VonNeumann>| VonNeumann::Successor(Box::new(VonNeumann::Set(set.clone())));
+    let axiom_replacement = model.axiom_of_replacement(&set1, replacement_property);
+    println!("Axiom of Replacement: {:?}", axiom_replacement);
 }
