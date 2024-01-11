@@ -130,4 +130,8 @@ fn main() {
     // Apply axioms
     let set1 = HashSet::new();
     let set2 = HashSet::new();
+
+    let axiom_ext = model.axiom_of_extensionality(&set1, &set2);
+    println!("Axiom of Extensionality: {}", axiom_ext);
+
 }
