@@ -124,5 +124,6 @@ impl KripkePlaket {
 }
 
 fn main() {
-    
+    // Example usage
+    let mut model = KripkePlatekModel::new();    
 }
