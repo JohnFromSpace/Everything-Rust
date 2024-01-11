@@ -15,6 +15,9 @@ struct KripkePlatekModel {
 
 impl KripkePlaket {
     fn new() -> Self {
-         
+        KripkePlatekModel {
+            universe: HashSet::new(),
+            admissible_sets: HashSet::new(),
+        }     
     }   
 }
