@@ -167,4 +167,11 @@ fn main() {
     // Check if a set is admissible
     let admissible_set: HashSet<VonNeumann> = HashSet::new();
     println!("Is the set admissible? {}", model.is_admissible(&admissible_set));
+
+    // Check if an ordinal is admissible
+    let admissible_ordinal = VonNeumann::Successor(Box::new(VonNeumann::Set(HashSet::new())));
+    println!(
+        "Is the ordinal admissible? {}",
+        model.is_admissible_ordinal(&admissible_ordinal)
+    );
 }
