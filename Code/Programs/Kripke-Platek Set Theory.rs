@@ -178,4 +178,8 @@ fn main() {
     // Check if a set is amenable
     let amenable_set: HashSet<VonNeumann> = HashSet::new();
     println!("Is the set amenable? {}", model.is_amenable_set(&amenable_set));
+
+    // Check if a set is a Cartesian product
+    let cartesian_product_set: HashSet<VonNeumann> = HashSet::new();
+    
 }
