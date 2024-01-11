@@ -52,6 +52,9 @@ impl KripkePlaket {
 
     // Axiom of infinity: There exists a set that contains the empty set and is closed under the operation of replacing each set x with {x}.
     fn axiom_of_infinity(&self) -> HashSet<VonNeumann> {
-        
+        let mut result = HashSet::new();
+        result.insert(self.axiom_of_empty_set());
+        result.insert(VonNeumann::Set(vec![VonNeumann::Set(vec![])]).into_iter().collect());
+        result    
     }
 }
