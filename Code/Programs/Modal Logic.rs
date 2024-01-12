@@ -46,3 +46,12 @@ enum EpistemicFormula {
     Or(Box<EpistemicFormula>, Box<EpistemicFormula>),
     Modal(ModalOperator, Box<EpistemicFormula>, Agent),
 }
+
+#[derive(Debug, PartialEq, Eq, Hash, Clone)]
+enum DoxasticFormula {
+    Atom(Proposition),
+    Not(Box<DoxasticFormula>),
+    And(Box<DoxasticFormula>, Box<DoxasticFormula>),
+    Or(Box<DoxasticFormula>, Box<DoxasticFormula>),
+    Modal(ModalOperator, Box<DoxasticFormula>, Agent),
+}
