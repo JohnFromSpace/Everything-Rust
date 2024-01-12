@@ -322,6 +322,13 @@ impl KripkeModel {
     }
 
     fn evaluate_temporal_formula(&self, formula: &TemporalFormula) -> bool {
-        
+        for frame in &self.frames {
+            for state in &frame.states {
+                if !self.evaluate_temporal_formula_at_state(frame, state, formula) {
+                    return false;
+                }
+            }
+        }
+        true    
     }
 }
