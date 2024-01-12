@@ -424,5 +424,9 @@ fn main() {
         Agent::Agent1,
     );
 
+    // Evaluate the Epistemic formula in the Kripke model
+    let result_epistemic = model.evaluate_epistemic_formula(&epistemic_formula, &Agent::Agent1);
+    println!("Does the Epistemic logic formula hold in the Kripke model? {}", result_epistemic);
+
     
 }
