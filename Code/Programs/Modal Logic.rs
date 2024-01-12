@@ -73,3 +73,9 @@ enum DeonticFormula {
     Or(Box<DeonticFormula>, Box<DeonticFormula>),
     Modal(DeonticOperator, Box<DeonticFormula>),
 }
+
+#[derive(Debug)]
+struct KripkeFrame {
+    states: HashSet<String>,
+    accessibility: HashMap<String, HashSet<String>>,
+}
