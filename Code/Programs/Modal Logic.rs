@@ -84,3 +84,7 @@ struct KripkeFrame {
 struct KripkeModel {
     frames: Vec<KripkeFrame>,
 }
+
+impl KripkeModel {
+    
+}
