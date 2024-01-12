@@ -309,7 +309,9 @@ impl KripkeModel {
                     }    
                 }
                 TemporalOperator::Past => {
+                    if let Some(accessible_states) = frame.accessibility.get(state) {
                         
+                    }        
                 }
             }
     }
