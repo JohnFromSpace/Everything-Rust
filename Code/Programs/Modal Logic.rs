@@ -354,7 +354,9 @@ impl KripkeModel {
             DeonticFormula::Modal(operator, sub_formula) => match operator {
                 DeonticOperator::O => {
                     if let Some(accessible_states) = frame.accessibility.get(state) {
-                        
+                        accessible_states
+                            .iter()
+                            .any(|next_state| self.evaluate_deontic_formula_at_state(frame, next_state, sub_formula))    
                     }   
                 }
             }
