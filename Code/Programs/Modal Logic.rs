@@ -28,3 +28,12 @@ enum TemporalOperator {
 enum DeonticOperator {
     Obligation, // O
 }
+
+#[derive(Debug, PartialEq, Eq, Hash, Clone)]
+enum AlethicFormula {
+    Atom(Proposition),
+    Not(Box<AlethicFormula>),
+    And(Box<AlethicFormula>, Box<AlethicFormula>),
+    Or(Box<AlethicFormula>, Box<AlethicFormula>),
+    Modal(ModalOperator, Box<AlethicFormula>),
+}
