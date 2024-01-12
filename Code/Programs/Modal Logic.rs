@@ -444,4 +444,8 @@ fn main() {
         TemporalOperator::Future,
         Box::new(TemporalFormula::Atom(Proposition::Atom("p".to_string()))),
     );
+
+    // Evaluate the Temporal formula in the Kripke model
+    let result_temporal = model.evaluate_temporal_formula(&temporal_formula);
+    println!("Does the Temporal logic formula hold in the Kripke model? {}", result_temporal);
 }
