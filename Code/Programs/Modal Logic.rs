@@ -338,6 +338,8 @@ impl KripkeModel {
         state: &str,
         formula: &DeonticFormula,
     ) -> bool {
-        
+        match formula {
+            DeonticFormula::Atom(prop) => frame.states.contains(&prop.to_string()),
+        }    
     }
 }
