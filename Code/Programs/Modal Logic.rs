@@ -260,9 +260,11 @@ impl KripkeModel {
                             }        
                         }
                     }   
-                 }
+                } else {
+                    // The formula is not about the current agent, so it is vacuously true
+                    true
+                }
             }
         }    
     }    
-    
 }
