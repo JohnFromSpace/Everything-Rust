@@ -448,4 +448,10 @@ fn main() {
     // Evaluate the Temporal formula in the Kripke model
     let result_temporal = model.evaluate_temporal_formula(&temporal_formula);
     println!("Does the Temporal logic formula hold in the Kripke model? {}", result_temporal);
+
+    // Define a Deontic logic formula: [O]p → O[p]
+    let deontic_formula = DeonticFormula::Modal(
+        DeonticOperator::O,
+        Box::new(DeonticFormula::Atom(Proposition::Atom("p".to_string()))),
+    );
 }
