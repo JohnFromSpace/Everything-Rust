@@ -196,4 +196,8 @@ impl KripkeModel {
             }
         }     
     }
+
+     fn evaluate_epistemic_formula(&self, formula: &EpistemicFormula, agent: &Agent) -> bool {
+         
+     }
 }
