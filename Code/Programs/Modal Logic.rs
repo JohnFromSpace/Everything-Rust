@@ -160,7 +160,9 @@ impl KripkeModel {
             EpistemicFormula::Modal(operator, sub_formula, formula_agent) => {
                 if formula_agent == agent {
                     match operator {
-                        
+                        ModalOperator::Box => {
+                            
+                        }    
                     }   
                 }
             }
