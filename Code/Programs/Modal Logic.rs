@@ -94,6 +94,10 @@ impl KripkeModel {
          match formula {
              AlethicFormula::Atom(prop) => frame.states.contains(&prop.to_string()),
              AlethicFormula::Not(sub_formula) => !self.evaluate_alethic_formula_at_state(frame, state, sub_formula),
+             AlethicFormula::And(sub_formula1, sub_formula2) => {
+                 self.evaluate_alethic_formula_at_state(frame, state, sub_formula1)
+                 && self.evaluate_alethic_formula_at_state(frame, state, sub_formula2)
+            }
          }
      }
 }
