@@ -288,7 +288,7 @@ impl KripkeModel {
         match formula {
             TemporalFormula::Atom(prop) => frame.states.contains(&prop.to_string()), 
             TemporalFormula::Not(sub_formula) => {
-                
+                 !self.evaluate_temporal_formula_at_state(frame, state, sub_formula)    
             }
     }
 }
