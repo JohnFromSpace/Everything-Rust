@@ -374,6 +374,9 @@ impl KripkeModel {
             }
         }
         true
-    }    
-    }
+    }       
+}
+
+fn main() {
+    
 }
