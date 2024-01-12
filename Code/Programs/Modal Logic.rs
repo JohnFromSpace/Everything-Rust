@@ -37,3 +37,12 @@ enum AlethicFormula {
     Or(Box<AlethicFormula>, Box<AlethicFormula>),
     Modal(ModalOperator, Box<AlethicFormula>),
 }
+
+#[derive(Debug, PartialEq, Eq, Hash, Clone)]
+enum EpistemicFormula {
+    Atom(Proposition),
+    Not(Box<EpistemicFormula>),
+    And(Box<EpistemicFormula>, Box<EpistemicFormula>),
+    Or(Box<EpistemicFormula>, Box<EpistemicFormula>),
+    Modal(ModalOperator, Box<EpistemicFormula>, Agent),
+}
