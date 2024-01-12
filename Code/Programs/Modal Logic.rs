@@ -285,6 +285,7 @@ impl KripkeModel {
         state: &str,
         formula: &TemporalFormula,
     ) -> bool {
-        
+        match formula {
+            TemporalFormula::Atom(prop) => frame.states.contains(&prop.to_string()),        
     }
 }
