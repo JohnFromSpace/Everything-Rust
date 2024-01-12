@@ -366,6 +366,14 @@ impl KripkeModel {
     }
 
     fn evaluate_deontic_formula(&self, formula: &DeonticFormula) -> bool {
-        
+        for frame in &self.frames {
+            for state in &frame.states {
+                if !self.evaluate_deontic_formula_at_state(frame, state, formula) {
+                    return false;
+                }
+            }
+        }
+        true
+    }    
     }
 }
