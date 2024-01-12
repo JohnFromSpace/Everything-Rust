@@ -313,6 +313,8 @@ impl KripkeModel {
                         accessible_states
                             .iter()
                             .any(|next_state| self.evaluate_temporal_formula_at_state(frame, next_state, sub_formula))    
+                    } else {
+                        false
                     }        
                 }
             }
