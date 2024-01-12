@@ -87,6 +87,6 @@ struct KripkeModel {
 
 impl KripkeModel {
     fn new() -> Self {
-        
+        KripkeModel { frames: Vec::new() }    
     }    
 }
