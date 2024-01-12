@@ -246,7 +246,9 @@ impl KripkeModel {
                             }    
                         }
                         ModalOperator::Diamond => {
-                            
+                            if let Some(accessible_states) = frame.accessibility.get(state) {
+                                
+                            }    
                         }
                     }   
                  }
