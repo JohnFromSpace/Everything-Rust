@@ -208,5 +208,14 @@ impl KripkeModel {
         true   
     }
 
+    fn evaluate_doxastic_formula_at_state(
+        &self,
+        frame: &KripkeFrame,
+        state: &str,
+        formula: &DoxasticFormula,
+        agent: &Agent,
+    ) -> bool {
+        
+    }    
     
 }
