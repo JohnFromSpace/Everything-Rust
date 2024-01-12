@@ -145,7 +145,7 @@ impl KripkeModel {
         agent: &Agent,
     ) -> bool {
         match formula {
-            
+            EpistemicFormula::Atom(prop) => frame.states.contains(&prop.to_string()),    
         }     
     }
 }
