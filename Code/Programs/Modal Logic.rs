@@ -341,7 +341,7 @@ impl KripkeModel {
         match formula {
             DeonticFormula::Atom(prop) => frame.states.contains(&prop.to_string()),
             DeonticFormula::Not(sub_formula) => {
-                
+                !self.evaluate_deontic_formula_at_state(frame, state, sub_formula)    
             }
         }    
     }
