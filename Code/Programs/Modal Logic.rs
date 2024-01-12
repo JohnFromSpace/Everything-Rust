@@ -17,3 +17,10 @@ enum Agent {
     Agent2,
     // Add more agents as needed
 }
+
+#[derive(Debug, PartialEq, Eq, Hash, Clone)]
+enum TemporalOperator {
+    Future, // F
+    Past,   // P
+}
+
