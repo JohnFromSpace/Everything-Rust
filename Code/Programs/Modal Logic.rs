@@ -91,6 +91,8 @@ impl KripkeModel {
     }
 
      fn evaluate_alethic_formula_at_state(&self, frame: &KripkeFrame, state: &str, formula: &AlethicFormula) -> bool {
-         
+         match formula {
+            AlethicFormula::Atom(prop) => frame.states.contains(&prop.to_string()),
+         }
      }
 }
