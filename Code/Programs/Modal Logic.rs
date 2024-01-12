@@ -221,7 +221,8 @@ impl KripkeModel {
                 !self.evaluate_doxastic_formula_at_state(frame, state, sub_formula, agent)    
             }
             DoxasticFormula::And(sub_formula1, sub_formula2) => {
-                
+                self.evaluate_doxastic_formula_at_state(frame, state, sub_formula1, agent)
+                    && self.evaluate_doxastic_formula_at_state(frame, state, sub_formula2, agent)    
             }
         }    
     }    
