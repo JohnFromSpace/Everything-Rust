@@ -438,4 +438,10 @@ fn main() {
     // Evaluate the Doxastic formula in the Kripke model
     let result_doxastic = model.evaluate_doxastic_formula(&doxastic_formula, &Agent::Agent1);
     println!("Does the Doxastic logic formula hold in the Kripke model? {}", result_doxastic);
+
+    // Define a Temporal logic formula: ◇Fp
+    let temporal_formula = TemporalFormula::Modal(
+        TemporalOperator::Future,
+        Box::new(TemporalFormula::Atom(Proposition::Atom("p".to_string()))),
+    );
 }
