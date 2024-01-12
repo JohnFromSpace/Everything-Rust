@@ -98,6 +98,10 @@ impl KripkeModel {
                  self.evaluate_alethic_formula_at_state(frame, state, sub_formula1)
                  && self.evaluate_alethic_formula_at_state(frame, state, sub_formula2)
             }
+            AlethicFormula::Or(sub_formula1, sub_formula2) => {
+                self.evaluate_alethic_formula_at_state(frame, state, sub_formula1)
+                    || self.evaluate_alethic_formula_at_state(frame, state, sub_formula2)
+            }
          }
      }
 }
