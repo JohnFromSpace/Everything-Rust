@@ -233,7 +233,14 @@ impl KripkeModel {
                     match operator {
                         ModalOperator::Box => {
                             if let Some(accessible_states) = frame.accessibility.get(state) {
-                                
+                                accessible_states.iter().all(|next_state| {
+                                    self.evaluate_doxastic_formula_at_state(
+                                        frame,
+                                        next_state,
+                                        sub_formula,
+                                        formula_agent,
+                                    )
+                                })    
                             }    
                         }    
                     }   
