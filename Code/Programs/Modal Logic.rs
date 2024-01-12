@@ -232,7 +232,9 @@ impl KripkeModel {
                  if formula_agent == agent {
                     match operator {
                         ModalOperator::Box => {
-                            
+                            if let Some(accessible_states) = frame.accessibility.get(state) {
+                                
+                            }    
                         }    
                     }   
                  }
