@@ -294,5 +294,8 @@ impl KripkeModel {
                 self.evaluate_temporal_formula_at_state(frame, state, sub_formula1)
                     && self.evaluate_temporal_formula_at_state(frame, state, sub_formula2)    
             }
+            TemporalFormula::Or(sub_formula1, sub_formula2) => {
+                
+            }
     }
 }
