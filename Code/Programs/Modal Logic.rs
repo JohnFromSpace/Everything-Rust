@@ -417,4 +417,12 @@ fn main() {
     let result_alethic = model.evaluate_alethic_formula(&alethic_formula);
     println!("Does the Alethic logic formula hold in the Kripke model? {}", result_alethic);
 
+    // Define an Epistemic logic formula: [K1]p → K1[p]
+    let epistemic_formula = EpistemicFormula::Modal(
+        ModalOperator::Box,
+        Box::new(EpistemicFormula::Atom(Proposition::Atom("p".to_string()))),
+        Agent::Agent1,
+    );
+
+    
 }
