@@ -55,3 +55,12 @@ enum DoxasticFormula {
     Or(Box<DoxasticFormula>, Box<DoxasticFormula>),
     Modal(ModalOperator, Box<DoxasticFormula>, Agent),
 }
+
+#[derive(Debug, PartialEq, Eq, Hash, Clone)]
+enum TemporalFormula {
+    Atom(Proposition),
+    Not(Box<TemporalFormula>),
+    And(Box<TemporalFormula>, Box<TemporalFormula>),
+    Or(Box<TemporalFormula>, Box<TemporalFormula>),
+    Modal(TemporalOperator, Box<TemporalFormula>),
+}
