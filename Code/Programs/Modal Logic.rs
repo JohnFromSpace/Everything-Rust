@@ -244,7 +244,10 @@ impl KripkeModel {
                             } else {
                                 false
                             }    
-                        }    
+                        }
+                        ModalOperator::Diamond => {
+                            
+                        }
                     }   
                  }
             }
