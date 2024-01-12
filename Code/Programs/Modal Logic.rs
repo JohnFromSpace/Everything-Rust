@@ -357,6 +357,8 @@ impl KripkeModel {
                         accessible_states
                             .iter()
                             .any(|next_state| self.evaluate_deontic_formula_at_state(frame, next_state, sub_formula))    
+                    } else {
+                        false
                     }   
                 }
             }
