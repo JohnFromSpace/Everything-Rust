@@ -147,7 +147,7 @@ impl KripkeModel {
         match formula {
             EpistemicFormula::Atom(prop) => frame.states.contains(&prop.to_string()),
             EpistemicFormula::Not(sub_formula) => {
-                
+                 !self.evaluate_epistemic_formula_at_state(frame, state, sub_formula, agent)    
             }
         }     
     }
