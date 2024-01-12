@@ -454,4 +454,8 @@ fn main() {
         DeonticOperator::O,
         Box::new(DeonticFormula::Atom(Proposition::Atom("p".to_string()))),
     );
+
+    // Evaluate the Deontic formula in the Kripke model
+    let result_deontic = model.evaluate_deontic_formula(&deontic_formula);
+    println!("Does the Deontic logic formula hold in the Kripke model? {}", result_deontic);
 }
