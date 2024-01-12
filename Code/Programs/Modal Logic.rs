@@ -86,5 +86,7 @@ struct KripkeModel {
 }
 
 impl KripkeModel {
-    
+    fn new() -> Self {
+        
+    }    
 }
