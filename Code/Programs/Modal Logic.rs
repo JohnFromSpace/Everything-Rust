@@ -64,3 +64,12 @@ enum TemporalFormula {
     Or(Box<TemporalFormula>, Box<TemporalFormula>),
     Modal(TemporalOperator, Box<TemporalFormula>),
 }
+
+#[derive(Debug, PartialEq, Eq, Hash, Clone)]
+enum DeonticFormula {
+    Atom(Proposition),
+    Not(Box<DeonticFormula>),
+    And(Box<DeonticFormula>, Box<DeonticFormula>),
+    Or(Box<DeonticFormula>, Box<DeonticFormula>),
+    Modal(DeonticOperator, Box<DeonticFormula>),
+}
