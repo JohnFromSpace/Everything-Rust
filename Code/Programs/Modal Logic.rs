@@ -247,8 +247,15 @@ impl KripkeModel {
                         }
                         ModalOperator::Diamond => {
                             if let Some(accessible_states) = frame.accessibility.get(state) {
-                                
-                            }    
+                                accessible_states.iter().any(|next_state| {
+                                    self.evaluate_doxastic_formula_at_state(
+                                        frame,
+                                        next_state,
+                                        sub_formula,
+                                        formula_agent,
+                                    )
+                                })
+                            }        
                         }
                     }   
                  }
