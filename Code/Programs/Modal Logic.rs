@@ -24,3 +24,7 @@ enum TemporalOperator {
     Past,   // P
 }
 
+#[derive(Debug, PartialEq, Eq, Hash, Clone)]
+enum DeonticOperator {
+    Obligation, // O
+}
