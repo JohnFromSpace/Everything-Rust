@@ -198,7 +198,7 @@ impl KripkeModel {
     }
 
      fn evaluate_epistemic_formula(&self, formula: &EpistemicFormula, agent: &Agent) -> bool {
-           for frame in &self.frames {
+        for frame in &self.frames {
             for state in &frame.states {
                 if !self.evaluate_epistemic_formula_at_state(frame, state, formula, agent) {
                     return false;
