@@ -301,7 +301,9 @@ impl KripkeModel {
             TemporalFormula::Modal(operator, sub_formula) => match operator {
                 TemporalOperator::Future => {
                      if let Some(accessible_states) = frame.accessibility.get(state) {
-                         
+                         accessible_states
+                            .iter()
+                            .any(|next_state| self.evaluate_temporal_formula_at_state(frame, next_state, sub_formula))    
                      }    
                 }    
             }
