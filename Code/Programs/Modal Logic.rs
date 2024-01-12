@@ -103,7 +103,9 @@ impl KripkeModel {
                     || self.evaluate_alethic_formula_at_state(frame, state, sub_formula2)
             }
             AlethicFormula::Modal(operator, sub_formula) => match operator {
-                
+                ModalOperator::Box => {
+                    
+                }    
             }
          }
      }
