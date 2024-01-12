@@ -379,5 +379,10 @@ impl KripkeModel {
 
 fn main() {
     // Example usage
-    let mut model = KripkeModel::new();        
+    let mut model = KripkeModel::new(); 
+
+    // Define states and accessibility relations for a Kripke frame
+    let frame1_states: HashSet<String> = ["s1".to_string(), "s2".to_string()].iter().cloned().collect();
+    let frame1_accessibility: HashMap<String, HashSet<String>> =
+        [("s1".to_string(), ["s2".to_string()].iter().cloned().collect())].iter().cloned().collect();
 }
