@@ -266,5 +266,9 @@ impl KripkeModel {
                 }
             }
         }    
-    }    
+    }
+
+    fn evaluate_doxastic_formula(&self, formula: &DoxasticFormula, agent: &Agent) -> bool {
+        
+    }
 }
