@@ -299,7 +299,9 @@ impl KripkeModel {
                     || self.evaluate_temporal_formula_at_state(frame, state, sub_formula2)    
             }
             TemporalFormula::Modal(operator, sub_formula) => match operator {
-                
+                TemporalOperator::Future => {
+                    
+                }    
             }
     }
 }
