@@ -231,7 +231,9 @@ impl KripkeModel {
             DoxasticFormula::Modal(operator, sub_formula, formula_agent) => {
                  if formula_agent == agent {
                     match operator {
-                        
+                        ModalOperator::Box => {
+                            
+                        }    
                     }   
                  }
             }
