@@ -413,5 +413,8 @@ fn main() {
         )),
     );
 
+    // Evaluate the Alethic formula in the Kripke model
+    let result_alethic = model.evaluate_alethic_formula(&alethic_formula);
+    println!("Does the Alethic logic formula hold in the Kripke model? {}", result_alethic);
 
 }
