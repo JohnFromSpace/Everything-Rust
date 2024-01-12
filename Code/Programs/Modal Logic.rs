@@ -255,6 +255,8 @@ impl KripkeModel {
                                         formula_agent,
                                     )
                                 })
+                            } else {
+                                false
                             }        
                         }
                     }   
