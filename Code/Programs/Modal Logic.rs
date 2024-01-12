@@ -307,7 +307,10 @@ impl KripkeModel {
                      } else {
                         false
                     }    
-                }    
+                }
+                TemporalOperator::Past => {
+                        
+                }
             }
     }
 }
