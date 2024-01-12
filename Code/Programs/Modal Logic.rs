@@ -144,6 +144,8 @@ impl KripkeModel {
         formula: &EpistemicFormula,
         agent: &Agent,
     ) -> bool {
-         
+        match formula {
+            
+        }     
     }
 }
