@@ -434,4 +434,8 @@ fn main() {
         Box::new(DoxasticFormula::Atom(Proposition::Atom("p".to_string()))),
         Agent::Agent1,
     );
+
+    // Evaluate the Doxastic formula in the Kripke model
+    let result_doxastic = model.evaluate_doxastic_formula(&doxastic_formula, &Agent::Agent1);
+    println!("Does the Doxastic logic formula hold in the Kripke model? {}", result_doxastic);
 }
