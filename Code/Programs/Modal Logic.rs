@@ -4,3 +4,9 @@ use std::collections::{HashMap, HashSet};
 enum Proposition {
     Atom(String),
 }
+
+#[derive(Debug, PartialEq, Eq, Hash, Clone)]
+enum ModalOperator {
+    Box,     // Necessity
+    Diamond, // Possibility
+}
