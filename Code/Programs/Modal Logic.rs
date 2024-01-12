@@ -385,4 +385,10 @@ fn main() {
     let frame1_states: HashSet<String> = ["s1".to_string(), "s2".to_string()].iter().cloned().collect();
     let frame1_accessibility: HashMap<String, HashSet<String>> =
         [("s1".to_string(), ["s2".to_string()].iter().cloned().collect())].iter().cloned().collect();
+
+    // Add the Kripke frame to the model
+    model.frames.push(KripkeFrame {
+        states: frame1_states,
+        accessibility: frame1_accessibility,
+    });
 }
