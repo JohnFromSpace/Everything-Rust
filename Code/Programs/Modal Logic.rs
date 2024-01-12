@@ -10,3 +10,10 @@ enum ModalOperator {
     Box,     // Necessity
     Diamond, // Possibility
 }
+
+#[derive(Debug, PartialEq, Eq, Hash, Clone)]
+enum Agent {
+    Agent1,
+    Agent2,
+    // Add more agents as needed
+}
