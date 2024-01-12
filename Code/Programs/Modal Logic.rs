@@ -153,6 +153,9 @@ impl KripkeModel {
                  self.evaluate_epistemic_formula_at_state(frame, state, sub_formula1, agent)
                     && self.evaluate_epistemic_formula_at_state(frame, state, sub_formula2, agent)     
             }
+            EpistemicFormula::Or(sub_formula1, sub_formula2) => {
+                
+            }
         }     
     }
 }
