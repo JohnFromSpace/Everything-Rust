@@ -79,3 +79,8 @@ struct KripkeFrame {
     states: HashSet<String>,
     accessibility: HashMap<String, HashSet<String>>,
 }
+
+#[derive(Debug)]
+struct KripkeModel {
+    frames: Vec<KripkeFrame>,
+}
