@@ -149,9 +149,10 @@ impl KripkeModel {
             EpistemicFormula::Not(sub_formula) => {
                  !self.evaluate_epistemic_formula_at_state(frame, state, sub_formula, agent)    
             }
-             EpistemicFormula::And(sub_formula1, sub_formula2) => {
-                 
-             }
+            EpistemicFormula::And(sub_formula1, sub_formula2) => {
+                 self.evaluate_epistemic_formula_at_state(frame, state, sub_formula1, agent)
+                    && self.evaluate_epistemic_formula_at_state(frame, state, sub_formula2, agent)     
+            }
         }     
     }
 }
