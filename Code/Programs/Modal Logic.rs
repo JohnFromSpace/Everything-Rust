@@ -215,7 +215,9 @@ impl KripkeModel {
         formula: &DoxasticFormula,
         agent: &Agent,
     ) -> bool {
-        
+        match formula {
+            
+        }    
     }    
     
 }
