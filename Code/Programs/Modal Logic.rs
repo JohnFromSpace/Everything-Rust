@@ -175,7 +175,7 @@ impl KripkeModel {
                             }
                         }
                         ModalOperator::Diamond => {
-                             if let Some(accessible_states) = frame.accessibility.get(state) {
+                            if let Some(accessible_states) = frame.accessibility.get(state) {
                                 accessible_states.iter().any(|next_state| {
                                     self.evaluate_epistemic_formula_at_state(
                                         frame,
@@ -184,7 +184,9 @@ impl KripkeModel {
                                         formula_agent,
                                     )
                                 })
-                            }    
+                            } else {
+                                false
+                            }
                         }                        
                     }   
                 }
