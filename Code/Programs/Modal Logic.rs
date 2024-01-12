@@ -378,5 +378,6 @@ impl KripkeModel {
 }
 
 fn main() {
-    
+    // Example usage
+    let mut model = KripkeModel::new();        
 }
