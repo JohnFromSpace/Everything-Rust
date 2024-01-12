@@ -216,7 +216,10 @@ impl KripkeModel {
         agent: &Agent,
     ) -> bool {
         match formula {
-            DoxasticFormula::Atom(prop) => frame.states.contains(&prop.to_string()),    
+            DoxasticFormula::Atom(prop) => frame.states.contains(&prop.to_string()),
+            DoxasticFormula::Not(sub_formula) => {
+                
+            }
         }    
     }    
     
