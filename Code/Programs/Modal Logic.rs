@@ -361,7 +361,11 @@ impl KripkeModel {
                         false
                     }   
                 }
-            }
+            },
         }    
+    }
+
+    fn evaluate_deontic_formula(&self, formula: &DeonticFormula) -> bool {
+        
     }
 }
