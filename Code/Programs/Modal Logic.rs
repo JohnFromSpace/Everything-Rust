@@ -427,6 +427,11 @@ fn main() {
     // Evaluate the Epistemic formula in the Kripke model
     let result_epistemic = model.evaluate_epistemic_formula(&epistemic_formula, &Agent::Agent1);
     println!("Does the Epistemic logic formula hold in the Kripke model? {}", result_epistemic);
-
     
+    // Define a Doxastic logic formula: [B1]p → B1[p]
+    let doxastic_formula = DoxasticFormula::Modal(
+        ModalOperator::Box,
+        Box::new(DoxasticFormula::Atom(Proposition::Atom("p".to_string()))),
+        Agent::Agent1,
+    );
 }
