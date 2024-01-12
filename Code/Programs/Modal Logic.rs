@@ -136,4 +136,14 @@ impl KripkeModel {
         }
         true    
     }
+
+     fn evaluate_epistemic_formula_at_state(
+        &self,
+        frame: &KripkeFrame,
+        state: &str,
+        formula: &EpistemicFormula,
+        agent: &Agent,
+    ) -> bool {
+         
+    }
 }
