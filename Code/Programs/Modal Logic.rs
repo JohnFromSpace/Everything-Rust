@@ -391,4 +391,27 @@ fn main() {
         states: frame1_states,
         accessibility: frame1_accessibility,
     });
+
+    // Define an Alethic logic formula: ◇(p ∧ q) → (◇p ∧ ◇q)
+    let alethic_formula = AlethicFormula::Or(
+    Box::new(AlethicFormula::Modal(
+        ModalOperator::Diamond,
+        Box::new(AlethicFormula::And(
+            Box::new(AlethicFormula::Atom(Proposition::Atom("p".to_string()))),
+            Box::new(AlethicFormula::Atom(Proposition::Atom("q".to_string()))),
+        )),
+    )),
+    Box::new(AlethicFormula::And(
+        Box::new(AlethicFormula::Modal(
+            ModalOperator::Diamond,
+            Box::new(AlethicFormula::Atom(Proposition::Atom("p".to_string()))),
+        )),
+        Box::new(AlethicFormula::Modal(
+            ModalOperator::Diamond,
+            Box::new(AlethicFormula::Atom(Proposition::Atom("q".to_string()))),
+            )),
+        )),
+    );
+
+
 }
