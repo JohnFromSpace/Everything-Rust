@@ -88,5 +88,9 @@ struct KripkeModel {
 impl KripkeModel {
     fn new() -> Self {
         KripkeModel { frames: Vec::new() }    
-    }    
+    }
+
+     fn evaluate_alethic_formula_at_state(&self, frame: &KripkeFrame, state: &str, formula: &AlethicFormula) -> bool {
+         
+     }
 }
