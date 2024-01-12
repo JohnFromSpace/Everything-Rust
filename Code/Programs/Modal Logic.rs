@@ -121,8 +121,12 @@ impl KripkeModel {
                     } else {
                         false
                     }
-                 }
+                }
             }
          }
      }
+
+    fn evaluate_alethic_formula(&self, formula: &AlethicFormula) -> bool {
+        
+    }
 }
