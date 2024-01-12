@@ -317,6 +317,11 @@ impl KripkeModel {
                         false
                     }        
                 }
-            }
+            },
+        }
+    }
+
+    fn evaluate_temporal_formula(&self, formula: &TemporalFormula) -> bool {
+        
     }
 }
