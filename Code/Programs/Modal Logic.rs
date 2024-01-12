@@ -344,7 +344,8 @@ impl KripkeModel {
                 !self.evaluate_deontic_formula_at_state(frame, state, sub_formula)    
             }
             DeonticFormula::And(sub_formula1, sub_formula2) => {
-                
+                self.evaluate_deontic_formula_at_state(frame, state, sub_formula1)
+                    && self.evaluate_deontic_formula_at_state(frame, state, sub_formula2)    
             }
         }    
     }
