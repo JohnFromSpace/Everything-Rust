@@ -175,3 +175,9 @@ fn get_syntax_theme(theme_name: &str) -> Option<Style> {
     let theme_set = ThemeSet::load_defaults();
     theme_set.themes.get(theme_name).map(|theme| theme.settings.selection)    
 }
+
+fn perform_syntax_highlighting(code: &str, theme: SyntaxTheme) {
+    match theme {
+        
+    }
+}
