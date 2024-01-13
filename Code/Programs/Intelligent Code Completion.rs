@@ -213,5 +213,16 @@ fn main() {
     let mut code_snippet = String::new();
 
     // Allow the user to input code interactively
-    println!("Enter your code (type 'done' on a new line to finish input):");    
+    println!("Enter your code (type 'done' on a new line to finish input):");  
+
+    loop {
+        let mut line = String::new();
+        io::stdin().read_line(&mut line).expect("Failed to read line");
+
+        if line.trim() == "done" {
+            break;
+        }
+
+        code_snippet.push_str(&line);
+    }
 }
