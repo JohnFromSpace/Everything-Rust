@@ -35,5 +35,5 @@ fn get_rust_completions(file_path: &str, line: usize, column: usize) -> racer::R
 }
 
 fn get_cpp_completions(file_path: &str, line: usize, column: usize) -> cppcomplete::Result<Vec<cppcomplete::Completion>> {
-    
+    cppcomplete::get_completions(file_path, line, column)    
 }
