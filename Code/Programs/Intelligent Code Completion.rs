@@ -134,5 +134,5 @@ fn get_user_preferences() -> UserPreferences {
 }
 
 fn read_yes_no_input() -> bool {
-    
+        
 }
