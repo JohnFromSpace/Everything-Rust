@@ -252,4 +252,28 @@ fn main() {
         Language::Rust => get_rust_completions(file_path, 5, 17), // Adjust line and column based on your cursor position
         Language::Cpp => get_cpp_completions(file_path, 5, 17),   // Adjust line and column based on your cursor position
     };
+
+    // Display completions
+    match completions {
+        Ok(completions) => {
+            let completion_strings: Vec<String> = completions.iter().map(|c| c.name.clone()).collect();
+            display_completions(language.clone(), completion_strings);
+
+            // Allow the user to choose a completion
+            println!("Enter the number of the completion you want to select:");
+            let mut input = String::new();
+            io::stdin().read_line(&mut input).expect("Failed to read line");
+
+            if let Ok(index) = input.trim().parse::<usize>() {
+                if index > 0 && index <= completions.len() {
+                    show_additional_info(language, index - 1, completion_strings);
+                } else {
+                    eprintln!("Invalid selection index.");
+                }
+            } else {
+                eprintln!("Invalid input. Please enter a number.");
+            }
+        }
+        Err(err) => eprintln!("Error: {}", err),
+    }
 }
