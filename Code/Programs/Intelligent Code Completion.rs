@@ -9,3 +9,8 @@ use std::path::Path;
 use syntect::easy::HighlightLines;
 use syntect::highlighting::{Style, ThemeSet};
 use syntect::parsing::SyntaxSet;
+
+struct CodeSnippet {
+    language: Language,
+    content: String,
+}
