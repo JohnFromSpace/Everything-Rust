@@ -208,3 +208,7 @@ fn perform_custom_syntax_highlighting(code: &str, style: Style) {
     println!("Performing Custom Theme Syntax Highlighting:");
     // TODO: Implement custom theme syntax highlighting
 }
+
+fn main() {
+    
+}
