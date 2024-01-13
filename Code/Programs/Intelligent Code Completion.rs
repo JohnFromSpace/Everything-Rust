@@ -277,11 +277,17 @@ fn main() {
         Err(err) => eprintln!("Error: {}", err),
     }
 
+    // Get user preferences
+    let preferences = get_user_preferences();
+
+    // Choose syntax highlighting theme
+    let syntax_theme = choose_syntax_theme();
+
     // Perform syntax highlighting based on user preferences
     if preferences.syntax_highlighting {
-        perform_syntax_highlighting(&code_snippet);
+        perform_syntax_highlighting(&code_snippet, syntax_theme);
     }
-
+    
     // Perform code formatting based on user preferences
     if preferences.perform_formatting {
         let formatted_code = format_code(&code_snippet);
