@@ -225,4 +225,11 @@ fn main() {
 
         code_snippet.push_str(&line);
     }
+
+    // Determine the language based on the code
+    let language = if code_snippet.contains("#include") {
+        Language::Cpp
+    } else {
+        Language::Rust
+    };
 }
