@@ -190,3 +190,9 @@ fn perform_syntax_highlighting(code: &str, theme: SyntaxTheme) {
         }    
     }
 }
+
+fn perform_default_syntax_highlighting(code: &str) {
+    // Default syntax highlighting logic
+    println!("Performing Default Syntax Highlighting:");
+    // TODO: Implement default syntax highlighting
+}
