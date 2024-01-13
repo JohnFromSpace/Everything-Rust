@@ -145,3 +145,7 @@ enum SyntaxTheme {
     Ocean,
     Custom(String),
 }
+
+fn choose_syntax_theme() -> SyntaxTheme {
+    
+}
