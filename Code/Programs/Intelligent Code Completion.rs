@@ -14,3 +14,8 @@ struct CodeSnippet {
     language: Language,
     content: String,
 }
+
+enum Language {
+    Rust,
+    Cpp,
+}
