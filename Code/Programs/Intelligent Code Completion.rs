@@ -138,3 +138,10 @@ fn read_yes_no_input() -> bool {
     io::stdin().read_line(&mut input).expect("Failed to read line");
     input.trim().to_lowercase() == "y"        
 }
+
+#[derive(Debug)]
+enum SyntaxTheme {
+    Default,
+    Ocean,
+    Custom(String),
+}
