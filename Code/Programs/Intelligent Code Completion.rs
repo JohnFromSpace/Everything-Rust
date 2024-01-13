@@ -69,3 +69,9 @@ fn display_completions(language: Language, completions: Vec<String>) {
         println!("{}. {}", index + 1, completion);
     }
 }
+
+fn show_additional_info(language: Language, index: usize, completions: Vec<String>) {
+    match language {
+        
+    }
+}
