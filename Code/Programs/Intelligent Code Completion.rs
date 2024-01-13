@@ -25,3 +25,7 @@ struct UserPreferences {
     syntax_highlighting: bool,
     perform_formatting: bool,
 }
+
+fn write_code_to_file(language: Language, code: &str, file_path: &str) {
+    
+}
