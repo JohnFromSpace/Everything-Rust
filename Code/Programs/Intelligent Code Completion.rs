@@ -276,4 +276,9 @@ fn main() {
         }
         Err(err) => eprintln!("Error: {}", err),
     }
+
+    // Perform syntax highlighting based on user preferences
+    if preferences.syntax_highlighting {
+        perform_syntax_highlighting(&code_snippet);
+    }
 }
