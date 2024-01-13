@@ -40,6 +40,11 @@ fn get_cpp_completions(file_path: &str, line: usize, column: usize) -> cppcomple
 
 fn analyze_code(language: Language, code: &str) {
     match language {
-        
+        Language::Rust => {
+            // Perform Rust-specific analysis if needed
+            // For example, extract variable types, function signatures, etc.
+            println!("Performing Rust analysis:");
+            // TODO: Add Rust analysis logic
+        }    
     }
 }    
