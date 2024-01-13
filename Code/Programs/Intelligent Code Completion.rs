@@ -29,3 +29,7 @@ struct UserPreferences {
 fn write_code_to_file(language: Language, code: &str, file_path: &str) {
     fs::write(file_path, code).expect("Failed to write to the file");    
 }
+
+fn get_rust_completions(file_path: &str, line: usize, column: usize) -> racer::Result<Vec<racer::Match>> {
+    
+}
