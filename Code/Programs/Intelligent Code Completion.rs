@@ -125,4 +125,10 @@ fn get_user_preferences() -> UserPreferences {
 
     println!("Do you want to perform code formatting? (y/n):");
     let perform_formatting = read_yes_no_input();
+
+    UserPreferences {
+        perform_analysis,
+        syntax_highlighting,
+        perform_formatting,
+    }
 }
