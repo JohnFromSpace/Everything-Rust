@@ -169,5 +169,8 @@ fn choose_syntax_theme() -> SyntaxTheme {
         },
         Err(_) => SyntaxTheme::Default, // Default theme if parsing fails
     }
+}
+
+fn get_syntax_theme(theme_name: &str) -> Option<Style> {
     
 }
