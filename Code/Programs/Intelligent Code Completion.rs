@@ -132,3 +132,7 @@ fn get_user_preferences() -> UserPreferences {
         perform_formatting,
     }
 }
+
+fn read_yes_no_input() -> bool {
+    
+}
