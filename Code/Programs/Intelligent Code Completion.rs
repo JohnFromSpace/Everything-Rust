@@ -97,4 +97,10 @@ fn perform_syntax_highlighting(code: &str) {
 
     let syntax = syntax_set.find_syntax_by_extension("rs").unwrap(); // Assume Rust syntax for now
     let mut highlighter = HighlightLines::new(syntax, &theme);
+
+    for line in code.lines() {
+        let ranges = highlighter.highlight(line);
+        let escaped = syntect::util::as_24_bit_terminal_escaped(&ranges[..], false);
+        println!("{}", escaped);
+    }
 }
