@@ -19,3 +19,9 @@ enum Language {
     Rust,
     Cpp,
 }
+
+struct UserPreferences {
+    perform_analysis: bool,
+    syntax_highlighting: bool,
+    perform_formatting: bool,
+}
