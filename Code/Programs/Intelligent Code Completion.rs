@@ -33,3 +33,7 @@ fn write_code_to_file(language: Language, code: &str, file_path: &str) {
 fn get_rust_completions(file_path: &str, line: usize, column: usize) -> racer::Result<Vec<racer::Match>> {
     racer::complete_from_file(file_path, line, column)    
 }
+
+fn get_cpp_completions(file_path: &str, line: usize, column: usize) -> cppcomplete::Result<Vec<cppcomplete::Completion>> {
+    
+}
