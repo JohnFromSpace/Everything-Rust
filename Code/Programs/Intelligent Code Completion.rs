@@ -64,4 +64,8 @@ fn display_completions(language: Language, completions: Vec<String>) {
             println!("C++ Completions:");
         }
     }
+
+    for (index, completion) in completions.iter().enumerate() {
+        println!("{}. {}", index + 1, completion);
+    }
 }
