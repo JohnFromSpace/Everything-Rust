@@ -134,5 +134,7 @@ fn get_user_preferences() -> UserPreferences {
 }
 
 fn read_yes_no_input() -> bool {
-        
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Failed to read line");
+    input.trim().to_lowercase() == "y"        
 }
