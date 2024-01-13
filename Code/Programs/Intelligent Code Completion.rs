@@ -59,6 +59,9 @@ fn display_completions(language: Language, completions: Vec<String>) {
     match language {
         Language::Rust => {
             println!("Rust Completions:");
-        }    
+        }
+        Language::Cpp => {
+            println!("C++ Completions:");
+        }
     }
 }
