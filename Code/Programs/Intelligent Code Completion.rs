@@ -72,6 +72,13 @@ fn display_completions(language: Language, completions: Vec<String>) {
 
 fn show_additional_info(language: Language, index: usize, completions: Vec<String>) {
     match language {
-        
+        Language::Rust => {
+            // Display additional information for Rust completions if available
+            if let Ok(match_) = get_rust_completions("temp_file", 5, 17) {
+                if index < match_.len() {
+                    println!("Additional Info for Rust Completion {}: {:?}", index + 1, match_[index]);
+                }
+            }
+        }    
     }
 }
