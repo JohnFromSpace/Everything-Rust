@@ -232,4 +232,18 @@ fn main() {
     } else {
         Language::Rust
     };
+
+    // Temporary file path to store the code snippet
+    let file_path = "temp_file";
+
+    // Write the code snippet to a temporary file
+    write_code_to_file(language.clone(), &code_snippet, file_path);
+
+    // Get user preferences
+    let preferences = get_user_preferences();
+
+    // Perform analysis based on user preferences
+    if preferences.perform_analysis {
+        analyze_code(language.clone(), &code_snippet);
+    }
 }
