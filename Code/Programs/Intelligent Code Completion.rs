@@ -106,5 +106,11 @@ fn perform_syntax_highlighting(code: &str) {
 }
 
 fn format_code(code: &str) -> String {
-    
+    match rustfmt::run_rustfmt(rustfmt::Config::default(), Some("stdin".to_owned()), code.into()) {
+        Ok(result) => result.1,
+        Err(err) => {
+            eprintln!("Error formatting code: {}", err);
+            code.to_owned()
+        }
+    }    
 }
