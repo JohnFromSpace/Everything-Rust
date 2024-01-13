@@ -281,4 +281,10 @@ fn main() {
     if preferences.syntax_highlighting {
         perform_syntax_highlighting(&code_snippet);
     }
+
+    // Perform code formatting based on user preferences
+    if preferences.perform_formatting {
+        let formatted_code = format_code(&code_snippet);
+        println!("Formatted Code:\n{}", formatted_code);
+    }
 }
