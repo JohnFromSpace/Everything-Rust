@@ -172,5 +172,6 @@ fn choose_syntax_theme() -> SyntaxTheme {
 }
 
 fn get_syntax_theme(theme_name: &str) -> Option<Style> {
-    
+    let theme_set = ThemeSet::load_defaults();
+    theme_set.themes.get(theme_name).map(|theme| theme.settings.selection)    
 }
