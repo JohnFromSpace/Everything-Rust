@@ -157,7 +157,16 @@ fn choose_syntax_theme() -> SyntaxTheme {
 
     match input.trim().parse::<u32>() {
         Ok(choice) => match choice {
-            
+            1 => SyntaxTheme::Default,
+            2 => SyntaxTheme::Ocean,
+            3 => {
+                println!("Enter the custom theme name:");
+                let mut theme_name = String::new();
+                io::stdin().read_line(&mut theme_name).expect("Failed to read line");
+                SyntaxTheme::Custom(theme_name.trim().to_owned())
+            }
+            _ => SyntaxTheme::Default, // Default theme if an invalid choice is made
+        },    
         }
     }
 }
