@@ -104,3 +104,7 @@ fn perform_syntax_highlighting(code: &str) {
         println!("{}", escaped);
     }
 }
+
+fn format_code(code: &str) -> String {
+    
+}
