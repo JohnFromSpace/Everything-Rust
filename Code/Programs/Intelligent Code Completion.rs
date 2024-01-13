@@ -178,6 +178,15 @@ fn get_syntax_theme(theme_name: &str) -> Option<Style> {
 
 fn perform_syntax_highlighting(code: &str, theme: SyntaxTheme) {
     match theme {
-        
+        SyntaxTheme::Default => perform_default_syntax_highlighting(code),
+        SyntaxTheme::Ocean => perform_ocean_syntax_highlighting(code),
+        SyntaxTheme::Custom(theme_name) => {
+            if let Some(style) = get_syntax_theme(&theme_name) {
+                perform_custom_syntax_highlighting(code, style);
+            } else {
+                eprintln!("Custom theme not found. Performing default syntax highlighting.");
+                perform_default_syntax_highlighting(code);
+            }
+        }    
     }
 }
