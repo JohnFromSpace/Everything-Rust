@@ -150,5 +150,8 @@ fn choose_syntax_theme() -> SyntaxTheme {
     println!("Choose a syntax highlighting theme:");
     println!("1. Default");
     println!("2. Ocean");
-    println!("3. Custom");    
+    println!("3. Custom");
+
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Failed to read line");
 }
