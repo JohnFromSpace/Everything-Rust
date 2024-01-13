@@ -90,3 +90,7 @@ fn show_additional_info(language: Language, index: usize, completions: Vec<Strin
         }
     }
 }
+
+fn perform_syntax_highlighting(code: &str) {
+    
+}
