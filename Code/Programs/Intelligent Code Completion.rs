@@ -202,3 +202,9 @@ fn perform_ocean_syntax_highlighting(code: &str) {
     println!("Performing Ocean Theme Syntax Highlighting:");
     // TODO: Implement Ocean theme syntax highlighting
 }
+
+fn perform_custom_syntax_highlighting(code: &str, style: Style) {
+    // Custom theme syntax highlighting logic
+    println!("Performing Custom Theme Syntax Highlighting:");
+    // TODO: Implement custom theme syntax highlighting
+}
