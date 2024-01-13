@@ -154,4 +154,10 @@ fn choose_syntax_theme() -> SyntaxTheme {
 
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Failed to read line");
+
+    match input.trim().parse::<u32>() {
+        Ok(choice) => match choice {
+            
+        }
+    }
 }
