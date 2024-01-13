@@ -196,3 +196,9 @@ fn perform_default_syntax_highlighting(code: &str) {
     println!("Performing Default Syntax Highlighting:");
     // TODO: Implement default syntax highlighting
 }
+
+fn perform_ocean_syntax_highlighting(code: &str) {
+    // Ocean theme syntax highlighting logic
+    println!("Performing Ocean Theme Syntax Highlighting:");
+    // TODO: Implement Ocean theme syntax highlighting
+}
