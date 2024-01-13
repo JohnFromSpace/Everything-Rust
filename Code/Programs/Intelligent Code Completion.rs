@@ -116,5 +116,5 @@ fn format_code(code: &str) -> String {
 }
 
 fn get_user_preferences() -> UserPreferences {
-    
+        
 }
