@@ -210,5 +210,8 @@ fn perform_custom_syntax_highlighting(code: &str, style: Style) {
 }
 
 fn main() {
-    
+    let mut code_snippet = String::new();
+
+    // Allow the user to input code interactively
+    println!("Enter your code (type 'done' on a new line to finish input):");    
 }
