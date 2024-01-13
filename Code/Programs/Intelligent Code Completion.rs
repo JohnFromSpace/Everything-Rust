@@ -293,4 +293,7 @@ fn main() {
         let formatted_code = format_code(&code_snippet);
         println!("Formatted Code:\n{}", formatted_code);
     }
+
+    // Clean up the temporary file
+    fs::remove_file(file_path).expect("Failed to remove the temporary file");
 }
