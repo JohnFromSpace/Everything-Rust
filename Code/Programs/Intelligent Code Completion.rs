@@ -116,5 +116,7 @@ fn format_code(code: &str) -> String {
 }
 
 fn get_user_preferences() -> UserPreferences {
-        
+    // Allow the user to interactively choose preferences
+    println!("Do you want to perform code analysis? (y/n):");
+    let perform_analysis = read_yes_no_input();        
 }
