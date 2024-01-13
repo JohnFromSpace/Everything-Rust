@@ -246,4 +246,10 @@ fn main() {
     if preferences.perform_analysis {
         analyze_code(language.clone(), &code_snippet);
     }
+
+    // Get completions based on the language
+    let completions = match language {
+        Language::Rust => get_rust_completions(file_path, 5, 17), // Adjust line and column based on your cursor position
+        Language::Cpp => get_cpp_completions(file_path, 5, 17),   // Adjust line and column based on your cursor position
+    };
 }
