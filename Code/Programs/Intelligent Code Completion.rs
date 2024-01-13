@@ -166,7 +166,8 @@ fn choose_syntax_theme() -> SyntaxTheme {
                 SyntaxTheme::Custom(theme_name.trim().to_owned())
             }
             _ => SyntaxTheme::Default, // Default theme if an invalid choice is made
-        },    
-        }
+        },
+        Err(_) => SyntaxTheme::Default, // Default theme if parsing fails
     }
+    
 }
