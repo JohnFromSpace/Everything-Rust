@@ -147,5 +147,8 @@ enum SyntaxTheme {
 }
 
 fn choose_syntax_theme() -> SyntaxTheme {
-    
+    println!("Choose a syntax highlighting theme:");
+    println!("1. Default");
+    println!("2. Ocean");
+    println!("3. Custom");    
 }
