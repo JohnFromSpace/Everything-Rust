@@ -140,6 +140,17 @@ fn analyze_rust_struct(struct_item: &ItemStruct) {
             println!("Struct field {}: {:?}", ident, quote! {#field_type});
         }
     }
+
+    // Generate code snippet for struct initialization
+    let struct_name = &struct_item.ident;
+    let struct_fields: Vec<Ident> = struct_item.fields.iter().filter_map(|f| f.ident.clone()).collect();
+    let init_code = quote! {
+        let instance = #struct_name {
+            #(#struct_fields: Default::default()),*
+        };
+    };
+
+    println!("Code snippet for struct initialization:\n{}", init_code);
 }
 
 fn analyze_cpp_code(code: &str) {
