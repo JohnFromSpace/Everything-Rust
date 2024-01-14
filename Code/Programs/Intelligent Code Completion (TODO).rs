@@ -189,7 +189,13 @@ fn analyze_cpp_code(code: &str) {
             // Extract and display return type
             let return_type = extract_return_type(code, capture.start());
             println!("Return Type: {:?}", return_type);
-            
+
+            // Generate C++ function signature code snippet
+            let func_signature = quote! {
+                #func_name#template_params(#(#parse_quote! { #params }),*) #const_modifier
+            };
+
+            println!("C++ Function Signature Code Snippet:\n{}", func_signature);
         }    
     }
 }
