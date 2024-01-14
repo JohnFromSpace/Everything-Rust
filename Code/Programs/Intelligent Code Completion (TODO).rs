@@ -59,7 +59,7 @@ fn analyze_code(language: Language, code: &str) {
             // Perform C++-specific analysis if needed
             // For example, extract variable types, function signatures, etc.
             println!("Performing C++ analysis:");
-            // TODO: Add C++ analysis logic
+            analyze_cpp_code(code);
         }
     }
 }
