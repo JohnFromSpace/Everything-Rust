@@ -388,7 +388,7 @@ fn perform_custom_syntax_highlighting(code: &str, style: Style) {
     println!("Performing Custom Theme Syntax Highlighting:");
     let syntax_set = SyntaxSet::load_defaults_newlines();
     let syntax = syntax_set.find_syntax_by_extension("rs").unwrap();
-    let mut highlighter = HighlightLines::new(syntax, &Style { /* your custom style settings */ });
+    let mut highlighter = HighlightLines::new(syntax, &Style);
 
     for line in code.lines() {
         let ranges = highlighter.highlight(line);
