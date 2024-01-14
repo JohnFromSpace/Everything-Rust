@@ -85,7 +85,14 @@ fn analyze_rust_code(code: &str) {
 }
 
 fn analyze_rust_function(func: &ItemFn) {
-    
+    println!("Found Rust function: {}", func.sig.ident);
+
+    // Display function visibility
+    if let Some(visibility) = &func.vis {
+        match visibility {
+            
+        }   
+    }
 }
 
 fn analyze_cpp_code(code: &str) {
