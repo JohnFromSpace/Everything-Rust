@@ -100,7 +100,9 @@ fn analyze_rust_function(func: &ItemFn) {
     // Display function parameters
     for input in &func.sig.inputs {
         if let Type::Path(TypePath { path, .. }) = &input.ty {
-            
+            let param_name = &input.pat;
+            let param_type = &path.segments.last().unwrap().ident;
+            println!("Parameter {}: {:?}", quote! {#param_name}, param_type);    
         }
     }
 }
