@@ -200,6 +200,10 @@ fn analyze_cpp_code(code: &str) {
     }
 }
 
+fn extract_return_type(code: &str, start: usize) -> Option<String> {
+    let mut depth = 0;
+    let mut found_colon = false;
+}
 
 fn display_completions(language: Language, completions: Vec<String>) {
     match language {
