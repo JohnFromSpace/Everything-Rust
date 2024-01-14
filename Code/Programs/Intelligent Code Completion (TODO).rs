@@ -105,6 +105,13 @@ fn analyze_rust_function(func: &ItemFn) {
             println!("Parameter {}: {:?}", quote! {#param_name}, param_type);    
         }
     }
+
+    // Display return type
+    if let Some(return_type) = &func.sig.output {
+        match return_type {
+            
+        }
+    }
 }
 
 fn analyze_cpp_code(code: &str) {
