@@ -163,11 +163,16 @@ fn analyze_cpp_code(code: &str) {
             (capture.get(1), capture.get(2), capture.get(3), capture.get(4)) {
             let template_params = template_params.as_str();
             let params: Vec<&str> = params_str.as_str().split(',').map(|p| p.trim()).collect();
-                
+
+            println!("Found C++ function: {}", func_name.as_str());
+
+            // Display template parameters
+            if !template_params.is_empty() {
+                println!("Template Parameters: {}", template_params);
+            }
         }    
     }
 }
-
 
 
 fn display_completions(language: Language, completions: Vec<String>) {
