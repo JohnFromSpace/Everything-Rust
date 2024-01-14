@@ -90,7 +90,10 @@ fn analyze_rust_function(func: &ItemFn) {
     // Display function visibility
     if let Some(visibility) = &func.vis {
         match visibility {
-            
+            Visibility::Public(_) => println!("Function is public."),
+            Visibility::Crate(_) => println!("Function has crate visibility."),
+            Visibility::Restricted(_) => println!("Function has restricted visibility."),
+            Visibility::Inherited => {} // Do nothing for inherited visibility    
         }   
     }
 }
