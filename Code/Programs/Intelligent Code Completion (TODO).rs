@@ -185,6 +185,11 @@ fn analyze_cpp_code(code: &str) {
             if const_modifier.is_some() {
                 println!("Const Modifier: const");
             }
+
+            // Extract and display return type
+            let return_type = extract_return_type(code, capture.start());
+            println!("Return Type: {:?}", return_type);
+            
         }    
     }
 }
