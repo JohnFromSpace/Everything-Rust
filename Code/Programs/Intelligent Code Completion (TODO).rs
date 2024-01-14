@@ -53,7 +53,7 @@ fn analyze_code(language: Language, code: &str) {
             // Perform Rust-specific analysis if needed
             // For example, extract variable types, function signatures, etc.
             println!("Performing Rust analysis:");
-            // TODO: Add Rust analysis logic
+            analyze_rust_code(code);
         }
         Language::Cpp => {
             // Perform C++-specific analysis if needed
