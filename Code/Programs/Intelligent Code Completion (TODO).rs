@@ -203,6 +203,22 @@ fn analyze_cpp_code(code: &str) {
 fn extract_return_type(code: &str, start: usize) -> Option<String> {
     let mut depth = 0;
     let mut found_colon = false;
+
+    for (i, c) in code[start..].chars().enumerate() {
+        match c {
+            '<' => depth += 1,
+            '>' => depth -= 1,
+            ';' if depth == 0 && !found_colon => {
+                found_colon = true;
+            }
+            ':' if found_colon => {
+                return Some(code[start + i + 1..start + i + 2].to_owned().trim().to_string());
+            }
+            _ => {}
+        }
+    }
+
+    None
 }
 
 fn display_completions(language: Language, completions: Vec<String>) {
