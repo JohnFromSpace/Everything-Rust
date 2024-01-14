@@ -361,7 +361,11 @@ fn perform_syntax_highlighting(code: &str, theme: SyntaxTheme) {
 fn perform_default_syntax_highlighting(code: &str) {
     // Default syntax highlighting logic
     println!("Performing Default Syntax Highlighting:");
-    // TODO: Implement default syntax highlighting
+    for line in code.lines() {
+        let ranges = highlighter.highlight(line, &syntax_set);
+        let escaped = syntect::util::as_24_bit_terminal_escaped(&ranges[..], false);
+        println!("{}", escaped);
+    }
 }
 
 fn perform_ocean_syntax_highlighting(code: &str) {
