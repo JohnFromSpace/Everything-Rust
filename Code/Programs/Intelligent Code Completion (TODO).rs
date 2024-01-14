@@ -84,6 +84,10 @@ fn analyze_rust_code(code: &str) {
     }   
 }
 
+fn analyze_rust_function(func: &ItemFn) {
+    
+}
+
 fn analyze_cpp_code(code: &str) {
     let function_declaration_regex = regex::Regex::new(r"\b(?:\w+\s+){0,2}(\w+)\s*\([^)]*\)\s*{").unwrap();  
 
