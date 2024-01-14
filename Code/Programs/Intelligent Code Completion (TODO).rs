@@ -126,7 +126,10 @@ fn analyze_rust_struct(struct_item: &ItemStruct) {
     // Display struct visibility
     if let Some(visibility) = &struct_item.vis {
         match visibility {
-            
+            Visibility::Public(_) => println!("Struct is public."),
+            Visibility::Crate(_) => println!("Struct has crate visibility."),
+            Visibility::Restricted(_) => println!("Struct has restricted visibility."),
+            Visibility::Inherited => {} // Do nothing for inherited visibility    
         }   
     }
 }
