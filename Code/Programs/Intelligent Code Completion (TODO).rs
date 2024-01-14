@@ -84,6 +84,10 @@ fn analyze_rust_code(code: &str) {
     }   
 }
 
+fn analyze_cpp_code(code: &str) {
+    
+}
+
 fn display_completions(language: Language, completions: Vec<String>) {
     match language {
         Language::Rust => {
