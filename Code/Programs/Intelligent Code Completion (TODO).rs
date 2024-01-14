@@ -74,7 +74,7 @@ fn analyze_rust_code(code: &str) {
                 }
                 Item::Struct(ref st) => {
                     println!("Found Rust struct: {}", st.ident);
-                    // Additional analysis for structs can be added here    
+                    analyze_rust_struct(st);    
                 }
                 _ => {}
             }   
