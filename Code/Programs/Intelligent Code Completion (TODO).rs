@@ -371,7 +371,11 @@ fn perform_default_syntax_highlighting(code: &str) {
 fn perform_ocean_syntax_highlighting(code: &str) {
     // Ocean theme syntax highlighting logic
     println!("Performing Ocean Theme Syntax Highlighting:");
-    // TODO: Implement Ocean theme syntax highlighting
+    let theme = ThemeSet::load_defaults().themes["oceanic-next"];
+    let syntax_set = SyntaxSet::load_defaults_newlines();
+    let syntax = syntax_set.find_syntax_by_extension("rs").unwrap();
+    let mut highlighter = HighlightLines::new(syntax, &theme);
+    
 }
 
 fn perform_custom_syntax_highlighting(code: &str, style: Style) {
