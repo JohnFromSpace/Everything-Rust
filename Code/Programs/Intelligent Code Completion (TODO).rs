@@ -10,6 +10,15 @@ use syntect::easy::HighlightLines;
 use syntect::highlighting::{Style, ThemeSet};
 use syntect::parsing::SyntaxSet;
 
+use syn::{Item, parse_quote};
+use proc_macro2::TokenStream;
+use quote::quote;
+
+// Add the following dependencies to your Cargo.toml:
+// syn = "1.0"
+// quote = "1.0"
+// proc-macro2 = "1.0"
+
 struct CodeSnippet {
     language: Language,
     content: String,
