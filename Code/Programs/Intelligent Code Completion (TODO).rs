@@ -109,7 +109,13 @@ fn analyze_rust_function(func: &ItemFn) {
     // Display return type
     if let Some(return_type) = &func.sig.output {
         match return_type {
-            
+            syn::ReturnType::Default => println!("Function has no return type."),
+            syn::ReturnType::Type(_, ty) => {
+                if let Type::Path(TypePath { path, .. }) = &**ty {
+                    let return_type = &path.segments.last().unwrap().ident;
+                    println!("Return Type: {:?}", return_type);
+                }
+            }    
         }
     }
 }
