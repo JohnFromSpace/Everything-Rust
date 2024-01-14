@@ -96,6 +96,13 @@ fn analyze_rust_function(func: &ItemFn) {
             Visibility::Inherited => {} // Do nothing for inherited visibility    
         }   
     }
+
+    // Display function parameters
+    for input in &func.sig.inputs {
+        if let Type::Path(TypePath { path, .. }) = &input.ty {
+            
+        }
+    }
 }
 
 fn analyze_cpp_code(code: &str) {
