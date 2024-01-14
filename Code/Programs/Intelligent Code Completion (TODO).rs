@@ -66,7 +66,11 @@ fn analyze_code(language: Language, code: &str) {
 
 fn analyze_rust_code(code: &str) {
     if let Ok(syntax_tree) = syn::parse_file(code) {
-        
+        for item in syntax_tree.items {
+            match item {
+                
+            }   
+        }
     }    
 }
 
