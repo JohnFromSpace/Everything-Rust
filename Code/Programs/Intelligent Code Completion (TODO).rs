@@ -89,7 +89,8 @@ fn analyze_cpp_code(code: &str) {
 
     for capture in function_declaration_regex.captures_iter(code) {
         if let Some(func_name) = capture.get(1) {
-            
+            println!("Found C++ function: {}", func_name.as_str());
+            // Additional analysis for functions can be added here    
         }    
     }
 }
