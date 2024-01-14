@@ -79,7 +79,9 @@ fn analyze_rust_code(code: &str) {
                 _ => {}
             }   
         }
-    }    
+    } else {
+        eprintln!("Failed to parse Rust code");
+    }   
 }
 
 fn display_completions(language: Language, completions: Vec<String>) {
