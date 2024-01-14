@@ -132,6 +132,14 @@ fn analyze_rust_struct(struct_item: &ItemStruct) {
             Visibility::Inherited => {} // Do nothing for inherited visibility    
         }   
     }
+
+    // Display struct fields and their types
+    for field in &struct_item.fields {
+        if let Some(ident) = &field.ident {
+            let field_type = &field.ty;
+            println!("Struct field {}: {:?}", ident, quote! {#field_type});
+        }
+    }
 }
 
 fn analyze_cpp_code(code: &str) {
