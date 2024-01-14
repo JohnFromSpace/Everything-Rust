@@ -180,6 +180,11 @@ fn analyze_cpp_code(code: &str) {
                     println!("Parameter {}: {:?}", param_name, param_type);
                 }
             }
+
+            // Display const modifier
+            if const_modifier.is_some() {
+                println!("Const Modifier: const");
+            }
         }    
     }
 }
