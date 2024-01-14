@@ -389,6 +389,12 @@ fn perform_custom_syntax_highlighting(code: &str, style: Style) {
     let syntax_set = SyntaxSet::load_defaults_newlines();
     let syntax = syntax_set.find_syntax_by_extension("rs").unwrap();
     let mut highlighter = HighlightLines::new(syntax, &Style { /* your custom style settings */ });
+
+    for line in code.lines() {
+        let ranges = highlighter.highlight(line);
+        let escaped = syntect::util::as_24_bit_terminal_escaped(&ranges[..], false);
+        println!("{}", escaped);
+    }
 }
 
 fn main() {
