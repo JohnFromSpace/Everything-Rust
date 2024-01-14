@@ -76,6 +76,7 @@ fn analyze_rust_code(code: &str) {
                     println!("Found Rust struct: {}", st.ident);
                     // Additional analysis for structs can be added here    
                 }
+                _ => {}
             }   
         }
     }    
