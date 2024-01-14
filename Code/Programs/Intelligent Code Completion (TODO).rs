@@ -20,6 +20,7 @@ use regex::Regex;
 // syn = "1.0"
 // quote = "1.0"
 // proc-macro2 = "1.0"
+// regex = "1.4"
 
 struct CodeSnippet {
     language: Language,
