@@ -170,6 +170,16 @@ fn analyze_cpp_code(code: &str) {
             if !template_params.is_empty() {
                 println!("Template Parameters: {}", template_params);
             }
+
+            // Display function parameters
+            for param in &params {
+                let param_parts: Vec<&str> = param.split_whitespace().collect();
+                if param_parts.len() == 2 {
+                    let param_type = param_parts[0];
+                    let param_name = param_parts[1];
+                    println!("Parameter {}: {:?}", param_name, param_type);
+                }
+            }
         }    
     }
 }
