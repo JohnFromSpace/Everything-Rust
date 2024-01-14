@@ -88,7 +88,9 @@ fn analyze_cpp_code(code: &str) {
     let function_declaration_regex = regex::Regex::new(r"\b(?:\w+\s+){0,2}(\w+)\s*\([^)]*\)\s*{").unwrap();  
 
     for capture in function_declaration_regex.captures_iter(code) {
-        
+        if let Some(func_name) = capture.get(1) {
+            
+        }    
     }
 }
 
