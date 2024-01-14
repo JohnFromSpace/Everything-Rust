@@ -69,7 +69,8 @@ fn analyze_rust_code(code: &str) {
         for item in syntax_tree.items {
             match item {
                 Item::Fn(ref func) => {
-                    
+                    println!("Found Rust function: {}", func.sig.ident);
+                    // Additional analysis for functions can be added here    
                 }    
             }   
         }
