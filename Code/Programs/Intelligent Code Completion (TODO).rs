@@ -121,7 +121,14 @@ fn analyze_rust_function(func: &ItemFn) {
 }
 
 fn analyze_rust_struct(struct_item: &ItemStruct) {
-    
+    println!("Found Rust struct: {}", struct_item.ident);
+
+    // Display struct visibility
+    if let Some(visibility) = &struct_item.vis {
+        match visibility {
+            
+        }   
+    }
 }
 
 fn analyze_cpp_code(code: &str) {
