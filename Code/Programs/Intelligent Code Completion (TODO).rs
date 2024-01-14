@@ -13,6 +13,8 @@ use syntect::parsing::SyntaxSet;
 use syn::{Item, parse_quote};
 use proc_macro2::TokenStream;
 use quote::quote;
+use syn::parse_quote;
+use regex::Regex;
 
 // Add the following dependencies to your Cargo.toml:
 // syn = "1.0"
@@ -157,12 +159,16 @@ fn analyze_cpp_code(code: &str) {
     let function_declaration_regex = regex::Regex::new(r"\b(?:\w+\s+){0,2}(\w+)\s*\([^)]*\)\s*{").unwrap();  
 
     for capture in function_declaration_regex.captures_iter(code) {
-        if let Some(func_name) = capture.get(1) {
-            println!("Found C++ function: {}", func_name.as_str());
-            // Additional analysis for functions can be added here    
+        if let (Some(func_name), Some(template_params), Some(params_str), const_modifier) =
+            (capture.get(1), capture.get(2), capture.get(3), capture.get(4)) {
+            let template_params = template_params.as_str();
+            let params: Vec<&str> = params_str.as_str().split(',').map(|p| p.trim()).collect();
+                
         }    
     }
 }
+
+
 
 fn display_completions(language: Language, completions: Vec<String>) {
     match language {
