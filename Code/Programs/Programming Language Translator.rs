@@ -135,3 +135,10 @@ language_converter!(
     "py",
     "def {}({}) -> {}:\n  return {}"
 );
+
+language_converter!(
+    RustConverter,
+    "Rust",
+    "rs",
+    "fn {}({}) -> {} {{\n  {}\n}}"
+);
