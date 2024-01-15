@@ -22,3 +22,7 @@ impl RustFunction {
         }
     }
 }
+
+trait LanguageConverter {
+    
+}
