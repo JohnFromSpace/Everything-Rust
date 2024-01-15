@@ -85,6 +85,12 @@ macro_rules! language_converter {
                 $ext
             }
         }
+
+        impl LanguageConverter for $struct_name {
+            fn convert(&self, rust_function: &RustFunction) -> Result<String, String> {
+                
+            }
+        }
     
     };
 }
