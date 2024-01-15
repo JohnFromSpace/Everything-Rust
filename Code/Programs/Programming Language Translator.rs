@@ -101,6 +101,9 @@ macro_rules! language_converter {
                 Ok(code)    
             }
         }
-    
+
+        fn details(&self) -> &'static LanguageDetails {
+                self
+        }    
     };
 }
