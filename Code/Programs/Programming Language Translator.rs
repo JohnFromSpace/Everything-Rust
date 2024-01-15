@@ -128,3 +128,10 @@ language_converter!(
     "kt",
     "fun {}({}): {} {{\n  return {};\n}}"
 );
+
+language_converter!(
+    PythonConverter,
+    "Python",
+    "py",
+    "def {}({}) -> {}:\n  return {}"
+);
