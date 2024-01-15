@@ -184,5 +184,8 @@ fn main() {
     let rust_functions = vec![
         RustFunction::new("add", vec![("a", "i32"), ("b", "i32")], "i32", "a + b"),
         RustFunction::new("multiply", vec![("a", "i32"), ("b", "i32")], "i32", "a * b"),
-    ];    
+    ];  
+
+    let code_converter = CodeConverter::new();
+    code_converter.convert_to_languages(&rust_functions);
 }
