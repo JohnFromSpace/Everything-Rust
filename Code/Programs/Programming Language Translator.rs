@@ -149,3 +149,10 @@ language_converter!(
     "go",
     "package main\n\nimport \"fmt\"\n\nfunc {}({}) {} {{\n  return {}\n}}"
 );
+
+language_converter!(
+    RubyConverter,
+    "Ruby",
+    "rb",
+    "def {}({})\n  {}\nend"
+);
