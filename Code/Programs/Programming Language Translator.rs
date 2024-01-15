@@ -107,3 +107,10 @@ macro_rules! language_converter {
         }    
     };
 }
+
+language_converter!(
+    JavaConverter,
+    "Java",
+    "java",
+    "public class Main {{\n  public static {} {}({}) {{\n    return {};\n  }}\n}}"
+);
