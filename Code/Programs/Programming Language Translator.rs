@@ -73,5 +73,7 @@ impl<'a> CodeConverter<'a> {
 }
 
 macro_rules! language_converter {
-    
+    ($struct_name:ident, $lang_name:expr, $ext:expr, $format_code:expr) => {
+        struct $struct_name;
+    }
 }
