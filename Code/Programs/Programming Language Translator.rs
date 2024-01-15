@@ -156,3 +156,10 @@ language_converter!(
     "rb",
     "def {}({})\n  {}\nend"
 );
+
+language_converter!(
+    SwiftConverter,
+    "Swift",
+    "swift",
+    "func {}({}) -> {} {{\n  return {}\n}}"
+);
