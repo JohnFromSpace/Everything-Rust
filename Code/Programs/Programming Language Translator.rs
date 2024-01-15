@@ -181,5 +181,8 @@ fn format_parameters(rust_function: &RustFunction) -> String {
 }
 
 fn main() {
-    
+    let rust_functions = vec![
+        RustFunction::new("add", vec![("a", "i32"), ("b", "i32")], "i32", "a + b"),
+        RustFunction::new("multiply", vec![("a", "i32"), ("b", "i32")], "i32", "a * b"),
+    ];    
 }
