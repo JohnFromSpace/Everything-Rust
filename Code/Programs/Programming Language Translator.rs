@@ -56,6 +56,18 @@ impl<'a> CodeConverter<'a> {
     }
 
     fn convert_to_languages(&self, rust_functions: &[RustFunction]) {
-        
+        for function in rust_functions {
+            for converter in &self.language_converters {
+                match converter.convert(function) {
+                    Ok(result) => println!("Converted {}:\n{}", converter.details().name(), result),
+                    Err(err) => eprintln!(
+                        "Error converting {} to {}: {}",
+                        function.name,
+                        converter.details().name(),
+                        err
+                    ),
+                }
+            }
+        }    
     }
 }
