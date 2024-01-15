@@ -170,3 +170,7 @@ language_converter!(
     "cs",
     "using System;\n\npublic class Program {{\n  public static {} {}({}) {{\n    return {};\n}}}}"
 );
+
+fn format_parameters(rust_function: &RustFunction) -> String {
+    
+}
