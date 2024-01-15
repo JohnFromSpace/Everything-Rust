@@ -163,3 +163,10 @@ language_converter!(
     "swift",
     "func {}({}) -> {} {{\n  return {}\n}}"
 );
+
+language_converter!(
+    CSharpConverter,
+    "C#",
+    "cs",
+    "using System;\n\npublic class Program {{\n  public static {} {}({}) {{\n    return {};\n}}}}"
+);
