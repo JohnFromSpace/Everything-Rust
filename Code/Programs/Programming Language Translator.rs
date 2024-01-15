@@ -13,6 +13,12 @@ impl RustFunction {
         let parameters = parameters
             .into_iter()
             .map(|(n, t)| (n.to_string(), t.to_string()))
-            .collect();    
+            .collect(); 
+        RustFunction {
+            name: name.to_string(),
+            parameters,
+            return_type: return_type.to_string(),
+            body: body.to_string(),
+        }
     }
 }
