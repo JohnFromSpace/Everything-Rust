@@ -24,5 +24,6 @@ impl RustFunction {
 }
 
 trait LanguageConverter {
-    
+    fn convert(&self, rust_function: &RustFunction) -> Result<String, String>;
+    fn details(&self) -> &'static LanguageDetails;    
 }
