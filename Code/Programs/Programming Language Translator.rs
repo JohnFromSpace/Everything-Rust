@@ -40,7 +40,18 @@ struct CodeConverter<'a> {
 impl<'a> CodeConverter<'a> {
     fn new() -> Self {
         CodeConverter {
-            
+            language_converters: vec![
+                Box::new(JavaConverter {}),
+                Box::new(CppConverter {}),
+                Box::new(KotlinConverter {}),
+                Box::new(PythonConverter {}),
+                Box::new(RustConverter {}),
+                Box::new(GoConverter {}),
+                Box::new(RubyConverter {}),
+                Box::new(SwiftConverter {}),
+                Box::new(CSharpConverter {}),
+                // Add other converters here
+            ],    
         }
     }
 }
