@@ -32,3 +32,7 @@ trait LanguageDetails {
     fn name(&self) -> &'static str;
     fn file_extension(&self) -> &'static str;    
 }
+
+struct CodeConverter<'a> {
+    
+}
