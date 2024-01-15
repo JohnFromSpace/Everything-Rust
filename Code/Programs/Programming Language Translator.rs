@@ -10,6 +10,9 @@ struct RustFunction {
 
 impl RustFunction {
     fn new(name: &str, parameters: Vec<(&str, &str)>, return_type: &str, body: &str) -> Self {
-        
+        let parameters = parameters
+            .into_iter()
+            .map(|(n, t)| (n.to_string(), t.to_string()))
+            .collect();    
     }
 }
