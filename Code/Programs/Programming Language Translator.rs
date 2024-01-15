@@ -79,7 +79,11 @@ macro_rules! language_converter {
         impl LanguageDetails for $struct_name {
             fn name(&self) -> &'static str {
                 $lang_name
-            }    
+            }
+
+            fn file_extension(&self) -> &'static str {
+                $ext
+            }
         }
     
     };
