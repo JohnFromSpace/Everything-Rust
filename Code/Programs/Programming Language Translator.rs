@@ -121,3 +121,10 @@ language_converter!(
     "cpp",
     "{} {}({}) {{\n  return {};\n}}"
 );
+
+language_converter!(
+    KotlinConverter,
+    "Kotlin",
+    "kt",
+    "fun {}({}): {} {{\n  return {};\n}}"
+);
