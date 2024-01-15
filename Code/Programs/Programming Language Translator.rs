@@ -114,3 +114,10 @@ language_converter!(
     "java",
     "public class Main {{\n  public static {} {}({}) {{\n    return {};\n  }}\n}}"
 );
+
+language_converter!(
+    CppConverter,
+    "C++",
+    "cpp",
+    "{} {}({}) {{\n  return {};\n}}"
+);
