@@ -36,3 +36,11 @@ trait LanguageDetails {
 struct CodeConverter<'a> {
     language_converters: Vec<Box<dyn LanguageConverter + 'a>>,    
 }
+
+impl<'a> CodeConverter<'a> {
+    fn new() -> Self {
+        CodeConverter {
+            
+        }
+    }
+}
