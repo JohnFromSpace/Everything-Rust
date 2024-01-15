@@ -34,5 +34,5 @@ trait LanguageDetails {
 }
 
 struct CodeConverter<'a> {
-    
+    language_converters: Vec<Box<dyn LanguageConverter + 'a>>,    
 }
