@@ -172,5 +172,10 @@ language_converter!(
 );
 
 fn format_parameters(rust_function: &RustFunction) -> String {
-    
+    rust_function
+        .parameters
+        .iter()
+        .map(|(name, ty)| format!("{} {}", ty, name))
+        .collect::<Vec<String>>()
+        .join(", ")    
 }
