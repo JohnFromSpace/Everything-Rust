@@ -179,3 +179,7 @@ fn format_parameters(rust_function: &RustFunction) -> String {
         .collect::<Vec<String>>()
         .join(", ")    
 }
+
+fn main() {
+    
+}
