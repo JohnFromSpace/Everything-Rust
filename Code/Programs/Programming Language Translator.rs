@@ -142,3 +142,10 @@ language_converter!(
     "rs",
     "fn {}({}) -> {} {{\n  {}\n}}"
 );
+
+language_converter!(
+    GoConverter,
+    "Go",
+    "go",
+    "package main\n\nimport \"fmt\"\n\nfunc {}({}) {} {{\n  return {}\n}}"
+);
