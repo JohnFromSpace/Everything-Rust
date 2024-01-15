@@ -88,7 +88,17 @@ macro_rules! language_converter {
 
         impl LanguageConverter for $struct_name {
             fn convert(&self, rust_function: &RustFunction) -> Result<String, String> {
-                
+                let mut code = String::new();
+                write!(
+                    code,
+                    $format_code,
+                    rust_function.return_type,
+                    rust_function.name,
+                    format_parameters(rust_function),
+                    rust_function.body
+                )
+                .map_err(|e| format!("Error formatting {} code: {}", $lang_name, e))?;
+                Ok(code)    
             }
         }
     
