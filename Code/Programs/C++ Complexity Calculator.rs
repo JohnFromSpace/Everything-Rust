@@ -97,4 +97,9 @@ fn is_valid_cpp(code: &str) -> bool {
         eprintln!("Validation failed: Remove function prototypes from the code.");
         return false;
     }
+
+    if !proper_indentation {
+        eprintln!("Validation failed: Ensure proper indentation in the code.");
+        return false;
+    }
 }
