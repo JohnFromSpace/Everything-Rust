@@ -57,4 +57,9 @@ fn is_valid_cpp(code: &str) -> bool {
         eprintln!("Validation failed: Remove leading spaces or tabs from the beginning of lines.");
         return false;
     }
+
+    if !no_unmatched_braces {
+        eprintln!("Validation failed: Check for unmatched braces.");
+        return false;
+    }
 }
