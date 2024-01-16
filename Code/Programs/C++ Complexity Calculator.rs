@@ -139,3 +139,8 @@ fn is_proper_function_definitions(code: &str) -> bool {
 
     true
 }
+
+// Function to check if variable names follow a proper format
+fn is_proper_variable_naming(code: &str) -> bool {
+    
+}
