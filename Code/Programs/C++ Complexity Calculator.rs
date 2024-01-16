@@ -10,6 +10,10 @@ fn main() {
             return;
         }
     };
-
     
+    // Validate the code
+    if !is_valid_cpp(&code) {
+        println!("Validation failed. Aborting analysis.");
+        return;
+    }
 }
