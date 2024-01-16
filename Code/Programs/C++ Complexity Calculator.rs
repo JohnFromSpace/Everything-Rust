@@ -62,4 +62,9 @@ fn is_valid_cpp(code: &str) -> bool {
         eprintln!("Validation failed: Check for unmatched braces.");
         return false;
     }
+
+    if !no_unmatched_parentheses {
+        eprintln!("Validation failed: Check for unmatched parentheses.");
+        return false;
+    }
 }
