@@ -52,4 +52,9 @@ fn is_valid_cpp(code: &str) -> bool {
     let no_static_globals = !code.contains("static");
     let proper_function_definitions = is_proper_function_definitions(code);
     let proper_variable_naming = is_proper_variable_naming(code);    
+
+    if !no_tabs_or_spaces_at_beginning {
+        eprintln!("Validation failed: Remove leading spaces or tabs from the beginning of lines.");
+        return false;
+    }
 }
