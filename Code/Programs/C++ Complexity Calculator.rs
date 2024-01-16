@@ -77,4 +77,9 @@ fn is_valid_cpp(code: &str) -> bool {
         eprintln!("Validation failed: Remove multi-line comments (/* */) from the code.");
         return false;
     }
+
+    if !no_empty_lines {
+        eprintln!("Validation failed: Remove empty lines from the code.");
+        return false;
+    }
 }
