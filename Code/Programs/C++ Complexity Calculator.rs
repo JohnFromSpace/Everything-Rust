@@ -38,5 +38,18 @@ fn main() {
 
 // Function to perform additional validations on C++ code
 fn is_valid_cpp(code: &str) -> bool {
-    
+    // Validation rules
+    let no_tabs_or_spaces_at_beginning = code.lines().all(|line| line.trim_start().is_empty());
+    let no_unmatched_braces = code.chars().filter(|&c| c == '{').count() == code.chars().filter(|&c| c == '}').count();
+    let no_unmatched_parentheses = code.chars().filter(|&c| c == '(').count() == code.chars().filter(|&c| c == ')').count();
+    let no_single_line_comments = !code.lines().any(|line| line.trim_start().starts_with("//"));
+    let no_multiple_line_comments = !code.contains("/*") && !code.contains("*/");
+    let no_empty_lines = code.lines().all(|line| !line.trim().is_empty());
+    let no_goto_statements = !code.contains("goto");
+    let no_using_namespace_directive = !code.contains("using namespace");
+    let no_function_prototypes = code.lines().all(|line| !line.contains(';') || line.contains('(') || line.contains(')'));
+    let proper_indentation = code.lines().all(|line| line.starts_with(' '));
+    let no_static_globals = !code.contains("static");
+    let proper_function_definitions = is_proper_function_definitions(code);
+    let proper_variable_naming = is_proper_variable_naming(code);    
 }
