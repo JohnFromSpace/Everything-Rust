@@ -124,5 +124,5 @@ fn is_valid_cpp(code: &str) -> bool {
 
 // Function to check if function definitions follow a proper format
 fn is_proper_function_definitions(code: &str) -> bool {
-    
+    let function_definition_pattern = Regex::new(r#"[\w<>]+\s+\w+\s*\([^)]*\)\s*{\s*"#).unwrap();    
 }
