@@ -102,4 +102,9 @@ fn is_valid_cpp(code: &str) -> bool {
         eprintln!("Validation failed: Ensure proper indentation in the code.");
         return false;
     }
+
+    if !no_static_globals {
+        eprintln!("Validation failed: Avoid using 'static' for globals. Prefer unnamed namespaces.");
+        return false;
+    }
 }
