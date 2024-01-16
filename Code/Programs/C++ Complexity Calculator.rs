@@ -124,5 +124,18 @@ fn is_valid_cpp(code: &str) -> bool {
 
 // Function to check if function definitions follow a proper format
 fn is_proper_function_definitions(code: &str) -> bool {
-    let function_definition_pattern = Regex::new(r#"[\w<>]+\s+\w+\s*\([^)]*\)\s*{\s*"#).unwrap();    
+    let function_definition_pattern = Regex::new(r#"[\w<>]+\s+\w+\s*\([^)]*\)\s*{\s*"#).unwrap();  
+
+    for cap in function_definition_pattern.captures_iter(code) {
+        let function_signature = cap.get(0).unwrap().as_str();
+        let opening_brace_index = function_signature.rfind('{');
+        let closing_brace_index = function_signature.rfind('}');
+
+        match (opening_brace_index, closing_brace_index) {
+            (Some(open), Some(close)) if open < close => continue,
+            _ => return false,
+        }
+    }
+
+    true
 }
