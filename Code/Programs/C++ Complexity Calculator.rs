@@ -29,4 +29,9 @@ fn main() {
     let if_statement_pattern = Regex::new(r#"if\s*\([^)]+\)"#).unwrap();
     let function_definition_pattern = Regex::new(r#"[\w<>]+\s+\w+\s*\([^)]*\)\s*{\s*"#).unwrap();
 
+    // Display results
+    println!("Occurrences of for loops: {}", for_loop_count);
+    println!("Occurrences of while loops: {}", while_loop_count);
+    println!("Occurrences of if statements: {}", if_statement_count);
+    println!("Occurrences of function definitions: {}", function_definition_count);
 }
