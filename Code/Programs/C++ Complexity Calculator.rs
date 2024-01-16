@@ -142,5 +142,8 @@ fn is_proper_function_definitions(code: &str) -> bool {
 
 // Function to check if variable names follow a proper format
 fn is_proper_variable_naming(code: &str) -> bool {
-    
+    // Add your variable naming conventions or patterns here
+    let valid_variable_name_pattern = Regex::new(r#"\b[a-z]\w*\b"#).unwrap();
+
+    valid_variable_name_pattern.is_match(code)    
 }
