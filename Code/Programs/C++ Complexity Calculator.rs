@@ -82,4 +82,9 @@ fn is_valid_cpp(code: &str) -> bool {
         eprintln!("Validation failed: Remove empty lines from the code.");
         return false;
     }
+
+    if !no_goto_statements {
+        eprintln!("Validation failed: Avoid using 'goto' statements.");
+        return false;
+    }
 }
