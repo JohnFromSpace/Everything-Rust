@@ -92,4 +92,9 @@ fn is_valid_cpp(code: &str) -> bool {
         eprintln!("Validation failed: Avoid using 'using namespace' directive.");
         return false;
     }
+
+    if !no_function_prototypes {
+        eprintln!("Validation failed: Remove function prototypes from the code.");
+        return false;
+    }
 }
