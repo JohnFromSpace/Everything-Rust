@@ -117,4 +117,7 @@ fn is_valid_cpp(code: &str) -> bool {
         eprintln!("Validation failed: Check for proper variable naming.");
         return false;
     }
+
+    // If all validations pass
+    true
 }
