@@ -87,4 +87,9 @@ fn is_valid_cpp(code: &str) -> bool {
         eprintln!("Validation failed: Avoid using 'goto' statements.");
         return false;
     }
+
+    if !no_using_namespace_directive {
+        eprintln!("Validation failed: Avoid using 'using namespace' directive.");
+        return false;
+    }
 }
