@@ -107,4 +107,9 @@ fn is_valid_cpp(code: &str) -> bool {
         eprintln!("Validation failed: Avoid using 'static' for globals. Prefer unnamed namespaces.");
         return false;
     }
+
+    if !proper_function_definitions {
+        eprintln!("Validation failed: Check for proper function definitions.");
+        return false;
+    }
 }
