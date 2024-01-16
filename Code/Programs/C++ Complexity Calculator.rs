@@ -72,4 +72,9 @@ fn is_valid_cpp(code: &str) -> bool {
         eprintln!("Validation failed: Remove single-line comments (//) from the code.");
         return false;
     }
+
+    if !no_multiple_line_comments {
+        eprintln!("Validation failed: Remove multi-line comments (/* */) from the code.");
+        return false;
+    }
 }
