@@ -112,4 +112,9 @@ fn is_valid_cpp(code: &str) -> bool {
         eprintln!("Validation failed: Check for proper function definitions.");
         return false;
     }
+
+    if !proper_variable_naming {
+        eprintln!("Validation failed: Check for proper variable naming.");
+        return false;
+    }
 }
