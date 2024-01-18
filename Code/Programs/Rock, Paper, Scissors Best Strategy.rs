@@ -62,5 +62,11 @@ impl Strategy {
 }
 
 fn main() {
-    let mut strategy = Strategy::new();    
+    let mut strategy = Strategy::new();  
+
+    for _ in 0..100 {
+        // Simulate the game by making random moves
+        let my_move = Move::random();
+        let opponent_move = Move::random();
+    }
 }
