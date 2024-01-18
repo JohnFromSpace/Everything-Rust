@@ -27,3 +27,9 @@ impl Move {
 struct Strategy {
     history: Vec<Move>,
 }
+
+impl Strategy {
+    fn new() -> Strategy {
+        
+    }
+}
