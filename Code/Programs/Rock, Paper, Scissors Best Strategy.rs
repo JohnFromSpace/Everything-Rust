@@ -34,6 +34,6 @@ impl Strategy {
     }
 
     fn observe(&mut self, opponent_move: Move) {
-        
+        self.history.push(opponent_move);    
     }
 }
