@@ -40,5 +40,10 @@ impl Strategy {
     fn predict(&self) -> Move {
         // Analyze opponent's historical moves and choose the move that maximizes winning chances
         let mut move_counts = HashMap::new();
+
+        for &opponent_move in &self.history {
+            let counter = move_counts.entry(opponent_move).or_insert(0);
+            *counter += 1;
+        }
     }
 }
