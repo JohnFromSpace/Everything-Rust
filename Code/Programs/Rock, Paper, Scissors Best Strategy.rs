@@ -51,5 +51,12 @@ impl Strategy {
             .max_by_key(|&(_, count)| count)
             .map(|(move, _)| move)
             .unwrap_or(Move::random());
+
+        // Choose the move that beats the most common move
+        match most_common_move {
+            Move::Rock => Move::Paper,
+            Move::Paper => Move::Scissors,
+            Move::Scissors => Move::Rock,
+        }
     }
 }
