@@ -36,4 +36,9 @@ impl Strategy {
     fn observe(&mut self, opponent_move: Move) {
         self.history.push(opponent_move);    
     }
+
+    fn predict(&self) -> Move {
+        // Analyze opponent's historical moves and choose the move that maximizes winning chances
+        let mut move_counts = HashMap::new();
+    }
 }
