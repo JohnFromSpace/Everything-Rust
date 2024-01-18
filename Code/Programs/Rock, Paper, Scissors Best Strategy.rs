@@ -10,6 +10,10 @@ enum Move {
 
 impl Move {
     fn random() -> Move {
-        
+        match rand::thread_rng().gen_range(0..3) {
+            0 => Move::Rock,
+            1 => Move::Paper,
+            _ => Move::Scissors,
+        }    
     }
 }
