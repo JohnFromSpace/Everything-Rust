@@ -7,3 +7,9 @@ enum Move {
     Paper,
     Scissors,
 }
+
+impl Move {
+    fn random() -> Move {
+        
+    }
+}
