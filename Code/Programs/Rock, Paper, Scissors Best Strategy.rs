@@ -18,6 +18,8 @@ impl Move {
     }
 
     fn beats(&self, other: Move) -> bool {
-        
+        (*self == Move::Rock && other == Move::Scissors)
+            || (*self == Move::Paper && other == Move::Rock)
+            || (*self == Move::Scissors && other == Move::Paper)    
     }
 }
