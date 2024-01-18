@@ -30,6 +30,6 @@ struct Strategy {
 
 impl Strategy {
     fn new() -> Strategy {
-        
+        Strategy { history: Vec::new() }    
     }
 }
