@@ -60,3 +60,7 @@ impl Strategy {
         }
     }
 }
+
+fn main() {
+    
+}
