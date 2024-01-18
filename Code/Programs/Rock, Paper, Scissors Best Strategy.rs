@@ -62,5 +62,5 @@ impl Strategy {
 }
 
 fn main() {
-    
+    let mut strategy = Strategy::new();    
 }
