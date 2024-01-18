@@ -16,4 +16,8 @@ impl Move {
             _ => Move::Scissors,
         }    
     }
+
+    fn beats(&self, other: Move) -> bool {
+        
+    }
 }
