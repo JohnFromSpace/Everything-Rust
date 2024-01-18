@@ -45,5 +45,11 @@ impl Strategy {
             let counter = move_counts.entry(opponent_move).or_insert(0);
             *counter += 1;
         }
+
+        let most_common_move = move_counts
+            .into_iter()
+            .max_by_key(|&(_, count)| count)
+            .map(|(move, _)| move)
+            .unwrap_or(Move::random());
     }
 }
