@@ -23,3 +23,7 @@ impl Move {
             || (*self == Move::Scissors && other == Move::Paper)    
     }
 }
+
+struct Strategy {
+    history: Vec<Move>,
+}
