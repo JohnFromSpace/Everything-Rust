@@ -68,5 +68,18 @@ fn main() {
         // Simulate the game by making random moves
         let my_move = Move::random();
         let opponent_move = Move::random();
+
+        // Observe the opponent's move
+        strategy.observe(opponent_move);
+
+        // Predict the opponent's move and print the result
+        let predicted_move = strategy.predict();
+        println!(
+            "My move: {:?}, Opponent's move: {:?}, Predicted move: {:?}, Win: {}",
+            my_move,
+            opponent_move,
+            predicted_move,
+            my_move.beats(predicted_move)
+        );
     }
 }
